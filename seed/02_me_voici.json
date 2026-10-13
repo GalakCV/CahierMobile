@@ -779,6 +779,71 @@
      "origin": "original",
      "review_status": "reviewed",
      "position": 3
+    },
+    {
+     "code": "ch02.p.cafe-campus",
+     "title": "Au café du campus",
+     "text_type": "dialogue",
+     "difficulty": 3,
+     "body": "Nina : Salut ! Tu es nouveau ici ?\nKenji : Oui. Je m'appelle Kenji. Je suis japonais, d'Osaka.\nNina : Moi, c'est Nina. Je suis italienne. Tu étudies quoi ?\nKenji : J'étudie le design. Et toi ?\nNina : Moi, j'étudie la musique. Je joue du piano et de la guitare. Tu aimes la musique ?\nKenji : Oui, beaucoup ! Mais je ne chante pas bien… Le week-end, je regarde des matchs de basket.\nNina : Tu as quel âge ?\nKenji : J'ai vingt et un ans. Et toi ?\nNina : Vingt-trois. Oh, il est déjà deux heures ! Mon cours commence à deux heures et quart. À bientôt, Kenji !",
+     "translation_pt": "Nina: Oi! Você é novo aqui?\nKenji: Sou. Meu nome é Kenji. Sou japonês, de Osaka.\nNina: Eu sou a Nina. Sou italiana. O que você estuda?\nKenji: Estudo design. E você?\nNina: Eu estudo música. Toco piano e violão. Você gosta de música?\nKenji: Gosto, muito! Mas não canto bem… No fim de semana, vejo jogos de basquete.\nNina: Quantos anos você tem?\nKenji: Tenho vinte e um anos. E você?\nNina: Vinte e três. Ah, já são duas horas! Minha aula começa às duas e quinze. Até logo, Kenji!",
+     "key_vocabulary": [
+      {
+       "fr": "nouveau",
+       "pt": "novo"
+      },
+      {
+       "fr": "étudier",
+       "pt": "estudar"
+      },
+      {
+       "fr": "jouer du piano",
+       "pt": "tocar piano"
+      },
+      {
+       "fr": "un match de basket",
+       "pt": "um jogo de basquete"
+      },
+      {
+       "fr": "déjà",
+       "pt": "já"
+      },
+      {
+       "fr": "commencer",
+       "pt": "começar"
+      }
+     ],
+     "useful_structures": [
+      {
+       "fr": "Tu étudies quoi ?",
+       "pt": "pergunta informal"
+      },
+      {
+       "fr": "Je ne chante pas bien.",
+       "pt": "negação"
+      },
+      {
+       "fr": "Tu as quel âge ?",
+       "pt": "perguntar a idade"
+      }
+     ],
+     "grammar_topics": [
+      "ch02.g.er",
+      "ch02.g.negation",
+      "ch02.g.quel",
+      "ch02.g.adjectifs",
+      "ch02.g.avoir"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.loisirs",
+      "ch02.v.pays",
+      "ch02.v.heure"
+     ],
+     "author": "Cahier (texto original)",
+     "source": "cahier-original",
+     "origin": "original",
+     "review_status": "reviewed",
+     "position": 4
     }
    ],
    "exercises": [
@@ -3374,6 +3439,889 @@
      ],
      "translation_pt": "Responda à Camille: apresente sua família e diga se você tem um animal de estimação.",
      "position": 76
+    },
+    {
+     "code": "c2-x-avoir-tu",
+     "type": "conjugation",
+     "instruction": "Conjugue avoir.",
+     "prompt": "Tu ___ des frères et sœurs ?",
+     "explanation": "avoir com tu: tu as.",
+     "difficulty": 2,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "as",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.famille"
+     ],
+     "grammar_topics": [
+      "ch02.g.avoir"
+     ],
+     "position": 77
+    },
+    {
+     "code": "c2-x-avoir-vous",
+     "type": "select_verb_form",
+     "instruction": "Escolha a forma correta.",
+     "prompt": "Vous ___ quel âge, madame ?",
+     "explanation": "Idade com avoir; vous → avez.",
+     "difficulty": 3,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "avez",
+       "correct": true
+      },
+      {
+       "text": "êtes",
+       "correct": false,
+       "feedback": "Idade se pergunta com avoir."
+      },
+      {
+       "text": "avons",
+       "correct": false
+      },
+      {
+       "text": "ont",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.age"
+     ],
+     "grammar_topics": [
+      "ch02.g.avoir",
+      "ch02.g.quel"
+     ],
+     "position": 78
+    },
+    {
+     "code": "c2-x-er-habite",
+     "type": "conjugation",
+     "instruction": "Conjugue o verbo entre parênteses.",
+     "prompt": "J'___ (habiter) à Recife.",
+     "explanation": "je + habiter → j'habite (elisão por causa do h mudo).",
+     "difficulty": 2,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "habite",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.infos"
+     ],
+     "grammar_topics": [
+      "ch02.g.er"
+     ],
+     "position": 79
+    },
+    {
+     "code": "c2-x-er-commencer",
+     "type": "conjugation",
+     "instruction": "Conjugue o verbo entre parênteses (atenção à ortografia).",
+     "prompt": "Nous ___ (commencer) le cours à neuf heures.",
+     "explanation": "Verbos em -cer ganham ç antes de -ons para manter o som de « s »: nous commençons.",
+     "difficulty": 4,
+     "competency": "orthographe",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "commençons",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.loisirs"
+     ],
+     "grammar_topics": [
+      "ch02.g.er"
+     ],
+     "position": 80
+    },
+    {
+     "code": "c2-x-er-ordre",
+     "type": "order_words",
+     "instruction": "Ordene as palavras.",
+     "prompt": "Monte a frase:",
+     "explanation": "Expressão de tempo + sujeito + verbo + complemento: « Le samedi, nous dansons avec nos amis. »",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Le samedi,",
+       "order": 1
+      },
+      {
+       "text": "nous",
+       "order": 2
+      },
+      {
+       "text": "dansons",
+       "order": 3
+      },
+      {
+       "text": "avec",
+       "order": 4
+      },
+      {
+       "text": "nos",
+       "order": 5
+      },
+      {
+       "text": "amis.",
+       "order": 6
+      }
+     ],
+     "objectives": [
+      "ch02.obj.loisirs"
+     ],
+     "grammar_topics": [
+      "ch02.g.er",
+      "ch02.g.possessifs"
+     ],
+     "position": 81
+    },
+    {
+     "code": "c2-x-neg-ilya",
+     "type": "transform_negative",
+     "instruction": "Passe para a negativa.",
+     "prompt": "Il y a des étudiants brésiliens dans la classe.",
+     "explanation": "Il y a → il n'y a pas; e des vira d' antes de vogal: « Il n'y a pas d'étudiants brésiliens dans la classe. »",
+     "difficulty": 5,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Il n'y a pas d'étudiants brésiliens dans la classe.",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.naime"
+     ],
+     "grammar_topics": [
+      "ch02.g.negation",
+      "ch02.g.adjectifs"
+     ],
+     "position": 82
+    },
+    {
+     "code": "c2-x-neg-erreur",
+     "type": "identify_error",
+     "instruction": "Encontre a parte errada.",
+     "prompt": "Je ne aime pas le café.",
+     "explanation": "Antes de vogal, ne vira n': « Je n'aime pas le café. »",
+     "difficulty": 3,
+     "competency": "orthographe",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Je",
+       "correct": false
+      },
+      {
+       "text": "ne aime",
+       "correct": true
+      },
+      {
+       "text": "pas",
+       "correct": false
+      },
+      {
+       "text": "le café",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.naime"
+     ],
+     "grammar_topics": [
+      "ch02.g.negation"
+     ],
+     "position": 83
+    },
+    {
+     "code": "c2-x-q-enfants",
+     "type": "transform_question",
+     "instruction": "Transforme em pergunta com est-ce que.",
+     "prompt": "Vous avez des enfants.",
+     "explanation": "« Est-ce que vous avez des enfants ? »",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Est-ce que vous avez des enfants ?",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.questions"
+     ],
+     "grammar_topics": [
+      "ch02.g.questions",
+      "ch02.g.avoir"
+     ],
+     "position": 84
+    },
+    {
+     "code": "c2-x-natural-ou",
+     "type": "natural_response",
+     "instruction": "Escolha a resposta mais natural.",
+     "prompt": "— Tu habites où ?",
+     "explanation": "« où » = onde: a resposta é um lugar: J'habite à Curitiba.",
+     "difficulty": 2,
+     "competency": "lecture",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "J'habite à Curitiba.",
+       "correct": true
+      },
+      {
+       "text": "J'ai vingt ans.",
+       "correct": false
+      },
+      {
+       "text": "Je suis étudiante.",
+       "correct": false
+      },
+      {
+       "text": "Il est midi.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.questions",
+      "ch02.obj.infos"
+     ],
+     "grammar_topics": [
+      "ch02.g.quel"
+     ],
+     "position": 85
+    },
+    {
+     "code": "c2-x-quelle-nat",
+     "type": "select_article",
+     "instruction": "Escolha a forma de quel.",
+     "prompt": "___ est votre nationalité ?",
+     "explanation": "nationalité é feminino: quelle.",
+     "difficulty": 2,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Quelle",
+       "correct": true
+      },
+      {
+       "text": "Quel",
+       "correct": false
+      },
+      {
+       "text": "Quels",
+       "correct": false
+      },
+      {
+       "text": "Quelles",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.infos"
+     ],
+     "grammar_topics": [
+      "ch02.g.quel"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.identite"
+     ],
+     "position": 86
+    },
+    {
+     "code": "c2-x-interrog-ou",
+     "type": "mc_single",
+     "instruction": "Escolha a palavra interrogativa.",
+     "prompt": "— ___ est-ce que tu habites ?\n— À Lyon.",
+     "explanation": "A resposta é um lugar (À Lyon): a pergunta usa où (onde).",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Où",
+       "correct": true
+      },
+      {
+       "text": "Quand",
+       "correct": false
+      },
+      {
+       "text": "Comment",
+       "correct": false
+      },
+      {
+       "text": "Qui",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.questions"
+     ],
+     "grammar_topics": [
+      "ch02.g.quel"
+     ],
+     "position": 87
+    },
+    {
+     "code": "c2-x-interrog-pourquoi",
+     "type": "fill_blank",
+     "instruction": "Complete com a palavra interrogativa.",
+     "prompt": "— ___ est-ce que tu étudies le français ?\n— Parce que j'adore la France !",
+     "explanation": "A resposta começa com « Parce que » (porque): a pergunta é pourquoi (por quê).",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Pourquoi",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.questions"
+     ],
+     "grammar_topics": [
+      "ch02.g.quel"
+     ],
+     "position": 88
+    },
+    {
+     "code": "c2-x-poss-vos",
+     "type": "select_article",
+     "instruction": "Escolha o possessivo.",
+     "prompt": "Vous habitez avec ___ parents ?",
+     "explanation": "Dono: vous; objeto no plural (parents) → vos.",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "vos",
+       "correct": true
+      },
+      {
+       "text": "votre",
+       "correct": false,
+       "feedback": "votre é para um objeto só."
+      },
+      {
+       "text": "ses",
+       "correct": false
+      },
+      {
+       "text": "leurs",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.famille"
+     ],
+     "grammar_topics": [
+      "ch02.g.possessifs"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.famille"
+     ],
+     "position": 89
+    },
+    {
+     "code": "c2-x-poss-son",
+     "type": "fill_blank",
+     "instruction": "Reescreva com um possessivo.",
+     "prompt": "C'est le chat de Julie. → C'est ___ chat.",
+     "explanation": "chat é masculino: son chat (dela). O gênero da dona não importa.",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "son",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.famille"
+     ],
+     "grammar_topics": [
+      "ch02.g.possessifs"
+     ],
+     "position": 90
+    },
+    {
+     "code": "c2-x-nat-multi",
+     "type": "mc_multiple",
+     "instruction": "Marque TODAS as frases corretas.",
+     "prompt": "Quelles phrases sont correctes ?",
+     "explanation": "Corretas: espagnole, japonaise, canadienne (feminino concordado). Erradas: « italien » e « portugais » estão no masculino.",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Elle est espagnole.",
+       "correct": true
+      },
+      {
+       "text": "Elle est japonaise.",
+       "correct": true
+      },
+      {
+       "text": "Elle est canadienne.",
+       "correct": true
+      },
+      {
+       "text": "Elle est italien.",
+       "correct": false
+      },
+      {
+       "text": "Elle est portugais.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.infos"
+     ],
+     "grammar_topics": [
+      "ch02.g.adjectifs"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.pays"
+     ],
+     "position": 91
+    },
+    {
+     "code": "c2-x-trad-portugaise",
+     "type": "translate_pt_fr",
+     "instruction": "Traduza para o francês.",
+     "prompt": "Ela é portuguesa e fala francês.",
+     "explanation": "portugaise (feminino); parler → elle parle. O artigo antes da língua é opcional depois de parler.",
+     "difficulty": 4,
+     "competency": "traduction",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "comparison": "regex",
+     "answers": [
+      {
+       "text": "elle est portugaise et (elle )?parle (le )?français",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "model_answer": "Elle est portugaise et elle parle français.",
+     "objectives": [
+      "ch02.obj.infos"
+     ],
+     "grammar_topics": [
+      "ch02.g.adjectifs",
+      "ch02.g.er"
+     ],
+     "position": 92
+    },
+    {
+     "code": "c2-x-heure-match",
+     "type": "match_pairs",
+     "instruction": "Relacione os horários.",
+     "prompt": "L'heure",
+     "explanation": "et demie = e meia; et quart = e quinze; moins le quart = quinze para; midi = meio-dia; minuit = meia-noite.",
+     "difficulty": 3,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "7 h 30",
+       "match": "sept heures et demie"
+      },
+      {
+       "text": "12 h",
+       "match": "midi"
+      },
+      {
+       "text": "9 h 15",
+       "match": "neuf heures et quart"
+      },
+      {
+       "text": "10 h 45",
+       "match": "onze heures moins le quart"
+      },
+      {
+       "text": "0 h",
+       "match": "minuit"
+      }
+     ],
+     "objectives": [
+      "ch02.obj.heure"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.heure"
+     ],
+     "position": 93
+    },
+    {
+     "code": "c2-x-cousine",
+     "type": "vocabulary_review",
+     "instruction": "Complete com uma palavra.",
+     "prompt": "La fille de ma tante, c'est ma ___.",
+     "explanation": "A filha da tia é a prima: la cousine.",
+     "difficulty": 3,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "cousine",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.famille"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.famille"
+     ],
+     "translation_pt": "A filha da minha tia é a minha ___.",
+     "position": 94
+    },
+    {
+     "code": "c2-x-trad-sport",
+     "type": "translate_fr_pt",
+     "instruction": "Traduza para o português.",
+     "prompt": "Mon frère n'aime pas le sport.",
+     "explanation": "ne… pas = não; aimer le sport = gostar de esporte (sem artigo em português).",
+     "difficulty": 3,
+     "competency": "traduction",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "comparison": "regex",
+     "accent_insensitive": true,
+     "answers": [
+      {
+       "text": "(o )?meu irmão não gosta (de|do) esportes?",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "model_answer": "Meu irmão não gosta de esporte.",
+     "objectives": [
+      "ch02.obj.naime"
+     ],
+     "grammar_topics": [
+      "ch02.g.negation"
+     ],
+     "position": 95
+    },
+    {
+     "code": "c2-x-ecrit-questions",
+     "type": "guided_writing",
+     "instruction": "Escreva 4 perguntas.",
+     "prompt": "Vous rencontrez un nouveau collègue. Écrivez quatre questions pour mieux le connaître.",
+     "explanation": "Varie as estruturas: est-ce que, entonação, quel/quelle e palavras como où ou comment.",
+     "difficulty": 5,
+     "competency": "ecriture",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "model_answer": "Tu t'appelles comment ?\nTu as quel âge ?\nEst-ce que tu habites à Paris ?\nQuelle est ta nationalité ?\nTu aimes la musique ?",
+     "criteria": [
+      "Escrevi pelo menos uma pergunta com est-ce que (ou est-ce qu').",
+      "Usei quel/quelle com a concordância certa.",
+      "Usei uma palavra interrogativa (où, quand, comment…).",
+      "Todas as perguntas terminam com ponto de interrogação."
+     ],
+     "objectives": [
+      "ch02.obj.questions"
+     ],
+     "grammar_topics": [
+      "ch02.g.questions",
+      "ch02.g.quel"
+     ],
+     "translation_pt": "Você conhece um colega novo. Escreva quatro perguntas para conhecê-lo melhor.",
+     "position": 96
+    },
+    {
+     "code": "c2-p4-kenji",
+     "type": "text_interpretation",
+     "instruction": "Leia o diálogo « Au café du campus ».",
+     "prompt": "Kenji est…",
+     "explanation": "« Je suis japonais, d'Osaka. »",
+     "difficulty": 1,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.cafe-campus",
+     "reading_skill": "character",
+     "evidence": "Je m'appelle Kenji. Je suis japonais, d'Osaka.",
+     "choices": [
+      {
+       "text": "japonais.",
+       "correct": true
+      },
+      {
+       "text": "italien.",
+       "correct": false
+      },
+      {
+       "text": "français.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.infos"
+     ],
+     "position": 97
+    },
+    {
+     "code": "c2-p4-nina-etudie",
+     "type": "text_interpretation",
+     "instruction": "Leia o diálogo e responda com uma palavra (com artigo).",
+     "prompt": "Nina étudie quoi ?",
+     "explanation": "« Moi, j'étudie la musique. »",
+     "difficulty": 2,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.cafe-campus",
+     "interaction": "text",
+     "reading_skill": "explicit",
+     "evidence": "Moi, j'étudie la musique.",
+     "answers": [
+      {
+       "text": "la musique",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "musique",
+       "blank": 0,
+       "primary": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.loisirs"
+     ],
+     "position": 98
+    },
+    {
+     "code": "c2-p4-chante-tf",
+     "type": "true_false",
+     "instruction": "Leia o diálogo « Au café du campus ».",
+     "prompt": "Kenji chante bien.",
+     "explanation": "Falso: « je ne chante pas bien ».",
+     "difficulty": 2,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.cafe-campus",
+     "reading_skill": "true_false",
+     "evidence": "Mais je ne chante pas bien…",
+     "answer": false,
+     "objectives": [
+      "ch02.obj.naime"
+     ],
+     "position": 99
+    },
+    {
+     "code": "c2-p4-ages",
+     "type": "text_interpretation",
+     "instruction": "Relacione cada pessoa à informação certa.",
+     "prompt": "Nina et Kenji",
+     "explanation": "Kenji tem 21 anos e estuda design; Nina tem 23 anos e estuda música.",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.cafe-campus",
+     "interaction": "match",
+     "reading_skill": "relate",
+     "evidence": "J'ai vingt et un ans. Et toi ? — Vingt-trois. / J'étudie le design. / j'étudie la musique.",
+     "choices": [
+      {
+       "text": "Kenji",
+       "match": "21 ans, design"
+      },
+      {
+       "text": "Nina",
+       "match": "23 ans, musique"
+      }
+     ],
+     "objectives": [
+      "ch02.obj.age"
+     ],
+     "position": 100
+    },
+    {
+     "code": "c2-p4-heure",
+     "type": "text_interpretation",
+     "instruction": "Leia o diálogo « Au café du campus ».",
+     "prompt": "Le cours de Nina commence à…",
+     "explanation": "« Mon cours commence à deux heures et quart » = 14h15.",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.cafe-campus",
+     "reading_skill": "time",
+     "evidence": "Mon cours commence à deux heures et quart.",
+     "choices": [
+      {
+       "text": "14 h 15",
+       "correct": true
+      },
+      {
+       "text": "14 h",
+       "correct": false
+      },
+      {
+       "text": "14 h 45",
+       "correct": false
+      },
+      {
+       "text": "12 h 15",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.heure"
+     ],
+     "position": 101
+    },
+    {
+     "code": "c2-p4-pourquoi",
+     "type": "text_interpretation",
+     "instruction": "Leia o diálogo « Au café du campus ».",
+     "prompt": "Pourquoi Nina dit « À bientôt » ?",
+     "explanation": "Já são duas horas e a aula dela começa às duas e quinze: ela precisa ir.",
+     "difficulty": 4,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.cafe-campus",
+     "reading_skill": "inference",
+     "evidence": "Oh, il est déjà deux heures ! Mon cours commence à deux heures et quart.",
+     "choices": [
+      {
+       "text": "Parce que son cours commence bientôt.",
+       "correct": true
+      },
+      {
+       "text": "Parce qu'elle n'aime pas Kenji.",
+       "correct": false
+      },
+      {
+       "text": "Parce que le café est fermé.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.heure"
+     ],
+     "position": 102
+    },
+    {
+     "code": "c2-p4-instruments",
+     "type": "text_interpretation",
+     "instruction": "Leia o diálogo. Marque TUDO o que Nina toca.",
+     "prompt": "Nina joue…",
+     "explanation": "« Je joue du piano et de la guitare. »",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.cafe-campus",
+     "interaction": "multiple",
+     "reading_skill": "explicit",
+     "evidence": "Je joue du piano et de la guitare.",
+     "choices": [
+      {
+       "text": "du piano",
+       "correct": true
+      },
+      {
+       "text": "de la guitare",
+       "correct": true
+      },
+      {
+       "text": "du violon",
+       "correct": false
+      },
+      {
+       "text": "au basket",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.loisirs"
+     ],
+     "position": 103
     }
    ]
   }

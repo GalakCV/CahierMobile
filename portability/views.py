@@ -75,8 +75,9 @@ def import_view(request):
             messages.error(request, "A simulação expirou. Envie o arquivo novamente.")
             return redirect("dados:import")
         data = json.loads(path.read_text(encoding="utf-8"))
-        update = request.POST.get("update_existing") == "1"
-        rep = importer.run_import(data, update_existing=update)
+        update = request.POST.get("existing") == "update"
+        skip = request.POST.get("existing") == "skip"
+        rep = importer.run_import(data, update_existing=update, skip_existing=skip)
         filename = request.POST.get("filename", "arquivo.json")[:200]
         ImportLog.objects.create(filename=filename, update_existing=update, report=rep.as_dict(),
                                  status=ImportLog.Status.APPLIED if rep.applied else ImportLog.Status.FAILED)
@@ -92,7 +93,8 @@ def import_view(request):
 
     if request.method == "POST":
         upload = request.FILES.get("file")
-        update = request.POST.get("update_existing") == "1"
+        existing = request.POST.get("existing", "refuse")
+        update, skip = existing == "update", existing == "skip"
         if upload is None:
             ctx["error"] = "Selecione um arquivo .json."
         elif not upload.name.lower().endswith(".json"):
@@ -105,10 +107,10 @@ def import_view(request):
             except ValueError as exc:
                 ctx["error"] = str(exc)
             else:
-                rep = importer.run_import(data, update_existing=update, dry_run=True)
+                rep = importer.run_import(data, update_existing=update, skip_existing=skip, dry_run=True)
                 ImportLog.objects.create(filename=upload.name[:200], update_existing=update, report=rep.as_dict(),
                                          status=ImportLog.Status.DRY_RUN if rep.ok else ImportLog.Status.FAILED)
-                ctx.update({"report": rep, "filename": upload.name, "update_existing": update})
+                ctx.update({"report": rep, "filename": upload.name, "existing": existing})
                 if rep.ok:
                     token = secrets.token_hex(16)
                     (_pending_dir() / f"{token}.json").write_text(json.dumps(data, ensure_ascii=False),

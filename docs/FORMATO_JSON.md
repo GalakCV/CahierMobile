@@ -8,9 +8,9 @@ Os arquivos de `seed/` são exemplos completos e reais deste formato.
   cada questão. Todos os erros encontrados aparecem no relatório.
 - A gravação acontece numa **única transação**: qualquer erro crítico desfaz tudo.
 - Pela interface, primeiro há uma **simulação** (nada é gravado); só depois da confirmação os dados entram.
-- **Duplicações**: códigos repetidos dentro do arquivo são recusados. Códigos que já existem no banco são
-  recusados, a menos que se marque *atualizar existentes* (`--update`), o que gera nova versão das questões
-  alteradas. Fontes, competências, curso e capítulos já existentes são reaproveitados — assim dá para
+- **Duplicações**: códigos repetidos dentro do arquivo são recusados. Para códigos que já existem no banco
+  há três opções: *recusar* (padrão), *manter os existentes e acrescentar só os novos* (`--skip-existing`,
+  usado pelo `seed_content`) ou *substituir* (`--update`), que gera nova versão das questões alteradas. Fontes, competências, curso e capítulos já existentes são reaproveitados — assim dá para
   acrescentar questões a um capítulo existente.
 - Códigos: letras minúsculas, números, `.`, `-` e `_`.
 - Campos desconhecidos geram aviso e são ignorados.

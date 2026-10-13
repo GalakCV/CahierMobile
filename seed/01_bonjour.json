@@ -543,6 +543,45 @@
        "gender": "m"
       }
      ]
+    },
+    {
+     "code": "ch01.v.frases-aula",
+     "title": "Frases úteis na aula",
+     "position": 5,
+     "items": [
+      {
+       "fr": "Je ne comprends pas.",
+       "pt": "Não entendo."
+      },
+      {
+       "fr": "Comment dit-on « caneta » en français ?",
+       "pt": "Como se diz « caneta » em francês?"
+      },
+      {
+       "fr": "Qu'est-ce que ça veut dire ?",
+       "pt": "O que isso quer dizer?"
+      },
+      {
+       "fr": "Comment ça s'écrit ?",
+       "pt": "Como se escreve?"
+      },
+      {
+       "fr": "Pardon ?",
+       "pt": "Como? / Desculpe?"
+      },
+      {
+       "fr": "Je ne sais pas.",
+       "pt": "Não sei."
+      },
+      {
+       "fr": "Ouvrez vos livres, page douze.",
+       "pt": "Abram os livros na página doze."
+      },
+      {
+       "fr": "Fermez la porte, s'il vous plaît.",
+       "pt": "Fechem a porta, por favor."
+      }
+     ]
     }
    ],
    "passages": [
@@ -644,6 +683,56 @@
      "origin": "original",
      "review_status": "reviewed",
      "position": 2
+    },
+    {
+     "code": "ch01.p.message-prof",
+     "title": "Message de la professeure",
+     "text_type": "email",
+     "difficulty": 3,
+     "body": "Objet : Cours de français A1 — informations\n\nBonjour à tous,\n\nJe m'appelle Sophie Leroy. Je suis la professeure de français du niveau A1. Le cours est le mardi et le jeudi, dans la salle 7.\n\nSur la table de chaque étudiant, il y a un livre, un cahier et un dictionnaire. Le premier cours, c'est le mardi 3 septembre.\n\nPour une question, voici mon adresse : s.leroy@exemple.fr\n\nÀ mardi !\nSophie Leroy",
+     "translation_pt": "Assunto: Curso de francês A1 — informações\n\nOlá a todos,\n\nEu me chamo Sophie Leroy. Sou a professora de francês do nível A1. A aula é na terça e na quinta, na sala 7.\n\nNa mesa de cada estudante há um livro, um caderno e um dicionário. A primeira aula é na terça-feira, 3 de setembro.\n\nPara alguma dúvida, este é o meu endereço: s.leroy@exemple.fr\n\nAté terça!\nSophie Leroy",
+     "key_vocabulary": [
+      {
+       "fr": "Objet",
+       "pt": "Assunto (de um e-mail)"
+      },
+      {
+       "fr": "chaque",
+       "pt": "cada"
+      },
+      {
+       "fr": "un dictionnaire",
+       "pt": "um dicionário"
+      },
+      {
+       "fr": "le premier cours",
+       "pt": "a primeira aula"
+      }
+     ],
+     "useful_structures": [
+      {
+       "fr": "Sur la table, il y a…",
+       "pt": "dizer o que há num lugar"
+      },
+      {
+       "fr": "le mardi 3 septembre",
+       "pt": "data com dia da semana"
+      }
+     ],
+     "grammar_topics": [
+      "ch01.g.ilya",
+      "ch01.g.indefinis",
+      "ch01.g.etre"
+     ],
+     "vocabulary_topics": [
+      "ch01.v.classe",
+      "ch01.v.date"
+     ],
+     "author": "Cahier (texto original)",
+     "source": "cahier-original",
+     "origin": "original",
+     "review_status": "reviewed",
+     "position": 3
     }
    ],
    "exercises": [
@@ -3114,6 +3203,922 @@
      ],
      "translation_pt": "Apresente um(a) colega de turma: o nome, a cidade de origem e uma informação sobre a turma.",
      "position": 68
+    },
+    {
+     "code": "c1-x-aula-match",
+     "type": "match_pairs",
+     "instruction": "Relacione as frases úteis na aula.",
+     "prompt": "En classe",
+     "explanation": "Frases para pedir ajuda em francês, sem recorrer ao português.",
+     "difficulty": 1,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Je ne comprends pas.",
+       "match": "Não entendo."
+      },
+      {
+       "text": "Comment dit-on… ?",
+       "match": "Como se diz…?"
+      },
+      {
+       "text": "Qu'est-ce que ça veut dire ?",
+       "match": "O que isso quer dizer?"
+      },
+      {
+       "text": "Pardon ?",
+       "match": "Como? / Desculpe?"
+      },
+      {
+       "text": "Je ne sais pas.",
+       "match": "Não sei."
+      }
+     ],
+     "objectives": [
+      "ch01.obj.classe"
+     ],
+     "vocabulary_topics": [
+      "ch01.v.frases-aula"
+     ],
+     "position": 69
+    },
+    {
+     "code": "c1-x-aula-natural",
+     "type": "natural_response",
+     "instruction": "Você não sabe dizer « caneta » em francês. O que você pergunta à professora?",
+     "prompt": "Vous dites :",
+     "explanation": "« Comment dit-on… en français ? » é a pergunta para pedir uma palavra. As outras frases não pedem a tradução.",
+     "difficulty": 3,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Comment dit-on « caneta » en français ?",
+       "correct": true
+      },
+      {
+       "text": "Comment ça va, madame ?",
+       "correct": false
+      },
+      {
+       "text": "Fermez la porte, s'il vous plaît.",
+       "correct": false
+      },
+      {
+       "text": "À bientôt, madame !",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch01.obj.classe"
+     ],
+     "vocabulary_topics": [
+      "ch01.v.frases-aula"
+     ],
+     "position": 70
+    },
+    {
+     "code": "c1-x-aula-tf",
+     "type": "true_false",
+     "instruction": "Verdadeiro ou falso?",
+     "prompt": "« Je ne comprends pas » veut dire « Não sei ».",
+     "explanation": "Falso. « Je ne comprends pas » = não entendo. « Não sei » é « Je ne sais pas ».",
+     "difficulty": 2,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answer": false,
+     "objectives": [
+      "ch01.obj.classe"
+     ],
+     "vocabulary_topics": [
+      "ch01.v.frases-aula"
+     ],
+     "translation_pt": "« Je ne comprends pas » quer dizer « Não sei ».",
+     "position": 71
+    },
+    {
+     "code": "c1-x-tuvous",
+     "type": "mc_single",
+     "instruction": "Você fala com Léo, um colega de turma da sua idade. Qual pergunta é a mais adequada?",
+     "prompt": "Choisissez la question.",
+     "explanation": "Entre colegas usa-se tu, e com tu o verbo être é es: « Tu es de Lyon ? ». « Vous êtes » seria formal demais aqui; « Tu est » tem erro de conjugação.",
+     "difficulty": 2,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Tu es de Lyon, Léo ?",
+       "correct": true
+      },
+      {
+       "text": "Vous êtes de Lyon, Léo ?",
+       "correct": false,
+       "feedback": "Formal; entre colegas usa-se tu."
+      },
+      {
+       "text": "Tu est de Lyon, Léo ?",
+       "correct": false,
+       "feedback": "Com tu, a forma é es."
+      },
+      {
+       "text": "Il est de Lyon, Léo ?",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch01.obj.saluer",
+      "ch01.obj.origine"
+     ],
+     "grammar_topics": [
+      "ch01.g.pronoms",
+      "ch01.g.etre"
+     ],
+     "position": 72
+    },
+    {
+     "code": "c1-x-pron-nous",
+     "type": "select_pronoun",
+     "instruction": "Escolha o pronome.",
+     "prompt": "Paulo et moi, ___ sommes de Recife.",
+     "explanation": "« Paulo et moi » = eu + outra pessoa = nous. O verbo sommes confirma.",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "nous",
+       "correct": true
+      },
+      {
+       "text": "vous",
+       "correct": false
+      },
+      {
+       "text": "ils",
+       "correct": false
+      },
+      {
+       "text": "on",
+       "correct": false,
+       "feedback": "on conjuga como il: on est."
+      }
+     ],
+     "objectives": [
+      "ch01.obj.origine"
+     ],
+     "grammar_topics": [
+      "ch01.g.pronoms",
+      "ch01.g.etre"
+     ],
+     "translation_pt": "Paulo e eu, ___ somos de Recife.",
+     "position": 73
+    },
+    {
+     "code": "c1-x-etre-sont",
+     "type": "conjugation",
+     "instruction": "Conjugue o verbo être.",
+     "prompt": "Les étudiants ___ dans la salle 12.",
+     "explanation": "les étudiants = ils → ils sont.",
+     "difficulty": 2,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "sont",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch01.obj.classe"
+     ],
+     "grammar_topics": [
+      "ch01.g.etre"
+     ],
+     "position": 74
+    },
+    {
+     "code": "c1-x-vous-tf",
+     "type": "true_false",
+     "instruction": "Verdadeiro ou falso?",
+     "prompt": "« Vous êtes » peut être pour une personne ou pour plusieurs personnes.",
+     "explanation": "Verdadeiro: vous é o tratamento formal para uma pessoa (o senhor, a senhora) e também o plural (vocês).",
+     "difficulty": 2,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answer": true,
+     "objectives": [
+      "ch01.obj.saluer"
+     ],
+     "grammar_topics": [
+      "ch01.g.pronoms"
+     ],
+     "translation_pt": "« Vous êtes » pode ser para uma pessoa ou para várias pessoas.",
+     "position": 75
+    },
+    {
+     "code": "c1-x-def-cahier",
+     "type": "select_article",
+     "instruction": "Escolha o artigo definido.",
+     "prompt": "Voilà ___ cahier de Paulo.",
+     "explanation": "cahier é masculino e começa com consoante: le cahier.",
+     "difficulty": 2,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "le",
+       "correct": true
+      },
+      {
+       "text": "la",
+       "correct": false
+      },
+      {
+       "text": "l'",
+       "correct": false
+      },
+      {
+       "text": "les",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch01.obj.classe"
+     ],
+     "grammar_topics": [
+      "ch01.g.definis"
+     ],
+     "vocabulary_topics": [
+      "ch01.v.classe"
+     ],
+     "position": 76
+    },
+    {
+     "code": "c1-x-def-pluriel",
+     "type": "transform_plural",
+     "instruction": "Passe para o plural.",
+     "prompt": "le livre et l'ordinateur",
+     "explanation": "le e l' viram les no plural, e os substantivos ganham -s: les livres et les ordinateurs.",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "comparison": "normalized",
+     "answers": [
+      {
+       "text": "les livres et les ordinateurs",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch01.obj.classe"
+     ],
+     "grammar_topics": [
+      "ch01.g.definis",
+      "ch01.g.genre"
+     ],
+     "vocabulary_topics": [
+      "ch01.v.classe"
+     ],
+     "position": 77
+    },
+    {
+     "code": "c1-x-articles-multi",
+     "type": "mc_multiple",
+     "instruction": "Marque TODAS as frases corretas.",
+     "prompt": "Quelles phrases sont correctes ?",
+     "explanation": "Corretas: une table, l'ordinateur (elisão), des chaises. Erradas: « le chaise » (chaise é feminino) e « un fenêtre » (fenêtre é feminino).",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Il y a une table.",
+       "correct": true
+      },
+      {
+       "text": "Voici l'ordinateur.",
+       "correct": true
+      },
+      {
+       "text": "Il y a des chaises.",
+       "correct": true
+      },
+      {
+       "text": "Voilà le chaise.",
+       "correct": false
+      },
+      {
+       "text": "Il y a un fenêtre.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch01.obj.classe"
+     ],
+     "grammar_topics": [
+      "ch01.g.definis",
+      "ch01.g.indefinis",
+      "ch01.g.genre"
+     ],
+     "vocabulary_topics": [
+      "ch01.v.classe"
+     ],
+     "position": 78
+    },
+    {
+     "code": "c1-x-genre-voici",
+     "type": "transform_gender",
+     "instruction": "Passe a frase para o feminino.",
+     "prompt": "Voici un étudiant de Nantes.",
+     "explanation": "un étudiant → une étudiante. O resto não muda.",
+     "difficulty": 2,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Voici une étudiante de Nantes.",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch01.obj.presenter"
+     ],
+     "grammar_topics": [
+      "ch01.g.genre"
+     ],
+     "position": 79
+    },
+    {
+     "code": "c1-x-erreur-pluriel",
+     "type": "identify_error",
+     "instruction": "Encontre a parte errada.",
+     "prompt": "Il y a des ordinateur dans la salle.",
+     "explanation": "Depois de des, o substantivo vai para o plural: des ordinateurs.",
+     "difficulty": 3,
+     "competency": "orthographe",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Il y a",
+       "correct": false
+      },
+      {
+       "text": "des ordinateur",
+       "correct": true
+      },
+      {
+       "text": "dans la salle",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch01.obj.classe"
+     ],
+     "grammar_topics": [
+      "ch01.g.indefinis",
+      "ch01.g.genre"
+     ],
+     "position": 80
+    },
+    {
+     "code": "c1-x-corrige-sont",
+     "type": "correct_sentence",
+     "instruction": "Corrija a frase.",
+     "prompt": "Le stylo et le cahier est sur la table.",
+     "explanation": "Dois sujetos (o stylo E o cahier) = plural: « sont ».",
+     "difficulty": 4,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Le stylo et le cahier sont sur la table.",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch01.obj.classe"
+     ],
+     "grammar_topics": [
+      "ch01.g.etre"
+     ],
+     "position": 81
+    },
+    {
+     "code": "c1-x-trad-voici",
+     "type": "translate_fr_pt",
+     "instruction": "Traduza para o português.",
+     "prompt": "Voici Paulo. Il est de Manaus.",
+     "explanation": "voici = este é / aqui está; il est de = ele é de.",
+     "difficulty": 3,
+     "competency": "traduction",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "comparison": "regex",
+     "accent_insensitive": true,
+     "answers": [
+      {
+       "text": "(este é|esse é|aqui está|eis|olha)( o)? paulo,? (ele )?é de manaus",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "model_answer": "Este é o Paulo. Ele é de Manaus.",
+     "objectives": [
+      "ch01.obj.presenter",
+      "ch01.obj.origine"
+     ],
+     "grammar_topics": [
+      "ch01.g.ilya",
+      "ch01.g.etre"
+     ],
+     "position": 82
+    },
+    {
+     "code": "c1-x-trad-bonsoir",
+     "type": "translate_pt_fr",
+     "instruction": "Traduza para o francês.",
+     "prompt": "Boa noite, senhora! Eu me chamo Ana e sou estudante.",
+     "explanation": "Ao chegar à noite: Bonsoir, madame. Depois: Je m'appelle Ana et je suis étudiante (feminino, com -e). O sujeito je não pode faltar.",
+     "difficulty": 5,
+     "competency": "traduction",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "comparison": "regex",
+     "answers": [
+      {
+       "text": "bonsoir,? madame,? je m'appelle ana,? et je suis étudiante",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "model_answer": "Bonsoir, madame ! Je m'appelle Ana et je suis étudiante.",
+     "objectives": [
+      "ch01.obj.saluer",
+      "ch01.obj.presenter"
+     ],
+     "grammar_topics": [
+      "ch01.g.etre",
+      "ch01.g.genre"
+     ],
+     "vocabulary_topics": [
+      "ch01.v.salutations"
+     ],
+     "position": 83
+    },
+    {
+     "code": "c1-x-num-ordre",
+     "type": "order_words",
+     "instruction": "Ordene os números do menor para o maior.",
+     "prompt": "Du plus petit au plus grand :",
+     "explanation": "seize (16) → vingt-six (26) → trente-deux (32) → quarante-quatre (44) → cinquante-neuf (59).",
+     "difficulty": 3,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "seize",
+       "order": 1
+      },
+      {
+       "text": "vingt-six",
+       "order": 2
+      },
+      {
+       "text": "trente-deux",
+       "order": 3
+      },
+      {
+       "text": "quarante-quatre",
+       "order": 4
+      },
+      {
+       "text": "cinquante-neuf",
+       "order": 5
+      }
+     ],
+     "objectives": [
+      "ch01.obj.nombres"
+     ],
+     "vocabulary_topics": [
+      "ch01.v.nombres"
+     ],
+     "position": 84
+    },
+    {
+     "code": "c1-x-num-47",
+     "type": "vocabulary_review",
+     "instruction": "Que número é este?",
+     "prompt": "quarante-sept",
+     "explanation": "quarante (40) + sept (7) = 47.",
+     "difficulty": 2,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "interaction": "single",
+     "choices": [
+      {
+       "text": "47",
+       "correct": true
+      },
+      {
+       "text": "57",
+       "correct": false
+      },
+      {
+       "text": "74",
+       "correct": false
+      },
+      {
+       "text": "37",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch01.obj.nombres"
+     ],
+     "vocabulary_topics": [
+      "ch01.v.nombres"
+     ],
+     "position": 85
+    },
+    {
+     "code": "c1-x-jour-veille",
+     "type": "fill_blank",
+     "instruction": "Complete com o dia da semana.",
+     "prompt": "Aujourd'hui, c'est ___. Demain, c'est mercredi.",
+     "explanation": "Se amanhã é quarta (mercredi), hoje é terça: mardi.",
+     "difficulty": 3,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "mardi",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch01.obj.date"
+     ],
+     "vocabulary_topics": [
+      "ch01.v.date"
+     ],
+     "translation_pt": "Hoje é ___. Amanhã é quarta-feira.",
+     "position": 86
+    },
+    {
+     "code": "c1-x-ordre-secretariat",
+     "type": "order_sentences",
+     "instruction": "Ordene a conversa na secretaria da escola.",
+     "prompt": "Ordene o diálogo:",
+     "explanation": "A secretária cumprimenta, o aluno responde e se apresenta, ela informa a sala e ele agradece e se despede.",
+     "difficulty": 4,
+     "competency": "lecture",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "— Bonjour, monsieur !",
+       "order": 1
+      },
+      {
+       "text": "— Bonjour, madame. Je m'appelle Lucas Martin.",
+       "order": 2
+      },
+      {
+       "text": "— Enchantée. Vous êtes dans la salle 8.",
+       "order": 3
+      },
+      {
+       "text": "— Merci, madame. Au revoir !",
+       "order": 4
+      }
+     ],
+     "objectives": [
+      "ch01.obj.presenter",
+      "ch01.obj.conge"
+     ],
+     "vocabulary_topics": [
+      "ch01.v.salutations"
+     ],
+     "position": 87
+    },
+    {
+     "code": "c1-x-dial-complete",
+     "type": "complete_dialogue",
+     "instruction": "Complete o diálogo (uma palavra ou expressão por lacuna).",
+     "prompt": "— Bonsoir ! Je ___ Clara. Et vous ?\n— Moi, ___ Antoine. Enchanté !\n— Vous êtes ___ quelle ville ?\n— Je suis ___ Lille.",
+     "explanation": "1) Je m'appelle (ou Je suis) Clara. 2) Moi, c'est Antoine. 3 e 4) Origem com de: de quelle ville ? — de Lille.",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "m'appelle",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "suis",
+       "blank": 0,
+       "primary": false
+      },
+      {
+       "text": "c'est",
+       "blank": 1,
+       "primary": true
+      },
+      {
+       "text": "de",
+       "blank": 2,
+       "primary": true
+      },
+      {
+       "text": "de",
+       "blank": 3,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch01.obj.presenter",
+      "ch01.obj.origine"
+     ],
+     "grammar_topics": [
+      "ch01.g.etre"
+     ],
+     "vocabulary_topics": [
+      "ch01.v.salutations"
+     ],
+     "position": 88
+    },
+    {
+     "code": "c1-x-ecrit-salle",
+     "type": "guided_writing",
+     "instruction": "Escreva 4 a 5 frases.",
+     "prompt": "Un nouveau camarade arrive. Décrivez la salle de classe pour lui : ce qu'il y a et combien.",
+     "explanation": "Descreva usando il y a + artigo + substantivo e números escritos por extenso. Compare com o modelo.",
+     "difficulty": 5,
+     "competency": "ecriture",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "model_answer": "Bienvenue ! Voici la salle 4. Il y a vingt-deux chaises et onze tables. Il y a un tableau blanc et un ordinateur. À bientôt !",
+     "criteria": [
+      "Usei il y a pelo menos duas vezes.",
+      "Usei artigos com o gênero correto (un/une/le/la…).",
+      "Escrevi pelo menos dois números por extenso, com hífen quando necessário.",
+      "Coloquei o -s nos plurais."
+     ],
+     "objectives": [
+      "ch01.obj.classe",
+      "ch01.obj.nombres"
+     ],
+     "grammar_topics": [
+      "ch01.g.ilya",
+      "ch01.g.indefinis"
+     ],
+     "vocabulary_topics": [
+      "ch01.v.classe",
+      "ch01.v.nombres"
+     ],
+     "translation_pt": "Um colega novo chega. Descreva a sala de aula para ele: o que há e quantos.",
+     "position": 89
+    },
+    {
+     "code": "c1-p3-auteur",
+     "type": "text_interpretation",
+     "instruction": "Leia a mensagem da professora.",
+     "prompt": "Qui écrit ce message ?",
+     "explanation": "A mensagem é assinada por Sophie Leroy, que se apresenta como professora de francês do nível A1.",
+     "difficulty": 1,
+     "competency": "interpretation",
+     "origin": "exam_inspired",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch01.p.message-prof",
+     "reading_skill": "character",
+     "adaptation_notes": "Inspirada no formato da compreensão escrita do DELF A1 (documento do cotidiano). Questão original; não é questão oficial.",
+     "evidence": "Je m'appelle Sophie Leroy. Je suis la professeure de français du niveau A1.",
+     "choices": [
+      {
+       "text": "La professeure de français.",
+       "correct": true
+      },
+      {
+       "text": "Un étudiant du niveau A1.",
+       "correct": false
+      },
+      {
+       "text": "La directrice de l'école.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch01.obj.presenter"
+     ],
+     "position": 90
+    },
+    {
+     "code": "c1-p3-jours-tf",
+     "type": "true_false",
+     "instruction": "Leia a mensagem da professora.",
+     "prompt": "Le cours est le lundi et le mercredi.",
+     "explanation": "Falso: o curso é na terça e na quinta (le mardi et le jeudi).",
+     "difficulty": 2,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch01.p.message-prof",
+     "reading_skill": "true_false",
+     "evidence": "Le cours est le mardi et le jeudi, dans la salle 7.",
+     "answer": false,
+     "objectives": [
+      "ch01.obj.date"
+     ],
+     "position": 91
+    },
+    {
+     "code": "c1-p3-table",
+     "type": "text_interpretation",
+     "instruction": "Leia a mensagem. Marque TUDO o que há na mesa de cada estudante.",
+     "prompt": "Sur la table, il y a…",
+     "explanation": "A professora lista: un livre, un cahier et un dictionnaire.",
+     "difficulty": 2,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch01.p.message-prof",
+     "interaction": "multiple",
+     "reading_skill": "explicit",
+     "evidence": "Sur la table de chaque étudiant, il y a un livre, un cahier et un dictionnaire.",
+     "choices": [
+      {
+       "text": "un livre",
+       "correct": true
+      },
+      {
+       "text": "un cahier",
+       "correct": true
+      },
+      {
+       "text": "un dictionnaire",
+       "correct": true
+      },
+      {
+       "text": "un ordinateur",
+       "correct": false
+      },
+      {
+       "text": "un stylo",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch01.obj.classe"
+     ],
+     "position": 92
+    },
+    {
+     "code": "c1-p3-date",
+     "type": "text_interpretation",
+     "instruction": "Leia a mensagem e complete com o número (em algarismos ou por extenso).",
+     "prompt": "Le premier cours, c'est le mardi ___ septembre.",
+     "explanation": "« Le premier cours, c'est le mardi 3 septembre. »",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch01.p.message-prof",
+     "interaction": "text",
+     "reading_skill": "time",
+     "evidence": "Le premier cours, c'est le mardi 3 septembre.",
+     "answers": [
+      {
+       "text": "3",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "trois",
+       "blank": 0,
+       "primary": false
+      }
+     ],
+     "objectives": [
+      "ch01.obj.date"
+     ],
+     "position": 93
+    },
+    {
+     "code": "c1-p3-objet",
+     "type": "text_interpretation",
+     "instruction": "Leia a mensagem da professora.",
+     "prompt": "Dans un e-mail, « Objet » indique…",
+     "explanation": "Em e-mails, Objet é o assunto da mensagem.",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch01.p.message-prof",
+     "reading_skill": "meaning",
+     "evidence": "Objet : Cours de français A1 — informations",
+     "choices": [
+      {
+       "text": "le sujet du message.",
+       "correct": true
+      },
+      {
+       "text": "le nom de l'étudiant.",
+       "correct": false
+      },
+      {
+       "text": "la date du cours.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch01.obj.classe"
+     ],
+     "position": 94
+    },
+    {
+     "code": "c1-p3-intention",
+     "type": "text_interpretation",
+     "instruction": "Leia a mensagem da professora.",
+     "prompt": "Ce message sert à…",
+     "explanation": "O e-mail se apresenta e dá informações práticas do curso: dias, sala, material e data de início.",
+     "difficulty": 4,
+     "competency": "interpretation",
+     "origin": "exam_inspired",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch01.p.message-prof",
+     "reading_skill": "intent",
+     "adaptation_notes": "Inspirada no formato da compreensão escrita do DELF A1 (documento do cotidiano). Questão original; não é questão oficial.",
+     "evidence": "Objet : Cours de français A1 — informations",
+     "choices": [
+      {
+       "text": "donner des informations sur le cours.",
+       "correct": true
+      },
+      {
+       "text": "inviter les étudiants à une fête.",
+       "correct": false
+      },
+      {
+       "text": "dire au revoir à la fin de l'année.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch01.obj.classe"
+     ],
+     "position": 95
     }
    ]
   }

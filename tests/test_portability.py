@@ -128,6 +128,34 @@ class ImportTests(TestCase):
         self.assertEqual(ex.versions.count(), 2)
         self.assertEqual(Exercise.objects.count(), 4)
 
+    def test_skip_existing_adds_only_new_items(self):
+        self.assertTrue(importer.run_import(minimal_package()).ok)
+        e1 = Exercise.objects.get(code="ch09-e1")
+        e1.explanation = "editada no painel"
+        e1.save()
+        data = minimal_package()
+        data["chapters"][0]["exercises"][0]["explanation"] = "versão do arquivo"
+        data["chapters"][0]["exercises"].append(
+            {"code": "ch09-e5", "type": "mc_single", "instruction": "Escolha", "prompt": "Tu ___ ici.",
+             "explanation": "tu es", "difficulty": 1, "competency": "grammaire", "origin": "original",
+             "source": "orig", "passage": "ch09.p1", "evidence": "A : Salut.",
+             "choices": [{"text": "es", "correct": True}, {"text": "est"}]})
+        rep = importer.run_import(data, skip_existing=True)
+        self.assertTrue(rep.ok, rep.errors)
+        self.assertEqual(rep.created, {"questões": 1})
+        self.assertEqual(rep.reused["questões"], 4)
+        self.assertEqual(Exercise.objects.get(code="ch09-e1").explanation, "editada no painel")
+        self.assertEqual(Exercise.objects.get(code="ch09-e5").passage.code, "ch09.p1")
+
+    def test_import_view_skip_mode(self):
+        self.assertTrue(importer.run_import(minimal_package()).ok)
+        c = Client(**LOCAL)
+        raw = json.dumps(minimal_package()).encode()
+        resp = c.post("/dados/importar/", {"file": SimpleUploadedFile("p.json", raw, "application/json"), "existing": "skip"})
+        self.assertContains(resp, "Arquivo válido")
+        resp = c.post("/dados/importar/", {"file": SimpleUploadedFile("p.json", raw, "application/json"), "existing": "refuse"})
+        self.assertContains(resp, "foi recusada")
+
     def test_rollback_on_critical_error(self):
         data = minimal_package()
         data["chapters"][0]["exercises"][3]["passage"] = "texto-inexistente"

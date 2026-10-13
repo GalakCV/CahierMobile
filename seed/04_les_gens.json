@@ -703,6 +703,67 @@
      "origin": "original",
      "review_status": "reviewed",
      "position": 2
+    },
+    {
+     "code": "ch04.p.portrait-lou",
+     "title": "Portrait : ma meilleure amie",
+     "text_type": "description",
+     "difficulty": 3,
+     "body": "Ma meilleure amie s'appelle Lou. Elle a vingt-cinq ans et elle habite à Bruxelles. Elle est photographe.\n\nLou est petite et mince. Elle a les cheveux roux et frisés et les yeux verts. Elle porte toujours des lunettes rondes.\n\nElle est très drôle et généreuse, mais un peu paresseuse le matin : elle se lève à dix heures ! Elle est plus sportive que moi : elle fait du vélo et de la natation. Moi, je préfère le cinéma.\n\nNous sommes très différentes, mais c'est une amie formidable !",
+     "translation_pt": "Minha melhor amiga se chama Lou. Ela tem vinte e cinco anos e mora em Bruxelas. Ela é fotógrafa.\n\nLou é baixinha e magra. Ela tem cabelo ruivo e cacheado e olhos verdes. Ela sempre usa óculos redondos.\n\nEla é muito engraçada e generosa, mas um pouco preguiçosa de manhã: ela se levanta às dez horas! Ela é mais esportiva do que eu: anda de bicicleta e faz natação. Eu prefiro o cinema.\n\nSomos muito diferentes, mas ela é uma amiga incrível!",
+     "key_vocabulary": [
+      {
+       "fr": "ma meilleure amie",
+       "pt": "minha melhor amiga"
+      },
+      {
+       "fr": "photographe",
+       "pt": "fotógrafo(a)"
+      },
+      {
+       "fr": "roux, rousse",
+       "pt": "ruivo(a)"
+      },
+      {
+       "fr": "toujours",
+       "pt": "sempre"
+      },
+      {
+       "fr": "formidable",
+       "pt": "incrível, ótima"
+      }
+     ],
+     "useful_structures": [
+      {
+       "fr": "Elle a les cheveux roux.",
+       "pt": "partes do corpo com artigo"
+      },
+      {
+       "fr": "plus sportive que moi",
+       "pt": "comparativo"
+      },
+      {
+       "fr": "c'est une amie formidable",
+       "pt": "c'est + determinante + nome"
+      }
+     ],
+     "grammar_topics": [
+      "ch04.g.article-corps",
+      "ch04.g.adjectifs-irreguliers",
+      "ch04.g.comparatif",
+      "ch04.g.cest-ilest",
+      "ch04.g.pronominaux"
+     ],
+     "vocabulary_topics": [
+      "ch04.v.physique",
+      "ch04.v.caractere",
+      "ch04.v.couleurs"
+     ],
+     "author": "Cahier (texto original)",
+     "source": "cahier-original",
+     "origin": "original",
+     "review_status": "reviewed",
+     "position": 3
     }
    ],
    "exercises": [
@@ -2920,6 +2981,812 @@
      ],
      "translation_pt": "Conte a sua manhã típica usando verbos pronominais.",
      "position": 64
+    },
+    {
+     "code": "c4-x-couleurs-match",
+     "type": "match_pairs",
+     "instruction": "Relacione as cores.",
+     "prompt": "Les couleurs",
+     "explanation": "rouge = vermelho, jaune = amarelo, gris = cinza, blanc = branco, noir = preto.",
+     "difficulty": 1,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "rouge",
+       "match": "vermelho"
+      },
+      {
+       "text": "jaune",
+       "match": "amarelo"
+      },
+      {
+       "text": "gris",
+       "match": "cinza"
+      },
+      {
+       "text": "blanc",
+       "match": "branco"
+      },
+      {
+       "text": "noir",
+       "match": "preto"
+      }
+     ],
+     "objectives": [
+      "ch04.obj.couleurs"
+     ],
+     "vocabulary_topics": [
+      "ch04.v.couleurs"
+     ],
+     "position": 65
+    },
+    {
+     "code": "c4-x-noires",
+     "type": "fill_blank",
+     "instruction": "Escreva a cor no feminino plural.",
+     "prompt": "Des chemises ___ (noir).",
+     "explanation": "chemises é feminino plural: noir + e + s = noires.",
+     "difficulty": 3,
+     "competency": "orthographe",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "noires",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch04.obj.couleurs"
+     ],
+     "grammar_topics": [
+      "ch04.g.adjectifs-irreguliers"
+     ],
+     "vocabulary_topics": [
+      "ch04.v.couleurs"
+     ],
+     "position": 66
+    },
+    {
+     "code": "c4-x-bleus",
+     "type": "fill_blank",
+     "instruction": "Escreva a cor no plural.",
+     "prompt": "Il a les yeux ___ (bleu).",
+     "explanation": "yeux é masculino plural: bleus.",
+     "difficulty": 2,
+     "competency": "orthographe",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "bleus",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch04.obj.couleurs",
+      "ch04.obj.physique"
+     ],
+     "grammar_topics": [
+      "ch04.g.article-corps",
+      "ch04.g.adjectifs-irreguliers"
+     ],
+     "vocabulary_topics": [
+      "ch04.v.couleurs"
+     ],
+     "position": 67
+    },
+    {
+     "code": "c4-x-belle",
+     "type": "transform_gender",
+     "instruction": "Passe para o feminino.",
+     "prompt": "Il est beau et sérieux.",
+     "explanation": "beau → belle; sérieux → sérieuse.",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Elle est belle et sérieuse.",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch04.obj.physique",
+      "ch04.obj.caractere"
+     ],
+     "grammar_topics": [
+      "ch04.g.adjectifs-irreguliers"
+     ],
+     "position": 68
+    },
+    {
+     "code": "c4-x-pluriel-chat",
+     "type": "transform_plural",
+     "instruction": "Passe para o plural.",
+     "prompt": "Le chat blanc est gentil.",
+     "explanation": "les chats blancs sont gentils — artigo, nome, adjetivos e verbo vão para o plural.",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Les chats blancs sont gentils.",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch04.obj.physique"
+     ],
+     "grammar_topics": [
+      "ch04.g.adjectifs-irreguliers"
+     ],
+     "position": 69
+    },
+    {
+     "code": "c4-x-bags-maison",
+     "type": "order_words",
+     "instruction": "Ordene as palavras.",
+     "prompt": "Monte a frase:",
+     "explanation": "belle (beleza) vem antes do nome; blanche (cor) vem depois.",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "C'est",
+       "order": 1
+      },
+      {
+       "text": "une",
+       "order": 2
+      },
+      {
+       "text": "belle",
+       "order": 3
+      },
+      {
+       "text": "maison",
+       "order": 4
+      },
+      {
+       "text": "blanche.",
+       "order": 5
+      }
+     ],
+     "objectives": [
+      "ch04.obj.physique"
+     ],
+     "grammar_topics": [
+      "ch04.g.adjectifs-avant",
+      "ch04.g.adjectifs-irreguliers"
+     ],
+     "position": 70
+    },
+    {
+     "code": "c4-x-nouvel",
+     "type": "select_verb_form",
+     "instruction": "Escolha a forma correta do adjetivo.",
+     "prompt": "Voici mon ___ ami, Théo.",
+     "explanation": "Antes de nome masculino começado por vogal, nouveau vira nouvel: un nouvel ami.",
+     "difficulty": 4,
+     "competency": "orthographe",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "nouvel",
+       "correct": true
+      },
+      {
+       "text": "nouveau",
+       "correct": false,
+       "feedback": "Antes de vogal: nouvel."
+      },
+      {
+       "text": "nouvelle",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch04.obj.presenter"
+     ],
+     "grammar_topics": [
+      "ch04.g.adjectifs-avant"
+     ],
+     "position": 71
+    },
+    {
+     "code": "c4-x-cest-ville",
+     "type": "mc_single",
+     "instruction": "Complete.",
+     "prompt": "Paris ? ___ une belle ville.",
+     "explanation": "une + nome → c'est.",
+     "difficulty": 2,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "C'est",
+       "correct": true
+      },
+      {
+       "text": "Elle est",
+       "correct": false
+      },
+      {
+       "text": "Il est",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch04.obj.presenter"
+     ],
+     "grammar_topics": [
+      "ch04.g.cest-ilest"
+     ],
+     "position": 72
+    },
+    {
+     "code": "c4-x-cest-marc",
+     "type": "fill_blank",
+     "instruction": "Complete com c'est ou il est.",
+     "prompt": "Voici Marc. ___ professeur. ___ un professeur très gentil.",
+     "explanation": "Profissão sem artigo → Il est professeur. Com artigo (un professeur…) → C'est.",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Il est",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "C'est",
+       "blank": 1,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch04.obj.presenter"
+     ],
+     "grammar_topics": [
+      "ch04.g.cest-ilest"
+     ],
+     "position": 73
+    },
+    {
+     "code": "c4-x-prono-tu",
+     "type": "conjugation",
+     "instruction": "Conjugue o verbo pronominal (pronome + verbo).",
+     "prompt": "Tu ___ (se laver) le matin ?",
+     "explanation": "tu te laves — o pronome te repete o sujeito.",
+     "difficulty": 2,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "te laves",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch04.obj.routine"
+     ],
+     "grammar_topics": [
+      "ch04.g.pronominaux"
+     ],
+     "vocabulary_topics": [
+      "ch04.v.routine"
+     ],
+     "position": 74
+    },
+    {
+     "code": "c4-x-prono-se",
+     "type": "select_pronoun",
+     "instruction": "Escolha o pronome reflexivo.",
+     "prompt": "Elles ___ couchent tard le samedi.",
+     "explanation": "elles → se: elles se couchent.",
+     "difficulty": 2,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "se",
+       "correct": true
+      },
+      {
+       "text": "nous",
+       "correct": false
+      },
+      {
+       "text": "vous",
+       "correct": false
+      },
+      {
+       "text": "me",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch04.obj.routine"
+     ],
+     "grammar_topics": [
+      "ch04.g.pronominaux"
+     ],
+     "position": 75
+    },
+    {
+     "code": "c4-x-soir-ordre",
+     "type": "order_sentences",
+     "instruction": "Ordene a noite de Paula.",
+     "prompt": "Ordene as frases:",
+     "explanation": "Jantar → escovar os dentes → ver um filme → deitar-se, guiado por d'abord, ensuite, puis, enfin.",
+     "difficulty": 3,
+     "competency": "lecture",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "D'abord, je dîne à huit heures.",
+       "order": 1
+      },
+      {
+       "text": "Ensuite, je me brosse les dents.",
+       "order": 2
+      },
+      {
+       "text": "Puis, je regarde un film.",
+       "order": 3
+      },
+      {
+       "text": "Enfin, je me couche à onze heures.",
+       "order": 4
+      }
+     ],
+     "objectives": [
+      "ch04.obj.routine"
+     ],
+     "grammar_topics": [
+      "ch04.g.pronominaux"
+     ],
+     "vocabulary_topics": [
+      "ch04.v.routine"
+     ],
+     "position": 76
+    },
+    {
+     "code": "c4-x-comp-train",
+     "type": "fill_blank",
+     "instruction": "Complete o comparativo (mais… que).",
+     "prompt": "Le train est ___ rapide ___ la voiture.",
+     "explanation": "plus + adjetivo + que.",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "plus",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "que",
+       "blank": 1,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch04.obj.comparer"
+     ],
+     "grammar_topics": [
+      "ch04.g.comparatif"
+     ],
+     "position": 77
+    },
+    {
+     "code": "c4-x-comp-ana",
+     "type": "mc_single",
+     "instruction": "Ana mede 1,60 m e Bia, 1,70 m. Qual frase está correta?",
+     "prompt": "Comparez Ana et Bia.",
+     "explanation": "Ana é mais baixa: « Ana est moins grande que Bia » — grande no feminino, concordando com Ana.",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Ana est moins grande que Bia.",
+       "correct": true
+      },
+      {
+       "text": "Ana est plus grande que Bia.",
+       "correct": false
+      },
+      {
+       "text": "Ana est aussi grande que Bia.",
+       "correct": false
+      },
+      {
+       "text": "Ana est moins grand que Bia.",
+       "correct": false,
+       "feedback": "O adjetivo concorda com Ana: grande."
+      }
+     ],
+     "objectives": [
+      "ch04.obj.comparer"
+     ],
+     "grammar_topics": [
+      "ch04.g.comparatif"
+     ],
+     "position": 78
+    },
+    {
+     "code": "c4-x-natural-comment",
+     "type": "natural_response",
+     "instruction": "Escolha a resposta mais natural.",
+     "prompt": "— Ton frère est comment ?",
+     "explanation": "« Il est comment ? » pede uma descrição: Il est grand et très sympa.",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Il est grand et très sympa.",
+       "correct": true
+      },
+      {
+       "text": "C'est grand.",
+       "correct": false
+      },
+      {
+       "text": "Il est un professeur.",
+       "correct": false
+      },
+      {
+       "text": "Il a les yeux.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch04.obj.physique",
+      "ch04.obj.caractere"
+     ],
+     "grammar_topics": [
+      "ch04.g.cest-ilest"
+     ],
+     "position": 79
+    },
+    {
+     "code": "c4-x-trad-cheveux",
+     "type": "translate_fr_pt",
+     "instruction": "Traduza para o português.",
+     "prompt": "Ma sœur a les cheveux longs et blonds.",
+     "explanation": "avoir les cheveux… = ter o cabelo…; em português o cabelo costuma ficar no singular.",
+     "difficulty": 3,
+     "competency": "traduction",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "comparison": "regex",
+     "accent_insensitive": true,
+     "answers": [
+      {
+       "text": "minha irmã tem (o )?cabelo (comprido|longo) e loiro|minha irmã tem (os )?cabelos (compridos|longos) e loiros",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "model_answer": "Minha irmã tem o cabelo comprido e loiro.",
+     "objectives": [
+      "ch04.obj.physique"
+     ],
+     "grammar_topics": [
+      "ch04.g.article-corps"
+     ],
+     "position": 80
+    },
+    {
+     "code": "c4-x-trad-serieux",
+     "type": "translate_pt_fr",
+     "instruction": "Traduza para o francês.",
+     "prompt": "Meu pai é mais sério do que a minha mãe.",
+     "explanation": "plus + adjetivo + que: « Mon père est plus sérieux que ma mère. »",
+     "difficulty": 5,
+     "competency": "traduction",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Mon père est plus sérieux que ma mère.",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch04.obj.comparer"
+     ],
+     "grammar_topics": [
+      "ch04.g.comparatif",
+      "ch04.g.adjectifs-irreguliers"
+     ],
+     "position": 81
+    },
+    {
+     "code": "c4-x-erreur-sportif",
+     "type": "identify_error",
+     "instruction": "Encontre a parte errada.",
+     "prompt": "C'est une fille sportif et gentille.",
+     "explanation": "fille é feminino: sportive.",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "C'est une fille",
+       "correct": false
+      },
+      {
+       "text": "sportif",
+       "correct": true
+      },
+      {
+       "text": "et gentille",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch04.obj.caractere"
+     ],
+     "grammar_topics": [
+      "ch04.g.adjectifs-irreguliers"
+     ],
+     "position": 82
+    },
+    {
+     "code": "c4-x-ecrit-coloc",
+     "type": "guided_writing",
+     "instruction": "Escreva um anúncio curto (5 a 6 frases).",
+     "prompt": "Vous cherchez un(e) colocataire. Décrivez-vous et décrivez la personne idéale.",
+     "explanation": "Descreva-se (físico e caráter), conte sua rotina com um verbo pronominal e diga como é a pessoa que procura.",
+     "difficulty": 5,
+     "competency": "ecriture",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "model_answer": "Bonjour ! Je m'appelle Diego, j'ai vingt-huit ans. Je suis grand et brun, j'ai les yeux noirs. Je suis calme et travailleur. Je me lève tôt et je me couche tôt. Je cherche un colocataire sympa, propre et pas trop bavard.",
+     "criteria": [
+      "Descrevi meu físico com avoir + les… e/ou être + adjetivos.",
+      "Usei pelo menos três adjetivos com a concordância certa.",
+      "Usei um verbo pronominal (je me lève, je me couche…).",
+      "Descrevi a pessoa procurada."
+     ],
+     "objectives": [
+      "ch04.obj.physique",
+      "ch04.obj.caractere",
+      "ch04.obj.routine"
+     ],
+     "grammar_topics": [
+      "ch04.g.article-corps",
+      "ch04.g.adjectifs-irreguliers",
+      "ch04.g.pronominaux"
+     ],
+     "translation_pt": "Você procura um(a) colega de apartamento. Descreva-se e descreva a pessoa ideal.",
+     "position": 83
+    },
+    {
+     "code": "c4-p3-cheveux",
+     "type": "text_interpretation",
+     "instruction": "Leia o retrato de Lou.",
+     "prompt": "Lou a les cheveux…",
+     "explanation": "« Elle a les cheveux roux et frisés ».",
+     "difficulty": 1,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch04.p.portrait-lou",
+     "reading_skill": "explicit",
+     "evidence": "Elle a les cheveux roux et frisés et les yeux verts.",
+     "choices": [
+      {
+       "text": "roux et frisés.",
+       "correct": true
+      },
+      {
+       "text": "blonds et longs.",
+       "correct": false
+      },
+      {
+       "text": "noirs et courts.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch04.obj.physique"
+     ],
+     "position": 84
+    },
+    {
+     "code": "c4-p3-yeux",
+     "type": "text_interpretation",
+     "instruction": "Leia o retrato e complete com a cor.",
+     "prompt": "Lou a les yeux ___.",
+     "explanation": "« les yeux verts » (plural masculino).",
+     "difficulty": 2,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch04.p.portrait-lou",
+     "interaction": "text",
+     "reading_skill": "complete",
+     "evidence": "Elle a les cheveux roux et frisés et les yeux verts.",
+     "answers": [
+      {
+       "text": "verts",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch04.obj.couleurs"
+     ],
+     "position": 85
+    },
+    {
+     "code": "c4-p3-leve-tf",
+     "type": "true_false",
+     "instruction": "Leia o retrato de Lou.",
+     "prompt": "Lou se lève tôt le matin.",
+     "explanation": "Falso: ela se levanta às dez horas — é « un peu paresseuse le matin ».",
+     "difficulty": 2,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch04.p.portrait-lou",
+     "reading_skill": "true_false",
+     "evidence": "un peu paresseuse le matin : elle se lève à dix heures !",
+     "answer": false,
+     "objectives": [
+      "ch04.obj.routine"
+     ],
+     "position": 86
+    },
+    {
+     "code": "c4-p3-sportive",
+     "type": "text_interpretation",
+     "instruction": "Leia o retrato de Lou.",
+     "prompt": "Qui est plus sportive ?",
+     "explanation": "« Elle est plus sportive que moi » — Lou é mais esportiva do que a autora do texto.",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch04.p.portrait-lou",
+     "reading_skill": "relate",
+     "evidence": "Elle est plus sportive que moi : elle fait du vélo et de la natation.",
+     "choices": [
+      {
+       "text": "Lou.",
+       "correct": true
+      },
+      {
+       "text": "L'auteure du texte.",
+       "correct": false
+      },
+      {
+       "text": "Elles sont aussi sportives.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch04.obj.comparer"
+     ],
+     "position": 87
+    },
+    {
+     "code": "c4-p3-metier",
+     "type": "text_interpretation",
+     "instruction": "Leia o retrato e responda com uma palavra.",
+     "prompt": "Quelle est la profession de Lou ?",
+     "explanation": "« Elle est photographe. »",
+     "difficulty": 2,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch04.p.portrait-lou",
+     "interaction": "text",
+     "reading_skill": "explicit",
+     "evidence": "Elle est photographe.",
+     "answers": [
+      {
+       "text": "photographe",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "Elle est photographe.",
+       "blank": 0,
+       "primary": false
+      }
+     ],
+     "objectives": [
+      "ch04.obj.presenter"
+     ],
+     "position": 88
+    },
+    {
+     "code": "c4-p3-differentes",
+     "type": "text_interpretation",
+     "instruction": "Leia o retrato de Lou.",
+     "prompt": "Pourquoi l'auteure dit « Nous sommes très différentes » ?",
+     "explanation": "Lou faz esporte e acorda tarde; a autora prefere cinema. Mesmo diferentes, são grandes amigas.",
+     "difficulty": 5,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch04.p.portrait-lou",
+     "reading_skill": "inference",
+     "evidence": "Elle est plus sportive que moi : elle fait du vélo et de la natation. Moi, je préfère le cinéma.",
+     "choices": [
+      {
+       "text": "Parce que Lou aime le sport et l'auteure préfère le cinéma.",
+       "correct": true
+      },
+      {
+       "text": "Parce qu'elles ne sont pas amies.",
+       "correct": false
+      },
+      {
+       "text": "Parce que Lou habite à Paris.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch04.obj.caractere",
+      "ch04.obj.comparer"
+     ],
+     "position": 89
     }
    ]
   }

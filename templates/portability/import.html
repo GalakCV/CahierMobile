@@ -21,7 +21,7 @@
   {% if token %}
   <form method="post" class="actions">{% csrf_token %}
     <input type="hidden" name="token" value="{{ token }}"><input type="hidden" name="filename" value="{{ filename }}">
-    <input type="hidden" name="update_existing" value="{% if update_existing %}1{% else %}0{% endif %}">
+    <input type="hidden" name="existing" value="{{ existing }}">
     <button class="btn" type="submit">Confirmar importação</button>
     <a class="btn btn-quiet" href="{% url 'dados:import' %}">Cancelar</a>
   </form>
@@ -33,7 +33,11 @@
 <form method="post" enctype="multipart/form-data" class="form-grid" style="margin-top:1rem">
   {% csrf_token %}
   <div class="field"><label for="file">Arquivo JSON (até {{ max_mb }} MB)</label><input id="file" type="file" name="file" accept=".json,application/json" required></div>
-  <label><input type="checkbox" name="update_existing" value="1"> Atualizar itens que já existem (mesmo código). Sem esta opção, códigos repetidos são recusados para evitar duplicações acidentais.</label>
+  <fieldset class="field"><legend>Itens que já existem (mesmo código)</legend>
+    <label><input type="radio" name="existing" value="refuse" checked> Recusar a importação (evita duplicações acidentais)</label><br>
+    <label><input type="radio" name="existing" value="skip"> Manter os existentes e acrescentar só os novos</label><br>
+    <label><input type="radio" name="existing" value="update"> Substituir os existentes (as questões alteradas ganham nova versão)</label>
+  </fieldset>
   <div class="actions"><button class="btn" type="submit">Validar arquivo</button></div>
   <p class="muted">Primeiro o arquivo é validado e simulado dentro de uma transação. Só depois da sua confirmação ele é gravado — e se qualquer erro crítico aparecer, nada é alterado.</p>
 </form>

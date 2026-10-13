@@ -779,6 +779,59 @@
      "origin": "original",
      "review_status": "reviewed",
      "position": 2
+    },
+    {
+     "code": "ch03.p.meteo",
+     "title": "La météo de demain",
+     "text_type": "other",
+     "difficulty": 3,
+     "body": "LA MÉTÉO DE DEMAIN — samedi 15 mars\n\nDans le nord, à Lille, il pleut toute la journée et il fait frais : 9 degrés.\n\nÀ Paris, il y a des nuages le matin, mais l'après-midi il fait beau : 14 degrés.\n\nDans l'est, à Strasbourg, il fait froid : 4 degrés. Il neige à la montagne, dans les Vosges.\n\nDans le sud, à Marseille, il y a du soleil et du vent : 18 degrés.\n\nUn week-end idéal pour faire du vélo… à Marseille !",
+     "translation_pt": "A PREVISÃO DO TEMPO DE AMANHÃ — sábado, 15 de março\n\nNo norte, em Lille, chove o dia todo e faz frio leve: 9 graus.\n\nEm Paris, há nuvens de manhã, mas à tarde o tempo fica bom: 14 graus.\n\nNo leste, em Estrasburgo, faz frio: 4 graus. Neva na montanha, nos Vosges.\n\nNo sul, em Marselha, há sol e vento: 18 graus.\n\nUm fim de semana ideal para andar de bicicleta… em Marselha!",
+     "key_vocabulary": [
+      {
+       "fr": "la météo",
+       "pt": "a previsão do tempo"
+      },
+      {
+       "fr": "toute la journée",
+       "pt": "o dia todo"
+      },
+      {
+       "fr": "des nuages",
+       "pt": "nuvens"
+      },
+      {
+       "fr": "un degré",
+       "pt": "um grau"
+      },
+      {
+       "fr": "idéal",
+       "pt": "ideal"
+      }
+     ],
+     "useful_structures": [
+      {
+       "fr": "Dans le nord, à Lille, il pleut.",
+       "pt": "região + cidade + tempo"
+      },
+      {
+       "fr": "il y a du soleil et du vent",
+       "pt": "il y a + du"
+      }
+     ],
+     "grammar_topics": [
+      "ch03.g.expressions-faire",
+      "ch03.g.prepositions-lieux"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.meteo",
+      "ch03.v.geographie"
+     ],
+     "author": "Cahier (texto original)",
+     "source": "cahier-original",
+     "origin": "original",
+     "review_status": "reviewed",
+     "position": 3
     }
    ],
    "exercises": [
@@ -2994,6 +3047,922 @@
      ],
      "translation_pt": "Escreva seus planos para o próximo fim de semana: aonde vai, como, com quem e o que vai fazer.",
      "position": 65
+    },
+    {
+     "code": "c3-x-faire-tu",
+     "type": "conjugation",
+     "instruction": "Conjugue faire.",
+     "prompt": "Qu'est-ce que tu ___ ce week-end ?",
+     "explanation": "faire com tu: tu fais.",
+     "difficulty": 2,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "fais",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.activites"
+     ],
+     "grammar_topics": [
+      "ch03.g.faire"
+     ],
+     "position": 66
+    },
+    {
+     "code": "c3-x-meteo-35",
+     "type": "mc_single",
+     "instruction": "Escolha a frase que corresponde à situação.",
+     "prompt": "Il y a 35 degrés à Rio.",
+     "explanation": "35 graus = muito calor: il fait très chaud.",
+     "difficulty": 1,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Il fait très chaud.",
+       "correct": true
+      },
+      {
+       "text": "Il fait froid.",
+       "correct": false
+      },
+      {
+       "text": "Il neige.",
+       "correct": false
+      },
+      {
+       "text": "Il fait frais.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.meteo"
+     ],
+     "grammar_topics": [
+      "ch03.g.expressions-faire"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.meteo"
+     ],
+     "translation_pt": "Faz 35 graus no Rio.",
+     "position": 67
+    },
+    {
+     "code": "c3-x-meteo-match",
+     "type": "match_pairs",
+     "instruction": "Relacione.",
+     "prompt": "Le temps",
+     "explanation": "il pleut = chove; il neige = neva; il fait froid = faz frio; il y a du vent = está ventando; il fait beau = o tempo está bom.",
+     "difficulty": 1,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "il pleut",
+       "match": "chove"
+      },
+      {
+       "text": "il neige",
+       "match": "neva"
+      },
+      {
+       "text": "il fait froid",
+       "match": "faz frio"
+      },
+      {
+       "text": "il y a du vent",
+       "match": "está ventando"
+      },
+      {
+       "text": "il fait beau",
+       "match": "o tempo está bom"
+      }
+     ],
+     "objectives": [
+      "ch03.obj.meteo"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.meteo"
+     ],
+     "position": 68
+    },
+    {
+     "code": "c3-x-ski",
+     "type": "select_article",
+     "instruction": "Escolha a forma correta.",
+     "prompt": "En hiver, mon père fait ___ ski.",
+     "explanation": "ski é masculino: faire du ski.",
+     "difficulty": 2,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "du",
+       "correct": true
+      },
+      {
+       "text": "de la",
+       "correct": false
+      },
+      {
+       "text": "de l'",
+       "correct": false
+      },
+      {
+       "text": "des",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.activites"
+     ],
+     "grammar_topics": [
+      "ch03.g.expressions-faire"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.activites"
+     ],
+     "position": 69
+    },
+    {
+     "code": "c3-x-faire-multi",
+     "type": "mc_multiple",
+     "instruction": "Marque TODAS as expressões corretas.",
+     "prompt": "Quelles expressions sont correctes ?",
+     "explanation": "du + masculino (vélo, camping), de la + feminino (natation). Erradas: « de la ski » (ski é masculino) e « du randonnée » (randonnée é feminino).",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "faire du vélo",
+       "correct": true
+      },
+      {
+       "text": "faire de la natation",
+       "correct": true
+      },
+      {
+       "text": "faire du camping",
+       "correct": true
+      },
+      {
+       "text": "faire de la ski",
+       "correct": false
+      },
+      {
+       "text": "faire du randonnée",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.activites"
+     ],
+     "grammar_topics": [
+      "ch03.g.expressions-faire"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.activites"
+     ],
+     "position": 70
+    },
+    {
+     "code": "c3-x-aller-vous",
+     "type": "conjugation",
+     "instruction": "Conjugue aller.",
+     "prompt": "Vous ___ à la plage demain ?",
+     "explanation": "aller com vous: vous allez.",
+     "difficulty": 2,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "allez",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.lieux"
+     ],
+     "grammar_topics": [
+      "ch03.g.aller"
+     ],
+     "position": 71
+    },
+    {
+     "code": "c3-x-aller-erreur",
+     "type": "identify_error",
+     "instruction": "Encontre a parte errada.",
+     "prompt": "Nous allez à Paris en train.",
+     "explanation": "Com nous, aller é allons: « Nous allons à Paris en train. »",
+     "difficulty": 3,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Nous",
+       "correct": false
+      },
+      {
+       "text": "allez",
+       "correct": true
+      },
+      {
+       "text": "à Paris",
+       "correct": false
+      },
+      {
+       "text": "en train",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.lieux"
+     ],
+     "grammar_topics": [
+      "ch03.g.aller"
+     ],
+     "position": 72
+    },
+    {
+     "code": "c3-x-futur-camping",
+     "type": "fill_blank",
+     "instruction": "Reescreva no futur proche (complete as lacunas).",
+     "prompt": "Je fais du camping. → Je ___ ___ du camping.",
+     "explanation": "aller com je (vais) + infinitivo (faire).",
+     "difficulty": 3,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "vais",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "faire",
+       "blank": 1,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.projets"
+     ],
+     "grammar_topics": [
+      "ch03.g.futur-proche",
+      "ch03.g.faire"
+     ],
+     "position": 73
+    },
+    {
+     "code": "c3-x-futur-question",
+     "type": "transform_question",
+     "instruction": "Transforme em pergunta com est-ce que.",
+     "prompt": "Tu vas visiter Rome.",
+     "explanation": "« Est-ce que tu vas visiter Rome ? »",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Est-ce que tu vas visiter Rome ?",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.projets"
+     ],
+     "grammar_topics": [
+      "ch03.g.futur-proche"
+     ],
+     "position": 74
+    },
+    {
+     "code": "c3-x-futur-trad",
+     "type": "translate_pt_fr",
+     "instruction": "Traduza para o francês.",
+     "prompt": "Amanhã eu não vou trabalhar: vou à praia.",
+     "explanation": "Futur proche negativo (je ne vais pas travailler) + aller no presente com à la plage.",
+     "difficulty": 5,
+     "competency": "traduction",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "comparison": "regex",
+     "answers": [
+      {
+       "text": "demain,? je ne vais pas travailler,? (je vais|je vais aller) à la plage",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "model_answer": "Demain, je ne vais pas travailler : je vais à la plage.",
+     "objectives": [
+      "ch03.obj.projets"
+     ],
+     "grammar_topics": [
+      "ch03.g.futur-proche",
+      "ch03.g.aller",
+      "ch03.g.prepositions-lieux"
+     ],
+     "position": 75
+    },
+    {
+     "code": "c3-x-prep-canada",
+     "type": "select_preposition",
+     "instruction": "Escolha a preposição.",
+     "prompt": "Nous habitons ___ Canada.",
+     "explanation": "Canada é masculino: au Canada.",
+     "difficulty": 2,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "au",
+       "correct": true
+      },
+      {
+       "text": "en",
+       "correct": false
+      },
+      {
+       "text": "à",
+       "correct": false
+      },
+      {
+       "text": "aux",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.lieux"
+     ],
+     "grammar_topics": [
+      "ch03.g.prepositions-lieux"
+     ],
+     "position": 76
+    },
+    {
+     "code": "c3-x-prep-eu",
+     "type": "mc_single",
+     "instruction": "Escolha a frase correta.",
+     "prompt": "Je vais…",
+     "explanation": "États-Unis é plural: aux États-Unis.",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "aux États-Unis.",
+       "correct": true
+      },
+      {
+       "text": "au États-Unis.",
+       "correct": false
+      },
+      {
+       "text": "en États-Unis.",
+       "correct": false
+      },
+      {
+       "text": "à États-Unis.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.lieux"
+     ],
+     "grammar_topics": [
+      "ch03.g.prepositions-lieux"
+     ],
+     "position": 77
+    },
+    {
+     "code": "c3-x-prep-du-en",
+     "type": "fill_blank",
+     "instruction": "Complete com du, de, en, au…",
+     "prompt": "Je suis ___ Japon, mais j'habite ___ Belgique.",
+     "explanation": "Origem de país masculino: du Japon (de + le). Morar num país feminino: en Belgique.",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "du",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "en",
+       "blank": 1,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.lieux"
+     ],
+     "grammar_topics": [
+      "ch03.g.prepositions-lieux"
+     ],
+     "position": 78
+    },
+    {
+     "code": "c3-x-partir-vous",
+     "type": "conjugation",
+     "instruction": "Conjugue partir.",
+     "prompt": "Vous ___ à quelle heure ?",
+     "explanation": "No plural, partir recupera o t: vous partez.",
+     "difficulty": 3,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "partez",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.activites"
+     ],
+     "grammar_topics": [
+      "ch03.g.partir-sortir-dormir"
+     ],
+     "position": 79
+    },
+    {
+     "code": "c3-x-acheter",
+     "type": "conjugation",
+     "instruction": "Conjugue acheter (atenção ao acento).",
+     "prompt": "Elles ___ des billets de train.",
+     "explanation": "Com terminação muda (ils/elles), acheter ganha acento grave: elles achètent.",
+     "difficulty": 4,
+     "competency": "orthographe",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "achètent",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.transports"
+     ],
+     "grammar_topics": [
+      "ch03.g.changement-radical"
+     ],
+     "position": 80
+    },
+    {
+     "code": "c3-x-transport-natural",
+     "type": "natural_response",
+     "instruction": "Escolha a resposta mais natural.",
+     "prompt": "— Tu vas à l'université comment ?",
+     "explanation": "« comment » pergunta o modo: a resposta é o meio de transporte.",
+     "difficulty": 2,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "En bus.",
+       "correct": true
+      },
+      {
+       "text": "À l'université.",
+       "correct": false
+      },
+      {
+       "text": "Il fait beau.",
+       "correct": false
+      },
+      {
+       "text": "En été.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.transports"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.transports"
+     ],
+     "position": 81
+    },
+    {
+     "code": "c3-x-num-77",
+     "type": "vocabulary_review",
+     "instruction": "Escreva por extenso, em francês.",
+     "prompt": "77",
+     "explanation": "77 = soixante-dix-sept (60 + 17).",
+     "difficulty": 4,
+     "competency": "orthographe",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "soixante-dix-sept",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.nombres"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.nombres"
+     ],
+     "position": 82
+    },
+    {
+     "code": "c3-x-num-84",
+     "type": "vocabulary_review",
+     "instruction": "Que número é este?",
+     "prompt": "quatre-vingt-quatre",
+     "explanation": "4 × 20 + 4 = 84.",
+     "difficulty": 2,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "interaction": "single",
+     "choices": [
+      {
+       "text": "84",
+       "correct": true
+      },
+      {
+       "text": "74",
+       "correct": false
+      },
+      {
+       "text": "94",
+       "correct": false
+      },
+      {
+       "text": "424",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.nombres"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.nombres"
+     ],
+     "position": 83
+    },
+    {
+     "code": "c3-x-trad-printemps",
+     "type": "translate_fr_pt",
+     "instruction": "Traduza para o português.",
+     "prompt": "Au printemps, nous faisons du vélo.",
+     "explanation": "au printemps = na primavera; faire du vélo = andar de bicicleta.",
+     "difficulty": 3,
+     "competency": "traduction",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "comparison": "regex",
+     "accent_insensitive": true,
+     "answers": [
+      {
+       "text": "na primavera,? (nós |a gente )?(andamos|anda) de bicicleta|na primavera,? (nós )?pedalamos",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "model_answer": "Na primavera, andamos de bicicleta.",
+     "objectives": [
+      "ch03.obj.saisons",
+      "ch03.obj.activites"
+     ],
+     "grammar_topics": [
+      "ch03.g.expressions-faire"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.meteo",
+      "ch03.v.activites"
+     ],
+     "position": 84
+    },
+    {
+     "code": "c3-x-ordre-carte",
+     "type": "order_sentences",
+     "instruction": "Ordene o cartão-postal.",
+     "prompt": "Ordene as frases:",
+     "explanation": "Saudação → onde está → tempo → plano → despedida.",
+     "difficulty": 3,
+     "competency": "lecture",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Chère Léa,",
+       "order": 1
+      },
+      {
+       "text": "Je suis à Biarritz, dans le sud-ouest.",
+       "order": 2
+      },
+      {
+       "text": "Il fait beau et il fait chaud.",
+       "order": 3
+      },
+      {
+       "text": "Demain, je vais faire du surf !",
+       "order": 4
+      },
+      {
+       "text": "Bisous, Marc",
+       "order": 5
+      }
+     ],
+     "objectives": [
+      "ch03.obj.projets",
+      "ch03.obj.meteo"
+     ],
+     "grammar_topics": [
+      "ch03.g.futur-proche",
+      "ch03.g.expressions-faire"
+     ],
+     "position": 85
+    },
+    {
+     "code": "c3-x-ecrit-meteo",
+     "type": "guided_writing",
+     "instruction": "Escreva 4 a 6 frases.",
+     "prompt": "Présentez la météo de demain dans votre ville et proposez une activité adaptée.",
+     "explanation": "Use il fait / il pleut / il y a, a temperatura (degrés) e o futur proche para a atividade.",
+     "difficulty": 5,
+     "competency": "ecriture",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "model_answer": "Demain, à Rio, il va faire très chaud : 34 degrés. Le matin, il y a du soleil. L'après-midi, il pleut un peu. C'est une bonne journée pour aller à la plage le matin !",
+     "criteria": [
+      "Usei pelo menos duas expressões de tempo (il fait, il pleut, il y a…).",
+      "Escrevi uma temperatura em degrés.",
+      "Usei o futur proche pelo menos uma vez.",
+      "Propus uma atividade coerente com o tempo."
+     ],
+     "objectives": [
+      "ch03.obj.meteo",
+      "ch03.obj.projets"
+     ],
+     "grammar_topics": [
+      "ch03.g.expressions-faire",
+      "ch03.g.futur-proche"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.meteo"
+     ],
+     "translation_pt": "Apresente a previsão do tempo de amanhã na sua cidade e proponha uma atividade adequada.",
+     "position": 86
+    },
+    {
+     "code": "c3-p3-pluie",
+     "type": "text_interpretation",
+     "instruction": "Leia a previsão do tempo.",
+     "prompt": "Où est-ce qu'il pleut toute la journée ?",
+     "explanation": "« Dans le nord, à Lille, il pleut toute la journée ».",
+     "difficulty": 1,
+     "competency": "interpretation",
+     "origin": "exam_inspired",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch03.p.meteo",
+     "reading_skill": "place",
+     "adaptation_notes": "Inspirada no formato da compreensão escrita do DELF A1 (documento do cotidiano). Questão original; não é questão oficial.",
+     "evidence": "Dans le nord, à Lille, il pleut toute la journée et il fait frais : 9 degrés.",
+     "choices": [
+      {
+       "text": "À Lille.",
+       "correct": true
+      },
+      {
+       "text": "À Paris.",
+       "correct": false
+      },
+      {
+       "text": "À Marseille.",
+       "correct": false
+      },
+      {
+       "text": "À Strasbourg.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.meteo"
+     ],
+     "position": 87
+    },
+    {
+     "code": "c3-p3-strasbourg",
+     "type": "text_interpretation",
+     "instruction": "Leia a previsão e responda com o número.",
+     "prompt": "Combien de degrés à Strasbourg ?",
+     "explanation": "« à Strasbourg, il fait froid : 4 degrés ».",
+     "difficulty": 2,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch03.p.meteo",
+     "interaction": "text",
+     "reading_skill": "explicit",
+     "evidence": "Dans l'est, à Strasbourg, il fait froid : 4 degrés.",
+     "answers": [
+      {
+       "text": "4",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "quatre",
+       "blank": 0,
+       "primary": false
+      },
+      {
+       "text": "4 degrés",
+       "blank": 0,
+       "primary": false
+      },
+      {
+       "text": "quatre degrés",
+       "blank": 0,
+       "primary": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.meteo"
+     ],
+     "position": 88
+    },
+    {
+     "code": "c3-p3-paris-tf",
+     "type": "true_false",
+     "instruction": "Leia a previsão do tempo.",
+     "prompt": "À Paris, il pleut toute la journée.",
+     "explanation": "Falso: em Paris há nuvens de manhã e o tempo fica bom à tarde.",
+     "difficulty": 2,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch03.p.meteo",
+     "reading_skill": "true_false",
+     "evidence": "À Paris, il y a des nuages le matin, mais l'après-midi il fait beau : 14 degrés.",
+     "answer": false,
+     "objectives": [
+      "ch03.obj.meteo"
+     ],
+     "position": 89
+    },
+    {
+     "code": "c3-p3-relier",
+     "type": "text_interpretation",
+     "instruction": "Relacione cada cidade ao tempo previsto.",
+     "prompt": "La météo de demain",
+     "explanation": "Lille: chuva; Paris: nuvens e depois tempo bom; Strasbourg: frio; Marseille: sol e vento.",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch03.p.meteo",
+     "interaction": "match",
+     "reading_skill": "relate",
+     "evidence": "Lille… il pleut / Paris… des nuages, puis il fait beau / Strasbourg… il fait froid / Marseille… du soleil et du vent",
+     "choices": [
+      {
+       "text": "Lille",
+       "match": "il pleut"
+      },
+      {
+       "text": "Paris",
+       "match": "des nuages, puis il fait beau"
+      },
+      {
+       "text": "Strasbourg",
+       "match": "il fait froid"
+      },
+      {
+       "text": "Marseille",
+       "match": "du soleil et du vent"
+      }
+     ],
+     "objectives": [
+      "ch03.obj.meteo",
+      "ch03.obj.lieux"
+     ],
+     "position": 90
+    },
+    {
+     "code": "c3-p3-neige",
+     "type": "text_interpretation",
+     "instruction": "Leia a previsão do tempo.",
+     "prompt": "Il neige…",
+     "explanation": "« Il neige à la montagne, dans les Vosges. »",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch03.p.meteo",
+     "reading_skill": "place",
+     "evidence": "Il neige à la montagne, dans les Vosges.",
+     "choices": [
+      {
+       "text": "à la montagne, dans les Vosges.",
+       "correct": true
+      },
+      {
+       "text": "à Paris.",
+       "correct": false
+      },
+      {
+       "text": "à la plage, à Marseille.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.meteo"
+     ],
+     "position": 91
+    },
+    {
+     "code": "c3-p3-velo",
+     "type": "text_interpretation",
+     "instruction": "Leia a previsão do tempo.",
+     "prompt": "Pourquoi le texte propose de faire du vélo à Marseille ?",
+     "explanation": "Em Marselha há sol e é a cidade mais quente (18 graus); nas outras, chove, faz frio ou neva.",
+     "difficulty": 5,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch03.p.meteo",
+     "reading_skill": "inference",
+     "evidence": "Dans le sud, à Marseille, il y a du soleil et du vent : 18 degrés.",
+     "choices": [
+      {
+       "text": "Parce qu'il y a du soleil et qu'il fait plus chaud.",
+       "correct": true
+      },
+      {
+       "text": "Parce qu'il neige.",
+       "correct": false
+      },
+      {
+       "text": "Parce qu'il pleut toute la journée.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.meteo",
+      "ch03.obj.activites"
+     ],
+     "position": 92
     }
    ]
   }

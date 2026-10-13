@@ -63,13 +63,13 @@ python3 -m venv .venv
 
 | Capítulo | Questões | Textos | Avaliação final |
 |---|---|---|---|
-| 1. Bonjour et bienvenue ! | 69 | 2 | 10 questões |
-| 2. Me voici ! | 77 | 3 | 10 questões |
-| 3. Les vacances en France | 66 | 2 | 9 questões |
-| 4. Les gens | 65 | 2 | 9 questões |
+| 1. Bonjour et bienvenue ! | 96 | 3 | 10 questões |
+| 2. Me voici ! | 104 | 4 | 10 questões |
+| 3. Les vacances en France | 93 | 3 | 9 questões |
+| 4. Les gens | 90 | 3 | 9 questões |
 
-São **277 questões** cobrindo os **27 tipos de exercício** pedidos, todas as dificuldades de 1 a 5 em cada
-capítulo, 9 textos de interpretação e 8 propostas de produção escrita. Os capítulos 0 e 5–13 do
+São **383 questões** cobrindo os **27 tipos de exercício** pedidos, todas as dificuldades de 1 a 5 em cada
+capítulo, 13 textos de interpretação e 12 propostas de produção escrita. Os capítulos 0 e 5–13 do
 *Français interactif* já estão no mapa curricular como “planejados”. O mapa completo está em
 [`docs/CURRICULO.md`](docs/CURRICULO.md).
 
@@ -77,6 +77,19 @@ Todo o conteúdo é **original** (fonte “Cahier — conteúdo original”). Qu
 são marcadas como **“inspiradas em formato de exame”**, nunca como oficiais.
 
 ---
+
+### Atualizar o Cahier sem perder o progresso
+
+Ao baixar uma versão nova (por exemplo, com `git pull`), rode `setup.ps1` de novo (ou
+`.venv\Scripts\python manage.py seed_content`). O conteúdo inicial é carregado de forma **incremental**:
+questões e textos novos são acrescentados; o que você já tem — inclusive edições feitas no painel —
+fica como está, e seu progresso não é tocado. Por segurança, faça um backup antes (`Backup.bat`).
+
+## Novidades
+
+**v1.1** — 106 questões novas nos capítulos 1 a 4 e um texto novo por capítulo (mensagem da professora,
+conversa no café do campus, previsão do tempo, retrato de uma amiga), além de frases úteis na sala de aula.
+A importação ganhou o modo “manter os existentes e acrescentar só os novos”.
 
 ## Como funciona por dentro
 
@@ -96,10 +109,10 @@ são marcadas como **“inspiradas em formato de exame”**, nunca como oficiais
 
 ### Comandos úteis
 ```
-.venv\Scripts\python manage.py seed_content            # carrega o conteúdo inicial (seguro repetir)
-.venv\Scripts\python manage.py seed_content --update   # atualiza o conteúdo inicial (gera novas versões)
+.venv\Scripts\python manage.py seed_content            # acrescenta o conteúdo inicial que ainda falta (seguro repetir)
+.venv\Scripts\python manage.py seed_content --update   # sobrescreve o conteúdo inicial com a versão dos arquivos
 .venv\Scripts\python manage.py validate_content        # relatório de qualidade do conteúdo
-.venv\Scripts\python manage.py import_content pacote.json [--dry-run] [--update]
+.venv\Scripts\python manage.py import_content pacote.json [--dry-run] [--update | --skip-existing]
 .venv\Scripts\python manage.py export_content saida.json [--kind conteudo|progresso|caderno|completo] [--chapter ch01]
 .venv\Scripts\python manage.py backup_db --label nome
 .venv\Scripts\python manage.py restore_db data\backups\arquivo.sqlite3 --confirm RESTAURAR
@@ -151,7 +164,7 @@ Estas escolhas foram feitas sem consulta, por não serem bloqueantes; todas pode
 
 ## Verificação feita
 
-- **124 testes automatizados** aprovados: modelos, migrations, correção (exata, normalizada, acentos,
+- **126 testes automatizados** aprovados: modelos, migrations, correção (exata, normalizada, acentos,
   regex, lacunas múltiplas), múltipla escolha, múltipla seleção, ordenação, pares, textos, domínio,
   revisão espaçada, caderno de erros, importação, exportação, backup e restauração, preservação do
   histórico, rotas, formulários, CSRF, escape de HTML, retomada de sessão e validação do conteúdo inicial.

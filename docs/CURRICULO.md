@@ -17,10 +17,10 @@ inspirado na prova de compreensão escrita do DELF A1 (sem reproduzir questões 
 ### 1. Bonjour et bienvenue ! — cumprimentos, apresentações, sala de aula
 - **Objetivos:** cumprimentar e perguntar como vai; apresentar-se e apresentar alguém; dizer de onde é;
   descrever a sala de aula; números 1–69; dias, meses e data; despedir-se.
-- **Vocabulário:** cumprimentos e despedidas; sala de aula; números 1–69; dias, meses e datas.
+- **Vocabulário:** cumprimentos e despedidas; sala de aula; frases úteis na aula; números 1–69; dias, meses e datas.
 - **Gramática:** pronomes sujeitos (tu × vous, ils em grupo misto); être; gênero e número; artigos
   definidos (le, la, l', les) e indefinidos (un, une, des); voilà/voici × il y a.
-- **Textos:** diálogo “Premier jour de cours”; ficha de inscrição.
+- **Textos:** diálogo “Premier jour de cours”; ficha de inscrição; e-mail “Message de la professeure”.
 - **Pontos de atenção para lusófonos:** est × et; gênero divergente (le stylo); nom × prénom; acento de êtes.
 
 ### 2. Me voici ! — informações pessoais, família, passatempos, horas
@@ -30,7 +30,7 @@ inspirado na prova de compreensão escrita do DELF A1 (sem reproduzir questões 
   nacionalidades.
 - **Gramática:** avoir (idade); verbos em -er (mangeons); possessivos (concordância com o objeto, mon amie);
   est-ce que / n'est-ce pas; ne… pas e pas de; quel e palavras interrogativas; adjetivos e nacionalidades.
-- **Textos:** perfil de intercâmbio de línguas; mensagem sobre a família; horários de uma midiateca.
+- **Textos:** perfil de intercâmbio de línguas; mensagem sobre a família; horários de uma midiateca; diálogo “Au café du campus”.
 - **Pontos de atenção:** “je suis vingt ans”; parents = pai e mãe; aimer + artigo; nacionalidade com minúscula.
 
 ### 3. Les vacances en France — tempo, lugares, transportes, planos
@@ -40,7 +40,7 @@ inspirado na prova de compreensão escrita do DELF A1 (sem reproduzir questões 
 - **Gramática:** faire e expressões com faire (il fait, il pleut); partir/sortir/dormir; verbos com mudança
   de radical (préférer, acheter); aller; futur proche (e sua negação); preposições com cidades e países
   (à, en, au, aux / de, du, des).
-- **Textos:** cartão-postal de Nice; anúncio de fim de semana em Bordeaux.
+- **Textos:** cartão-postal de Nice; anúncio de fim de semana em Bordeaux; previsão do tempo por região.
 - **Pontos de atenção:** “il est chaud” × il fait chaud; au printemps; à vélo × en voiture; quatre-vingts.
 
 ### 4. Les gens — descrever pessoas e a rotina
@@ -49,7 +49,7 @@ inspirado na prova de compreensão escrita do DELF A1 (sem reproduzir questões 
 - **Vocabulário:** rosto e corpo; cores; descrição física; personalidade; rotina.
 - **Gramática:** artigo definido com partes do corpo; adjetivos irregulares e cores invariáveis; adjetivos
   antes do nome (beau/bel/belle, vieux/vieille); c'est × il est; verbos pronominais; comparativo (meilleur).
-- **Textos:** anúncio de colega de apartamento; “La journée d'Hugo”.
+- **Textos:** anúncio de colega de apartamento; “La journée d'Hugo”; retrato “Ma meilleure amie”.
 - **Pontos de atenção:** “elle a cheveux longs”; des yeux marron; une maison petite; il est un ami.
 
 ## Capítulos planejados (cadastro progressivo)

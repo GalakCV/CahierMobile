@@ -45,6 +45,7 @@ class Report:
     reused: dict[str, int] = field(default_factory=dict)
     dry_run: bool = False
     applied: bool = False
+    skip_existing: bool = False
 
     def error(self, where: str, msg: str) -> None:
         self.errors.append(f"{where}: {msg}")
@@ -61,7 +62,8 @@ class Report:
         return not self.errors
 
     def as_dict(self) -> dict:
-        return {"ok": self.ok, "applied": self.applied, "dry_run": self.dry_run, "errors": self.errors,
+        return {"ok": self.ok, "applied": self.applied, "dry_run": self.dry_run,
+                "skip_existing": self.skip_existing, "errors": self.errors,
                 "warnings": self.warnings, "created": self.created, "updated": self.updated, "reused": self.reused}
 
 
@@ -346,9 +348,16 @@ def _validate_exercise(e: dict, w: str, rep: Report) -> None:
 # Gravação
 # ---------------------------------------------------------------------------
 
-def run_import(data, *, update_existing=False, dry_run=False) -> Report:
+def run_import(data, *, update_existing=False, dry_run=False, skip_existing=False) -> Report:
+    """Importa o pacote.
+
+    - padrão: códigos já existentes são recusados (evita duplicação acidental);
+    - ``update_existing``: substitui os existentes (gera nova versão das questões);
+    - ``skip_existing``: mantém os existentes intactos e só acrescenta o que é novo.
+    """
     rep = validate_structure(data)
     rep.dry_run = dry_run
+    rep.skip_existing = skip_existing and not update_existing
     if not rep.ok:
         return rep
     try:
@@ -514,6 +523,9 @@ def _apply_chapter(ch, course, update, rep, where):
 def _upsert_child(model, code, values, update, rep, label, where):
     obj = model.objects.filter(code=code).first()
     if obj is not None and not update:
+        if rep.skip_existing:
+            rep.bump("reused", label)
+            return None
         rep.error(where, "já existe no banco (marque 'atualizar existentes' para substituir)")
         return None
     if obj is None:
@@ -572,6 +584,9 @@ def _apply_exercise(e, chapter, n, update, rep, where):
     if not source or not competency:
         return None
     existing = Exercise.objects.filter(code=e["code"]).first()
+    if existing and not update and rep.skip_existing:
+        rep.bump("reused", "questões")
+        return None
     if existing and not update:
         rep.error(where, "já existe no banco (marque 'atualizar existentes' para substituir)")
         return None
