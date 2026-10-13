@@ -1,0 +1,100 @@
+{% extends "base.html" %}{% load cahier %}
+{% block title %}Painel{% endblock %}
+{% block content %}
+<h1>{% if user_setting.display_name %}Bonjour, {{ user_setting.display_name }}.{% else %}Bonjour !{% endif %}</h1>
+{% if not has_content %}
+  <div class="empty">
+    <p>Ainda não há exercícios cadastrados.</p>
+    <p>Rode <code>python manage.py seed_content</code> (o <code>setup.ps1</code> já faz isso) ou importe um pacote em <a href="{% url 'dados:import' %}">Dados → Importar</a>.</p>
+  </div>
+{% else %}
+<div class="hello">
+  <section class="resume" aria-labelledby="continuar">
+    {% if resume %}
+      <h2 id="continuar">Continue de onde parou</h2>
+      <p><strong>{{ resume }}</strong><br>
+        <span class="muted">{{ resume.answered_count }} de {{ resume.total }} questões respondidas · {{ resume.get_status_display|lower }}</span></p>
+      <div class="actions">
+        <a class="btn" href="{{ resume.get_absolute_url }}">Retomar sessão</a>
+        <a class="btn btn-quiet" href="{% url 'learning:session_new' %}">Começar outra</a>
+      </div>
+    {% elif current_chapter %}
+      <h2 id="continuar">{{ current_chapter.number }}. {{ current_chapter.title }}</h2>
+      <p class="muted">Capítulo atual · {{ chapter_info.status_label }} · domínio estimado {{ chapter_info.mastery|pct }}</p>
+      <div class="actions">
+        {% if chapter_info.status == "not_started" %}
+          <a class="btn" href="{{ current_chapter.get_absolute_url }}">Ler o conteúdo do capítulo</a>
+          <a class="btn btn-quiet" href="{% url 'learning:session_new' %}?capitulo={{ current_chapter.code }}">Praticar</a>
+        {% elif chapter_info.status == "ready" %}
+          <form method="post" action="{% url 'learning:start_chapter_assessment' current_chapter.code %}" class="inline">{% csrf_token %}
+            <button class="btn" type="submit">Fazer a avaliação final</button></form>
+          <a class="btn btn-quiet" href="{{ current_chapter.get_absolute_url }}">Ver capítulo</a>
+        {% else %}
+          <form method="post" action="{% url 'learning:start_chapter_review' current_chapter.code %}" class="inline">{% csrf_token %}
+            <button class="btn" type="submit">Continuar o capítulo</button></form>
+          <a class="btn btn-quiet" href="{{ current_chapter.get_absolute_url }}">Rever explicações</a>
+        {% endif %}
+      </div>
+    {% endif %}
+    {% if due_reviews %}
+      <form method="post" action="{% url 'learning:start_spaced_review' %}">{% csrf_token %}
+        <p>Você tem <strong>{{ due_reviews }} revis{{ due_reviews|pluralize:"ão,ões" }} pendente{{ due_reviews|pluralize }}</strong>.
+        <button class="btn btn-ghost btn-small" type="submit">Revisar agora</button></p>
+      </form>
+    {% endif %}
+  </section>
+
+  <section aria-labelledby="hoje">
+    <h2 id="hoje" style="margin-top:0">Hoje</h2>
+    <p>{{ minutes_today }} de {{ user_setting.daily_goal_minutes }} minutos da meta diária</p>
+    {% meter goal_pct %}
+    <p class="muted" style="margin-top:.6rem">
+      {% if streak %}Sequência de {{ streak }} dia{{ streak|pluralize }} estudando.{% else %}Estude hoje para começar uma sequência.{% endif %}
+    </p>
+  </section>
+</div>
+
+<dl class="figures">
+  <div><dt>Progresso geral</dt><dd>{{ general_progress|pct }}</dd></div>
+  <div><dt>Exercícios feitos</dt><dd>{{ attempt_count }} <small>({{ distinct_exercises }} diferentes)</small></dd></div>
+  <div><dt>Taxa de acertos</dt><dd>{{ accuracy|pct }}</dd></div>
+  <div><dt>Dias seguidos</dt><dd>{{ streak }}</dd></div>
+  <div><dt>Tempo total</dt><dd>{{ total_minutes|minutes }}</dd></div>
+  <div><dt>Revisões pendentes</dt><dd>{{ due_reviews }}</dd></div>
+</dl>
+
+<div class="grid-2">
+  <section aria-labelledby="fortes">
+    <h2 id="fortes">Competências mais fortes</h2>
+    {% if strong %}
+    <ul class="list-plain">
+      {% for m in strong %}<li><div class="row"><span>{{ m.label }}</span><span>{{ m.details.accuracy|pct }} de acerto</span></div>{% meter m.score True %}</li>{% endfor %}
+    </ul>
+    {% else %}<p class="muted">Responda algumas questões de cada competência para ver este quadro.</p>{% endif %}
+
+    <h2>Precisam de atenção</h2>
+    {% if weak %}
+    <ul class="list-plain">
+      {% for m in weak %}<li><div class="row"><span>{{ m.label }}</span><span>{{ m.details.accuracy|pct }} de acerto</span></div>{% meter m.score True %}</li>{% endfor %}
+    </ul>
+    {% else %}<p class="muted">Nada por aqui ainda.</p>{% endif %}
+  </section>
+
+  <section aria-labelledby="erros">
+    <h2 id="erros">Erros mais recorrentes</h2>
+    {% if errors %}
+    <ul class="list-plain">
+      {% for r in errors %}
+      <li><div class="row"><span class="fr">{{ r.exercise.prompt|truncatechars:70 }}</span>
+        <span class="tag tag-{{ r.recovery }}">{{ r.error_count }} erro{{ r.error_count|pluralize }}</span></div>
+        <small>{{ r.exercise.chapter.title }} · {{ r.get_recovery_display }}</small></li>
+      {% endfor %}
+    </ul>
+    {% if error_topics %}<p class="muted">Tópicos com mais erros:
+      {% for t in error_topics %}{{ t.title }} ({{ t.errors }}){% if not forloop.last %}, {% endif %}{% endfor %}</p>{% endif %}
+    <p><a href="{% url 'learning:notebook' %}">Abrir o caderno de erros</a></p>
+    {% else %}<p class="muted">Nenhum erro registrado. Os erros aparecem aqui para você revisá-los com calma.</p>{% endif %}
+  </section>
+</div>
+{% endif %}
+{% endblock %}

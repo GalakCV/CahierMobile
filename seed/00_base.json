@@ -1,0 +1,210 @@
+{
+ "format": "cahier-content",
+ "version": 1,
+ "sources": [
+  {
+   "key": "francais-interactif",
+   "title": "Français interactif",
+   "author": "French @UTAustin — Department of French and Italian, The University of Texas at Austin",
+   "url": "https://utexas.pressbooks.pub/francais-interactif/",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "notes": "Usado como eixo curricular: sequência de capítulos, temas, objetivos comunicativos e pontos gramaticais. Nenhum exercício ou texto foi copiado; todo o conteúdo desta plataforma foi escrito do zero e adaptado para atividades exclusivamente escritas. A licença CC BY 4.0 permitiria adaptação com atribuição, mas optou-se por conteúdo original."
+  },
+  {
+   "key": "cahier-original",
+   "title": "Cahier — conteúdo original",
+   "author": "Cahier (exercícios, textos e explicações redigidos para esta plataforma com assistência do Claude, Anthropic)",
+   "url": "",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "notes": "Exercícios, textos e explicações originais. Personagens, escolas e endereços são fictícios. Revisão pedagógica feita na criação; recomenda-se revisão adicional por um professor de FLE."
+  },
+  {
+   "key": "cecr",
+   "title": "Quadro Europeu Comum de Referência para as Línguas (CECR/CEFR) — descritores do nível A1",
+   "author": "Conselho da Europa",
+   "url": "https://www.coe.int/en/web/common-european-framework-reference-languages",
+   "license": "Referência (nada reproduzido)",
+   "license_url": "",
+   "notes": "Usado apenas para calibrar o nível de dificuldade e o tipo de tarefa esperada em A1."
+  },
+  {
+   "key": "delf-formato",
+   "title": "DELF A1 e A2 — descrição pública das provas",
+   "author": "France Éducation international",
+   "url": "https://www.france-education-international.fr/diplome/delf-tout-public",
+   "license": "Referência de formato (nada reproduzido)",
+   "license_url": "",
+   "notes": "Algumas questões seguem o formato da prova de compreensão escrita do DELF A1 (documentos do cotidiano com perguntas de múltipla escolha e resposta curta). Elas são marcadas como “inspiradas em formato de exame”: nenhuma é uma questão oficial do DELF."
+  }
+ ],
+ "competencies": [
+  {
+   "code": "vocabulaire",
+   "name": "Vocabulário",
+   "position": 1,
+   "description": "Reconhecer e usar as palavras e expressões do capítulo."
+  },
+  {
+   "code": "grammaire",
+   "name": "Gramática",
+   "position": 2,
+   "description": "Escolher a forma correta: artigos, pronomes, preposições, concordância."
+  },
+  {
+   "code": "conjugaison",
+   "name": "Conjugação",
+   "position": 3,
+   "description": "Conjugar os verbos estudados, com a ortografia correta."
+  },
+  {
+   "code": "orthographe",
+   "name": "Ortografia",
+   "position": 4,
+   "description": "Escrever corretamente, com acentos, elisões e hífens."
+  },
+  {
+   "code": "lecture",
+   "name": "Leitura",
+   "position": 5,
+   "description": "Compreender frases, diálogos e documentos curtos."
+  },
+  {
+   "code": "interpretation",
+   "name": "Interpretação de texto",
+   "position": 6,
+   "description": "Localizar informações, relacionar dados e fazer inferências simples em textos."
+  },
+  {
+   "code": "traduction",
+   "name": "Tradução contextualizada",
+   "position": 7,
+   "description": "Passar ideias do francês para o português e vice-versa em contexto."
+  },
+  {
+   "code": "ecriture",
+   "name": "Produção escrita",
+   "position": 8,
+   "description": "Escrever mensagens e textos curtos com apoio de modelos e critérios."
+  }
+ ],
+ "course": {
+  "code": "fle-a1",
+  "title": "Francês A1 — consolidação",
+  "description": "Curso de consolidação do nível A1, organizado a partir dos capítulos do Français interactif, com atividades exclusivamente escritas.",
+  "reference_source": "francais-interactif"
+ },
+ "chapters": [
+  {
+   "code": "ch00",
+   "number": 0,
+   "title": "Bienvenue !",
+   "theme": "Primeiro contato com a língua",
+   "description": "Capítulo preliminar do Français interactif: apresentação pessoal, disciplinas, alfabeto e fonética.",
+   "cefr_level": "A1",
+   "is_active": false,
+   "is_planned": true,
+   "reference_note": "Referência: je me présente, les matières, l'alphabet; introdução à fonética. Na plataforma, os pontos escritos (apresentar-se, soletrar por escrito) foram incorporados ao capítulo 1; a parte de fonética fica fora do escopo (sem áudio)."
+  },
+  {
+   "code": "ch05",
+   "number": 5,
+   "title": "Bon appétit !",
+   "theme": "Comida, compras e restaurante",
+   "description": "Alimentação, mercado, café e restaurante; quantidades.",
+   "cefr_level": "A1",
+   "is_active": false,
+   "is_planned": true,
+   "reference_note": "Gramática de referência: artigos partitivos; expressões de quantidade; verbos em -ir regulares; prendre e derivados; boire, croire, voir; palavras interrogativas; perguntas com inversão."
+  },
+  {
+   "code": "ch06",
+   "number": 6,
+   "title": "La ville",
+   "theme": "A cidade e os pequenos comércios",
+   "description": "Orientar-se na cidade, comércios, números ordinais e primeiros relatos no passado.",
+   "cefr_level": "A1",
+   "is_active": false,
+   "is_planned": true,
+   "reference_note": "Gramática de referência: verbos em -re regulares; contrações de à e de com o artigo definido; determinantes demonstrativos; passé composé com avoir e com être."
+  },
+  {
+   "code": "ch07",
+   "number": 7,
+   "title": "Les fêtes",
+   "theme": "Festas, ritos e costumes",
+   "description": "Festas e tradições; falar de hábitos no passado.",
+   "cefr_level": "A2",
+   "is_active": false,
+   "is_planned": true,
+   "reference_note": "Gramática de referência: verbos como ouvrir; pronomes complemento direto e indireto; imparfait (formação e usos)."
+  },
+  {
+   "code": "ch08",
+   "number": 8,
+   "title": "La maison",
+   "theme": "A casa e as tarefas domésticas",
+   "description": "Cômodos, móveis, tarefas da casa.",
+   "cefr_level": "A2",
+   "is_active": false,
+   "is_planned": true,
+   "reference_note": "Gramática de referência: passé composé dos verbos pronominais; pronomes y e en; imperativo; venir."
+  },
+  {
+   "code": "ch09",
+   "number": 9,
+   "title": "Médias et communications",
+   "theme": "Mídias, internet e telefone",
+   "description": "Televisão, cinema, imprensa, internet e conversas ao telefone (aqui apenas por escrito).",
+   "cefr_level": "A2",
+   "is_active": false,
+   "is_planned": true,
+   "reference_note": "Gramática de referência: pronomes relativos qui e que; outras negações (ne… jamais, rien, personne); dire, lire, écrire; vouloir, pouvoir, devoir; passé composé × imparfait."
+  },
+  {
+   "code": "ch10",
+   "number": 10,
+   "title": "Mode, forme et santé",
+   "theme": "Moda, passatempos, corpo e saúde",
+   "description": "Roupas, corpo, saúde e passatempos.",
+   "cefr_level": "A2",
+   "is_active": false,
+   "is_planned": true,
+   "reference_note": "Gramática de referência: verbos como mettre; pronomes interrogativos; il faut e expressões impessoais; pronomes tônicos."
+  },
+  {
+   "code": "ch11",
+   "number": 11,
+   "title": "Les études",
+   "theme": "Estudos e disciplinas",
+   "description": "Ensino médio e superior, matérias e cursos.",
+   "cefr_level": "A2",
+   "is_active": false,
+   "is_planned": true,
+   "reference_note": "Gramática de referência: savoir × connaître; suivre, vivre; il y a (tempo atrás); subjuntivo regular, irregular e de obrigação."
+  },
+  {
+   "code": "ch12",
+   "number": 12,
+   "title": "La vie professionnelle",
+   "theme": "O mundo do trabalho",
+   "description": "Profissões e mundo do trabalho.",
+   "cefr_level": "A2",
+   "is_active": false,
+   "is_planned": true,
+   "reference_note": "Gramática de referência: subjuntivo de dúvida; depuis, pendant, pour; advérbios; comparativos; bon/meilleur × bien/mieux; futuro simples."
+  },
+  {
+   "code": "ch13",
+   "number": 13,
+   "title": "L'amour et l'argent",
+   "theme": "Finanças e relações",
+   "description": "Dinheiro, finanças e relações afetivas.",
+   "cefr_level": "A2",
+   "is_active": false,
+   "is_planned": true,
+   "reference_note": "Gramática de referência: usos do futuro; subjuntivo de vontade e emoção; condicional; frases com si."
+  }
+ ]
+}

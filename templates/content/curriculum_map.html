@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Mapa curricular{% endblock %}
+{% block content %}
+<h1>Mapa curricular</h1>
+<p>Eixo organizador: {% if course.reference_source %}<a href="{{ course.reference_source.url }}" rel="noreferrer noopener">{{ course.reference_source.title }}</a> ({{ course.reference_source.license_name }}){% else %}—{% endif %}. Usamos a sequência de capítulos, temas, objetivos comunicativos e pontos gramaticais; os exercícios e textos desta plataforma são originais e exclusivamente escritos.</p>
+<p class="muted">A versão completa e comentada deste mapa está em <code>docs/CURRICULO.md</code>.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Cap.</th><th>Tema</th><th>Gramática</th><th>Vocabulário</th><th>Estado</th></tr></thead>
+<tbody>
+{% for ch in chapters %}
+<tr><td>{{ ch.number }}</td>
+  <td><strong lang="fr">{% if not ch.is_planned %}<a href="{{ ch.get_absolute_url }}">{{ ch.title }}</a>{% else %}{{ ch.title }}{% endif %}</strong><br><small class="muted">{{ ch.theme }}</small></td>
+  <td>{% if ch.is_planned %}<small class="prewrap">{{ ch.reference_note }}</small>{% else %}{% for g in ch.grammar_topics.all %}{{ g.title }}{% if not forloop.last %}; {% endif %}{% endfor %}{% endif %}</td>
+  <td>{% for v in ch.vocabulary_topics.all %}{{ v.title }}{% if not forloop.last %}; {% endif %}{% empty %}<small class="muted">{{ ch.description }}</small>{% endfor %}</td>
+  <td>{% if ch.is_planned %}<span class="tag">planejado</span>{% else %}<span class="tag tag-status-completed">disponível</span>{% endif %}</td></tr>
+{% endfor %}
+</tbody></table></div>
+{% endblock %}

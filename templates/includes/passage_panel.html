@@ -1,0 +1,9 @@
+{% load cahier %}
+<aside class="reading" aria-labelledby="texto-{{ passage.pk }}">
+  <h2 id="texto-{{ passage.pk }}" lang="fr">{{ passage.title }}</h2>
+  <p class="muted" style="font-size:.85rem">{{ passage.get_text_type_display }} · {{ passage.word_count }} palavras · {{ passage.cefr_level }}</p>
+  <div class="fr" lang="fr">{{ passage.body|dialogue }}</div>
+  {% if passage.translation_pt and not hide_translation %}
+  <details class="help" data-translation><summary>Ver tradução do texto</summary><div class="prewrap">{{ passage.translation_pt }}</div></details>
+  {% endif %}
+</aside>

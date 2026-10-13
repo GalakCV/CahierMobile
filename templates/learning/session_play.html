@@ -1,0 +1,44 @@
+{% extends "base.html" %}{% load cahier %}
+{% block title %}Questão {{ number }} de {{ total }}{% endblock %}
+{% block content %}
+<div class="session-head">
+  <div class="session-progress">
+    <strong>{{ session }}</strong>
+    <div class="muted" style="font-size:.9rem">Questão {{ number }} de {{ total }}{% if session.is_assessment %} · modo avaliação{% endif %}</div>
+    {% meter progress_pct True %}
+  </div>
+  <form method="post" action="{% url 'learning:session_pause' session.pk %}" class="inline">{% csrf_token %}
+    <button class="btn btn-quiet btn-small" type="submit">Interromper e sair</button>
+  </form>
+</div>
+
+<div class="workspace{% if ex.passage %} with-text{% endif %}">
+  {% if ex.passage %}{% include "includes/passage_panel.html" with passage=ex.passage hide_translation=session.is_assessment %}{% endif %}
+  <form method="post" class="sheet" data-once novalidate>
+    {% csrf_token %}
+    <input type="hidden" name="item" value="{{ item.pk }}">
+    <input type="hidden" name="used_translation" value="0">
+    {% if error %}<p class="form-error" role="alert">{{ error }}</p>{% endif %}
+    {% include "includes/exercise_body.html" %}
+    {% if ex.translation_pt and not session.is_assessment %}
+      <details class="help" data-translation><summary>Ver tradução</summary><div class="prewrap">{{ ex.translation_pt }}</div></details>
+    {% endif %}
+    <div class="actions">
+      <button class="btn" type="submit">{% if ex.interaction == "writing" %}Enviar texto{% else %}Responder{% endif %}</button>
+    </div>
+  </form>
+</div>
+
+<div class="actions" style="font-size:.9rem">
+  <form method="post" action="{% url 'learning:mark_for_review' ex.code %}" class="inline">{% csrf_token %}
+    <input type="hidden" name="next" value="{{ request.path }}">
+    <button class="btn btn-quiet btn-small" type="submit">Marcar para revisão</button>
+  </form>
+  <a class="btn btn-quiet btn-small" href="{% url 'learning:flag_issue' ex.code %}?next={{ request.path|urlencode }}">Sinalizar problema</a>
+  {% if session.answered_count %}
+  <form method="post" action="{% url 'learning:session_finish' session.pk %}" class="inline">{% csrf_token %}
+    <button class="btn btn-quiet btn-small" type="submit" data-confirm="Encerrar agora? As questões não respondidas ficam de fora do resultado.">Encerrar sessão</button>
+  </form>
+  {% endif %}
+</div>
+{% endblock %}

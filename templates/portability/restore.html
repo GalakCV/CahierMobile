@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Restaurar backup{% endblock %}
+{% block content %}
+<p class="muted"><a href="{% url 'dados:home' %}">Dados</a> / restaurar</p>
+<h1>Restaurar backup</h1>
+<div class="danger-zone">
+  <p><strong>Atenção:</strong> restaurar substitui todo o banco atual (conteúdo e progresso) pelo conteúdo do backup. Antes de restaurar, um backup de segurança do estado atual é criado automaticamente.</p>
+  {% if error %}<p class="form-error" role="alert">{{ error }}</p>{% endif %}
+  <form method="post" enctype="multipart/form-data" class="form-grid">
+    {% csrf_token %}
+    <div class="field"><label for="name">Backup salvo</label>
+      <select id="name" name="name"><option value="">— nenhum (vou enviar um arquivo) —</option>
+      {% for b in backups %}<option value="{{ b.name }}"{% if b.name == selected %} selected{% endif %}>{{ b.name }} ({{ b.size_kb }} KB)</option>{% endfor %}</select></div>
+    <div class="field"><label for="file">Ou envie um arquivo .sqlite3 (até {{ max_mb }} MB)</label><input id="file" type="file" name="file" accept=".sqlite3,.sqlite,.db"></div>
+    <div class="field"><label for="confirmation">Para confirmar, digite <strong>{{ confirm_phrase }}</strong></label>
+      <input id="confirmation" type="text" name="confirmation" autocomplete="off" required></div>
+    <div class="actions"><button class="btn btn-danger" type="submit">Restaurar este backup</button>
+      <a class="btn btn-quiet" href="{% url 'dados:home' %}">Cancelar</a></div>
+  </form>
+</div>
+{% endblock %}

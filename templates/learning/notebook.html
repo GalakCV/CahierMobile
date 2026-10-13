@@ -1,0 +1,34 @@
+{% extends "base.html" %}{% load cahier %}
+{% block title %}Caderno de erros{% endblock %}
+{% block content %}
+<h1>Caderno de erros</h1>
+<p class="muted">Cada questão que você errou fica aqui até ser superada: três acertos seguidos e um intervalo de revisão de pelo menos 14 dias.</p>
+<p>{% for value, label in states %}<span class="tag tag-{{ value }}">{{ label }}: {{ counts|get_item:value }}</span> {% endfor %}
+  · <a href="{% url 'dados:export' 'caderno' %}">Exportar caderno (JSON)</a></p>
+<form method="get" class="filters">
+  <div><label for="estado">Estado</label><select id="estado" name="estado"><option value="">Todos</option>{% for value, label in states %}<option value="{{ value }}"{% if value == f_state %} selected{% endif %}>{{ label }}</option>{% endfor %}</select></div>
+  <div><label for="capitulo">Capítulo</label><select id="capitulo" name="capitulo"><option value="">Todos</option>{% for c in chapters %}<option value="{{ c.code }}"{% if c.code == f_chapter %} selected{% endif %}>{{ c.number }}. {{ c.title }}</option>{% endfor %}</select></div>
+  <div><label for="competencia">Competência</label><select id="competencia" name="competencia"><option value="">Todas</option>{% for c in competencies %}<option value="{{ c.code }}"{% if c.code == f_comp %} selected{% endif %}>{{ c.name }}</option>{% endfor %}</select></div>
+  <div><label for="ordem">Ordenar por</label><select id="ordem" name="ordem"><option value="erros"{% if order == "erros" %} selected{% endif %}>Mais erros</option><option value="recentes"{% if order == "recentes" %} selected{% endif %}>Mais recentes</option><option value="revisao"{% if order == "revisao" %} selected{% endif %}>Próxima revisão</option></select></div>
+  <button class="btn btn-quiet btn-small" type="submit">Filtrar</button>
+</form>
+{% if rows %}
+{% for r in rows %}
+<article class="result-item">
+  <div class="row"><p class="instruction" style="margin:0">{{ r.ex.instruction }}</p><span class="tag tag-{{ r.item.recovery }}">{{ r.item.get_recovery_display }}</span></div>
+  <p class="fr prewrap" lang="fr" style="margin:.3rem 0">{{ r.ex.prompt }}</p>
+  <dl class="answer-compare">
+    <dt>Sua resposta</dt><dd lang="fr" class="wrong">{{ r.item.last_answer|default:"—" }}</dd>
+    <dt>Resposta correta</dt><dd lang="fr" class="right">{{ r.last_wrong.correct_display|default:"—" }}</dd>
+  </dl>
+  <details class="help"><summary>Explicação</summary><div class="prewrap">{{ r.ex.explanation }}</div></details>
+  <p class="muted" style="font-size:.88rem">
+    Capítulo {{ r.ex.chapter.number }} ({{ r.ex.chapter.title }}) · {{ r.ex.competency.name }}
+    {% for g in r.ex.grammar_topics.all %} · {{ g.title }}{% endfor %}{% for v in r.ex.vocabulary_topics.all %} · {{ v.title }}{% endfor %}<br>
+    {{ r.item.error_count }} erro{{ r.item.error_count|pluralize }} · última tentativa {{ r.item.last_attempt_at|date:"d/m/Y H:i" }} · próxima revisão {{ r.item.due_at|date:"d/m/Y" }}
+  </p>
+</article>
+{% endfor %}
+{% include "includes/pagination.html" %}
+{% else %}<div class="empty">Nenhum erro com esses filtros.</div>{% endif %}
+{% endblock %}

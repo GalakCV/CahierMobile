@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}{{ src.title }}{% endblock %}
+{% block content %}
+<p class="muted"><a href="{% url 'content:credits' %}">Créditos</a> / fonte</p>
+<h1>{{ src.title }}</h1>
+<dl class="answer-compare">
+  <dt>Autoria</dt><dd>{{ src.author }}</dd>
+  <dt>URL</dt><dd>{% if src.url %}<a href="{{ src.url }}" rel="noreferrer noopener">{{ src.url }}</a>{% else %}—{% endif %}</dd>
+  <dt>Licença</dt><dd>{% if src.license_url %}<a href="{{ src.license_url }}" rel="noreferrer noopener">{{ src.license_name }}</a>{% else %}{{ src.license_name }}{% endif %}</dd>
+</dl>
+{% if src.notes %}<div class="explanation prewrap">{{ src.notes }}</div>{% endif %}
+<h2>Textos ({{ passages|length }})</h2>
+<ul>{% for p in passages %}<li><a href="{{ p.get_absolute_url }}" lang="fr">{{ p.title }}</a> — cap. {{ p.chapter.number }} · {{ p.get_origin_display }}</li>{% empty %}<li class="muted">Nenhum.</li>{% endfor %}</ul>
+<h2>Questões</h2>
+<div class="table-wrap"><table><thead><tr><th>Código</th><th>Capítulo</th><th>Tipo</th><th>Origem</th></tr></thead>
+<tbody>{% for e in exercises %}<tr><td><a href="{% url 'content:exercise_preview' e.code %}"><code>{{ e.code }}</code></a></td><td>{{ e.chapter.number }}</td><td>{{ e.get_exercise_type_display }}</td><td>{{ e.get_origin_display }}</td></tr>
+{% empty %}<tr><td colspan="4" class="muted">Nenhuma.</td></tr>{% endfor %}</tbody></table></div>
+{% endblock %}

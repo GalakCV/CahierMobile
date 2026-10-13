@@ -1,0 +1,36 @@
+{% extends "base.html" %}{% load cahier %}
+{% block title %}Capítulos{% endblock %}
+{% block content %}
+<h1>Capítulos</h1>
+<p class="muted">Organizados a partir do <em>Français interactif</em> (UT Austin). Os exercícios e textos são originais.</p>
+{% if rows %}
+<ol class="chapters">
+{% for r in rows %}{% with ch=r.chapter info=r.info %}
+  <li class="chapter-row">
+    <span class="chapter-num" aria-hidden="true">{{ ch.number }}</span>
+    <div>
+      <h2><a href="{{ ch.get_absolute_url }}"><span class="visually-hidden">Capítulo {{ ch.number }}: </span><span lang="fr">{{ ch.title }}</span></a></h2>
+      <p class="muted" style="margin:0 0 .5rem">{{ ch.theme }}</p>
+      <details class="help"><summary>Objetivos, gramática e vocabulário</summary><div>
+        <p><strong>Objetivos</strong></p><ul>{% for o in ch.objectives.all %}<li>{{ o.description }}</li>{% endfor %}</ul>
+        <p><strong>Gramática:</strong> {% for g in ch.grammar_topics.all %}{{ g.title }}{% if not forloop.last %}; {% endif %}{% endfor %}</p>
+        <p><strong>Vocabulário:</strong> {% for v in ch.vocabulary_topics.all %}{{ v.title }}{% if not forloop.last %}; {% endif %}{% endfor %}</p>
+      </div></details>
+    </div>
+    <div class="chapter-side">
+      <span class="tag tag-status-{{ info.status }}">{{ info.status_label }}</span>
+      <div style="margin-top:.5rem">Domínio estimado {{ info.mastery|pct }}</div>{% meter info.mastery True %}
+      <div class="muted">{{ ch.n_exercises }} exercícios · {{ ch.n_passages }} textos<br>
+        Respondidos: {{ info.progress|pct }}<br>
+        {% if info.assessment_available %}Avaliação disponível{% if info.best_assessment is not None %} (melhor: {{ info.best_assessment }}%){% endif %}{% else %}Sem avaliação{% endif %}</div>
+    </div>
+  </li>
+{% endwith %}{% endfor %}
+</ol>
+{% else %}<div class="empty">Nenhum capítulo cadastrado. Rode <code>python manage.py seed_content</code>.</div>{% endif %}
+{% if planned %}
+<h2>Próximos capítulos (planejados)</h2>
+<p class="muted">Já estão no <a href="{% url 'content:curriculum_map' %}">mapa curricular</a> e podem receber conteúdo pelo painel ou por importação.</p>
+<ul class="list-plain">{% for p in planned %}<li><span lang="fr">{{ p.number }}. {{ p.title }}</span> <small class="muted">— {{ p.theme }}</small></li>{% endfor %}</ul>
+{% endif %}
+{% endblock %}

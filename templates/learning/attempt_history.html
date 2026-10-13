@@ -1,0 +1,17 @@
+{% extends "base.html" %}{% load cahier %}
+{% block title %}Respostas{% endblock %}
+{% block content %}
+<h1>Todas as respostas</h1>
+<p class="muted">As tentativas nunca são alteradas: cada uma guarda a versão da questão que foi respondida.</p>
+<form method="get" class="filters"><div><label for="q">Buscar</label><input id="q" type="text" name="q" value="{{ q }}"></div><button class="btn btn-quiet btn-small" type="submit">Filtrar</button></form>
+{% if page.object_list %}
+<div class="table-wrap"><table>
+<thead><tr><th>Data</th><th>Questão</th><th>Versão</th><th>Resposta</th><th>Resultado</th><th>Tempo</th></tr></thead>
+<tbody>{% for a in page %}
+<tr><td>{{ a.created_at|date:"d/m/Y H:i" }}</td><td><code>{{ a.exercise.code }}</code><br><small>{{ a.exercise.chapter.title }}</small></td>
+<td>v{{ a.exercise_version }}</td><td lang="fr">{{ a.answer_display|truncatechars:80 }}</td>
+<td>{{ a.result|result_mark }} {{ a.get_result_display }}</td><td>{{ a.duration_seconds }} s</td></tr>
+{% endfor %}</tbody></table></div>
+{% include "includes/pagination.html" %}
+{% else %}<div class="empty">Nenhuma resposta registrada.</div>{% endif %}
+{% endblock %}

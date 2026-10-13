@@ -1,0 +1,19 @@
+{% extends "base.html" %}{% load cahier %}
+{% block title %}Histórico de sessões{% endblock %}
+{% block content %}
+<h1>Histórico</h1>
+<p><a href="{% url 'learning:attempt_history' %}">Ver todas as respostas (tentativas)</a></p>
+{% if page.object_list %}
+<div class="table-wrap"><table>
+  <thead><tr><th>Sessão</th><th>Tipo</th><th>Estado</th><th>Início</th><th>Resultado</th><th></th></tr></thead>
+  <tbody>
+  {% for s in page %}
+    <tr><td>{{ s }}</td><td>{{ s.get_kind_display }}<br><small>{{ s.get_mode_display }}</small></td>
+      <td>{{ s.get_status_display }}</td><td>{{ s.started_at|date:"d/m/Y H:i" }}</td>
+      <td>{{ s.result_score|score_pct }}</td>
+      <td>{% if s.status == "finished" %}<a href="{% url 'learning:session_result' s.pk %}">Resultado</a>{% else %}<a href="{{ s.get_absolute_url }}">Retomar</a>{% endif %}</td></tr>
+  {% endfor %}
+  </tbody></table></div>
+{% include "includes/pagination.html" %}
+{% else %}<div class="empty">Nenhuma sessão ainda. <a href="{% url 'learning:session_new' %}">Comece uma prática.</a></div>{% endif %}
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}{% load cahier %}
+{% block title %}Produção escrita{% endblock %}
+{% block content %}
+<h1>Produção escrita</h1>
+<p class="muted">Seus textos ficam guardados aqui. Eles não recebem nota automática: você compara com a resposta-modelo e se autoavalia pelos critérios — ou corrige depois, com calma.</p>
+<p class="actions">
+  <a class="btn btn-small {% if not flt %}{% else %}btn-quiet{% endif %}" href="?">Todos</a>
+  <a class="btn btn-small {% if flt == 'pendentes' %}{% else %}btn-quiet{% endif %}" href="?filtro=pendentes">Aguardando avaliação</a>
+  <a class="btn btn-small {% if flt == 'revisar' %}{% else %}btn-quiet{% endif %}" href="?filtro=revisar">Marcados para revisar</a>
+</p>
+{% if page.object_list %}
+{% for w in page %}
+<article class="result-item">
+  <div class="row"><strong>{{ w.attempt.exercise.instruction }}</strong>
+  <span>{% if w.assessed_score is None %}<span class="tag tag-reviewing">aguardando</span>{% else %}<span class="tag">{{ w.assessed_score|score_pct }} · {{ w.get_assessed_by_display }}</span>{% endif %}{% if w.marked_for_review %} <span class="tag tag-recent">revisar</span>{% endif %}</span></div>
+  <p class="fr prewrap" lang="fr">{{ w.text|truncatechars:240 }}</p>
+  <small class="muted">{{ w.attempt.created_at|date:"d/m/Y H:i" }} · {{ w.attempt.exercise.chapter.title }}</small>
+  <a class="btn btn-quiet btn-small" href="{% url 'learning:written_assess' w.pk %}">{% if w.assessed_score is None %}Avaliar{% else %}Reabrir{% endif %}</a>
+</article>
+{% endfor %}
+{% include "includes/pagination.html" %}
+{% else %}<div class="empty">Nenhum texto aqui ainda.</div>{% endif %}
+{% endblock %}

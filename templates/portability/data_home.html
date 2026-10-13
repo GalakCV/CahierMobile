@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Dados e backup{% endblock %}
+{% block content %}
+<h1>Dados e backup</h1>
+<p class="muted">Tudo fica no seu computador, na pasta <code>{{ backup_dir }}</code> e no banco SQLite ao lado dela.</p>
+
+<div class="grid-2">
+<section>
+  <h2>Exportar</h2>
+  <ul class="list-plain">
+    <li class="row"><span>Todo o conteúdo (capítulos, textos, questões, fontes)</span><a class="btn btn-quiet btn-small" href="{% url 'dados:export' 'conteudo' %}">Baixar JSON</a></li>
+    <li><form method="get" action="{% url 'dados:export' 'conteudo' %}" class="row">
+      <label for="capitulo">Apenas um capítulo</label>
+      <span><select id="capitulo" name="capitulo">{% for c in chapters %}<option value="{{ c.code }}">{{ c.number }}. {{ c.title }}</option>{% endfor %}</select>
+      <button class="btn btn-quiet btn-small" type="submit">Baixar JSON</button></span></form></li>
+    <li class="row"><span>Progresso (respostas, sessões, domínio, revisões)</span><a class="btn btn-quiet btn-small" href="{% url 'dados:export' 'progresso' %}">Baixar JSON</a></li>
+    <li class="row"><span>Caderno de erros</span><a class="btn btn-quiet btn-small" href="{% url 'dados:export' 'caderno' %}">Baixar JSON</a></li>
+    <li class="row"><span>Exportação completa (conteúdo + progresso + caderno)</span><a class="btn btn-quiet btn-small" href="{% url 'dados:export' 'completo' %}">Baixar JSON</a></li>
+  </ul>
+
+  <h2>Importar conteúdo</h2>
+  <p>Envie um pacote JSON no formato descrito em <code>docs/FORMATO_JSON.md</code> (até {{ max_import_mb }} MB). Antes de gravar, o arquivo é validado e você vê um relatório.</p>
+  <p><a class="btn" href="{% url 'dados:import' %}">Importar pacote</a></p>
+  {% if imports %}<h3>Últimas importações</h3>
+  <ul class="list-plain">{% for i in imports %}<li class="row"><span>{{ i.filename }}</span><small class="muted">{{ i.get_status_display }} · {{ i.created_at|date:"d/m/Y H:i" }}</small></li>{% endfor %}</ul>{% endif %}
+</section>
+
+<section>
+  <h2>Backup do banco</h2>
+  <form method="post" action="{% url 'dados:backup_create' %}" class="actions">{% csrf_token %}
+    <label for="label" class="visually-hidden">Rótulo</label>
+    <input id="label" type="text" name="label" placeholder="rótulo (opcional)" maxlength="40" style="padding:.5rem;border:1px solid var(--rule-strong);border-radius:4px;background:var(--paper);color:var(--ink)">
+    <button class="btn" type="submit">Criar backup agora</button>
+  </form>
+  {% if backups %}
+  <div class="table-wrap"><table><thead><tr><th>Arquivo</th><th>Tamanho</th><th></th></tr></thead><tbody>
+  {% for b in backups %}<tr><td><code>{{ b.name }}</code></td><td>{{ b.size_kb }} KB</td>
+    <td><a href="{% url 'dados:backup_download' b.name %}">Baixar</a> · <a href="{% url 'dados:backup_restore' %}?nome={{ b.name|urlencode }}">Restaurar…</a></td></tr>{% endfor %}
+  </tbody></table></div>
+  {% else %}<p class="muted">Nenhum backup ainda.</p>{% endif %}
+  <p><a href="{% url 'dados:backup_restore' %}">Restaurar a partir de um arquivo…</a> (até {{ max_restore_mb }} MB)</p>
+  <p class="muted" style="font-size:.9rem">Também é possível criar backups pelo terminal com <code>backup.ps1</code>.</p>
+</section>
+</div>
+{% endblock %}

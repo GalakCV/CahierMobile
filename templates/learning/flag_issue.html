@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Sinalizar problema{% endblock %}
+{% block content %}
+<h1>Sinalizar problema</h1>
+<p class="muted">Questão <code>{{ ex.code }}</code> (versão {{ ex.version }}).</p>
+<blockquote class="evidence" lang="fr">{{ ex.prompt }}</blockquote>
+<form method="post" class="form-grid" novalidate>
+  {% csrf_token %}
+  <input type="hidden" name="next" value="{{ next }}">
+  <input type="hidden" name="user_answer" value="{{ user_answer }}">
+  <div class="field"><fieldset><legend>{{ form.kind.label }}</legend>{{ form.kind }}</fieldset>{{ form.kind.errors }}</div>
+  <div class="field">{{ form.comment.label_tag }} {{ form.comment }}{{ form.comment.errors }}</div>
+  <div class="actions"><button class="btn" type="submit">Enviar para o painel editorial</button>
+    {% if next %}<a class="btn btn-quiet" href="{{ next }}">Voltar</a>{% endif %}</div>
+</form>
+{% endblock %}

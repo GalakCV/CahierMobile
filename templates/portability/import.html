@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Importar conteúdo{% endblock %}
+{% block content %}
+<p class="muted"><a href="{% url 'dados:home' %}">Dados</a> / importar</p>
+<h1>Importar conteúdo</h1>
+{% if error %}<p class="form-error" role="alert">{{ error }}</p>{% endif %}
+
+{% if report %}
+<section class="panel" aria-live="polite">
+  <h2 style="margin-top:0">{% if final %}Resultado da importação{% else %}Relatório da validação{% endif %} — {{ filename }}</h2>
+  {% if report.ok %}
+    <p class="verdict verdict-correct"><span class="mark">✓</span> {% if final %}Importação gravada.{% else %}Arquivo válido. Nada foi gravado ainda.{% endif %}</p>
+  {% else %}
+    <p class="verdict verdict-incorrect"><span class="mark">✗</span> {{ report.errors|length }} erro{{ report.errors|length|pluralize }} crítico{{ report.errors|length|pluralize }}. A importação inteira foi recusada e o banco não foi alterado.</p>
+    <ul>{% for e in report.errors %}<li>{{ e }}</li>{% endfor %}</ul>
+  {% endif %}
+  {% if report.created %}<p><strong>{% if final %}Criados{% else %}Seriam criados{% endif %}:</strong> {% for k, v in report.created.items %}{{ v }} {{ k }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>{% endif %}
+  {% if report.updated %}<p><strong>{% if final %}Atualizados{% else %}Seriam atualizados{% endif %}:</strong> {% for k, v in report.updated.items %}{{ v }} {{ k }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>{% endif %}
+  {% if report.reused %}<p><strong>Já existentes (reaproveitados):</strong> {% for k, v in report.reused.items %}{{ v }} {{ k }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>{% endif %}
+  {% if report.warnings %}<details class="help"><summary>{{ report.warnings|length }} aviso{{ report.warnings|length|pluralize }}</summary><div><ul>{% for w in report.warnings %}<li>{{ w }}</li>{% endfor %}</ul></div></details>{% endif %}
+  {% if token %}
+  <form method="post" class="actions">{% csrf_token %}
+    <input type="hidden" name="token" value="{{ token }}"><input type="hidden" name="filename" value="{{ filename }}">
+    <input type="hidden" name="update_existing" value="{% if update_existing %}1{% else %}0{% endif %}">
+    <button class="btn" type="submit">Confirmar importação</button>
+    <a class="btn btn-quiet" href="{% url 'dados:import' %}">Cancelar</a>
+  </form>
+  {% endif %}
+</section>
+{% endif %}
+
+{% if not token %}
+<form method="post" enctype="multipart/form-data" class="form-grid" style="margin-top:1rem">
+  {% csrf_token %}
+  <div class="field"><label for="file">Arquivo JSON (até {{ max_mb }} MB)</label><input id="file" type="file" name="file" accept=".json,application/json" required></div>
+  <label><input type="checkbox" name="update_existing" value="1"> Atualizar itens que já existem (mesmo código). Sem esta opção, códigos repetidos são recusados para evitar duplicações acidentais.</label>
+  <div class="actions"><button class="btn" type="submit">Validar arquivo</button></div>
+  <p class="muted">Primeiro o arquivo é validado e simulado dentro de uma transação. Só depois da sua confirmação ele é gravado — e se qualquer erro crítico aparecer, nada é alterado.</p>
+</form>
+{% endif %}
+{% endblock %}

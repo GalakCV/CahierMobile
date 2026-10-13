@@ -1,0 +1,76 @@
+{% load cahier %}
+<div class="sheet-meta">
+  <span class="tag">{{ ex.get_exercise_type_display }}</span>
+  {% difficulty_dots ex.difficulty %}
+  {% if ex.competency.name != ex.get_exercise_type_display %}<span>{{ ex.competency.name }}</span>{% endif %}
+  {% if ex.reading_skill %}<span>{{ ex.get_reading_skill_display }}</span>{% endif %}
+</div>
+<p class="instruction">{{ ex.instruction }}</p>
+{% if ex.context %}<div class="context" lang="fr">{{ ex.context|dialogue }}</div>{% endif %}
+
+{% if ex.interaction == "text" and ex.blank_count %}
+  <p class="prompt" lang="fr">{% for i, part, has_blank in prompt_parts %}{{ part }}{% if has_blank %}<label class="visually-hidden" for="blank_{{ i }}">Lacuna {{ i|add:1 }}</label><input class="blank" type="text" id="blank_{{ i }}" name="blank_{{ i }}" autocomplete="off" autocapitalize="off" spellcheck="false" lang="fr"{% if forloop.first %} autofocus{% endif %}{% if readonly %} disabled{% endif %}>{% endif %}{% endfor %}</p>
+{% else %}
+  <p class="prompt" lang="fr">{{ ex.prompt }}</p>
+{% endif %}
+
+{% if ex.interaction == "single" or ex.interaction == "multiple" %}
+  <fieldset style="border:0;padding:0;margin:0"><legend class="visually-hidden">Alternativas</legend>
+  <ul class="options">
+    {% for c in choices %}
+    <li class="option"><label>
+      <input type="{% if ex.interaction == 'single' %}radio{% else %}checkbox{% endif %}" name="choice" value="{{ c.pk }}"{% if readonly %} disabled{% endif %}{% if ex.interaction == 'single' and forloop.first %} required{% endif %}>
+      <span lang="fr">{{ c.text }}</span></label></li>
+    {% endfor %}
+  </ul></fieldset>
+  {% if ex.interaction == "multiple" %}<p class="helptext">Marque todas as alternativas corretas.</p>{% endif %}
+
+{% elif ex.interaction == "text" and not ex.blank_count %}
+  <label class="visually-hidden" for="blank_0">Sua resposta</label>
+  <input class="text-answer" type="text" id="blank_0" name="blank_0" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="500" autofocus{% if readonly %} disabled{% endif %}>
+
+{% elif ex.interaction == "order" %}
+  <div data-order class="{% if ex.exercise_type == 'order_sentences' or ex.exercise_type == 'text_interpretation' or ex.exercise_type == 'dialogue_comprehension' %}order-sentences{% endif %}">
+    <p class="helptext" id="order-help">Toque nos itens na ordem certa. Toque de novo para devolver um item.</p>
+    <div class="order-zone" data-empty="Sua sequência aparece aqui." aria-label="Sua sequência" aria-describedby="order-help"></div>
+    <div class="order-bank" aria-label="Itens disponíveis">
+      {% for c in choices %}<button type="button" class="token" data-id="{{ c.pk }}" aria-pressed="false" lang="fr">{{ c.text }}</button>{% endfor %}
+    </div>
+    <input type="hidden" name="order" value="">
+    <button type="button" class="btn btn-quiet btn-small" data-order-clear>Recomeçar</button>
+    <noscript><p class="form-error">Esta questão precisa de JavaScript ativado no navegador.</p></noscript>
+  </div>
+
+{% elif ex.interaction == "match" %}
+  <table class="match-table">
+    <thead><tr><th scope="col">Item</th><th scope="col">Corresponde a</th></tr></thead>
+    <tbody>
+    {% for c in choices %}
+      <tr><td lang="fr"><label for="match_{{ c.pk }}">{{ c.text }}</label></td>
+      <td><select id="match_{{ c.pk }}" name="match_{{ c.pk }}"{% if readonly %} disabled{% endif %}>
+        <option value="">— escolha —</option>
+        {% for r in rights %}<option value="{{ r.pk }}">{{ r.match_text }}</option>{% endfor %}
+      </select></td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+{% elif ex.interaction == "writing" %}
+  {% if ex.criteria_list %}
+  <details class="help" open><summary>O que seu texto deve conter</summary><div><ul>{% for c in ex.criteria_list %}<li>{{ c }}</li>{% endfor %}</ul></div></details>
+  {% endif %}
+  <label class="visually-hidden" for="text">Seu texto</label>
+  <textarea class="text-answer" id="text" name="text" maxlength="5000" lang="fr" spellcheck="false"{% if readonly %} disabled{% endif %}></textarea>
+{% endif %}
+
+{% if ex.interaction == "text" or ex.interaction == "writing" %}
+  {% if user_setting.show_keyboard and not readonly %}
+  <div class="keyboard" data-keyboard role="group" aria-label="Caracteres franceses">
+    {% for ch in "éèêëàâçùûîïôœæ" %}<button type="button" data-char="{{ ch }}" aria-label="Inserir {{ ch }}">{{ ch }}</button>{% endfor %}
+    <button type="button" data-char="’" aria-label="Inserir apóstrofo">’</button>
+    <button type="button" data-char="«&nbsp;" aria-label="Inserir aspas francesas">«</button>
+    <button type="button" data-char="&nbsp;»" aria-label="Fechar aspas francesas">»</button>
+    <span class="hint">Shift + clique = maiúscula</span>
+  </div>
+  {% endif %}
+{% endif %}

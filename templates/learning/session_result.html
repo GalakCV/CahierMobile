@@ -1,0 +1,61 @@
+{% extends "base.html" %}{% load cahier %}
+{% block title %}Resultado{% endblock %}
+{% block content %}
+<h1>{{ session }}</h1>
+<p class="muted">{{ session.get_kind_display }} · {{ session.get_mode_display }} · {{ answered }} de {{ total }} questões · {{ minutes }} min</p>
+
+<div class="grid-2">
+  <div>
+    <p class="score-big">{{ score_pct|default_if_none:"—" }}{% if score_pct is not None %}%{% endif %}</p>
+    <p>{{ correct_count }} correta{{ correct_count|pluralize }}, {{ wrong_count }} com erro{% if pending %}, {{ pending|length }} aguardando sua avaliação{% endif %}.</p>
+    {% if passed is not None %}
+      {% if passed %}<p class="verdict verdict-correct"><span class="mark">✓</span> Avaliação aprovada: capítulo concluído. Ele continua nas revisões espaçadas.</p>
+      {% else %}<p class="verdict verdict-incorrect"><span class="mark">✗</span> É preciso 70% para concluir o capítulo. Revise os pontos abaixo e tente de novo.</p>{% endif %}
+    {% endif %}
+  </div>
+  <div class="actions" style="align-items:flex-start">
+    {% if wrong_count %}
+    <form method="post" action="{% url 'learning:session_retry' session.pk %}" class="inline">{% csrf_token %}
+      <button class="btn" type="submit">Refazer só as erradas ({{ wrong_count }})</button></form>
+    {% endif %}
+    {% if session.chapter %}<a class="btn btn-quiet" href="{{ session.chapter.get_absolute_url }}">Voltar ao capítulo</a>{% endif %}
+    <a class="btn btn-quiet" href="{% url 'learning:dashboard' %}">Ir para o painel</a>
+  </div>
+</div>
+
+{% for p in passages %}
+<section class="panel" style="margin-top:1.5rem">
+  <h2 style="margin-top:0" lang="fr">{{ p.title }}</h2>
+  <div class="grid-2">
+    {% if p.key_vocabulary %}<div><h3>Vocabulário novo</h3><ul class="vocab" style="columns:1">{% for v in p.key_vocabulary %}<li><span class="fr" lang="fr">{{ v.fr }}</span> — {{ v.pt }}</li>{% endfor %}</ul></div>{% endif %}
+    {% if p.useful_structures %}<div><h3>Estruturas úteis</h3><ul class="examples">{% for s in p.useful_structures %}<li><span class="fr" lang="fr">{{ s.fr }}</span><span class="pt">{{ s.pt }}</span></li>{% endfor %}</ul></div>{% endif %}
+  </div>
+  <details class="help"><summary>Reler o texto</summary><div class="fr" lang="fr">{{ p.body|dialogue }}</div></details>
+</section>
+{% endfor %}
+
+<h2>Questão por questão</h2>
+{% for i in items %}
+<article class="result-item">
+  <div class="head">
+    {% if i.attempt %}<span class="result-mark {{ i.attempt.result }}{% if i.attempt.result == 'pending' and i.attempt.effective_score is not None %} correct{% endif %}" aria-label="{{ i.attempt.get_result_display }}">{{ i.attempt.result|result_mark }}</span>{% else %}<span class="result-mark" aria-label="Não respondida">–</span>{% endif %}
+    <div style="flex:1">
+      <p class="instruction" style="margin:0">{{ i.position }}. {{ i.exercise.instruction }}</p>
+      <p class="fr prewrap" lang="fr" style="margin:.2rem 0">{{ i.exercise.prompt }}</p>
+      {% if i.attempt %}
+        <dl class="answer-compare">
+          <dt>Sua resposta</dt><dd lang="fr" class="{% if i.attempt.result != 'correct' and i.attempt.result != 'pending' %}wrong{% endif %}">{{ i.attempt.answer_display }}</dd>
+          {% if i.attempt.result != "correct" %}<dt>{% if i.attempt.result == "pending" %}Resposta-modelo{% else %}Correta{% endif %}</dt><dd lang="fr" class="right">{{ i.attempt.correct_display }}</dd>{% endif %}
+        </dl>
+        <div class="explanation prewrap">{{ i.exercise.explanation }}</div>
+        {% if i.exercise.evidence %}<blockquote class="evidence" lang="fr">{{ i.exercise.evidence }}</blockquote>{% endif %}
+        {% if i.attempt.result == "pending" and i.attempt.written and i.attempt.effective_score is None %}
+          <a class="btn btn-small" href="{% url 'learning:written_assess' i.attempt.written.pk %}?next={{ request.path|urlencode }}">Autoavaliar este texto</a>
+        {% endif %}
+      {% else %}<p class="muted">Não respondida.</p>{% endif %}
+    </div>
+  </div>
+</article>
+{% endfor %}
+{% if unfinished %}<p class="muted">Esta sessão ainda tem questões não respondidas. <a href="{{ session.get_absolute_url }}">Continuar</a></p>{% endif %}
+{% endblock %}

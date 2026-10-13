@@ -1,0 +1,29 @@
+{% extends "base.html" %}{% load cahier %}
+{% block title %}Revisões{% endblock %}
+{% block content %}
+<h1>Revisões</h1>
+<p class="muted">As questões voltam em intervalos crescentes ({% for d in intervals %}{{ d }}{% if not forloop.last %}, {% endif %}{% endfor %} dias). Errar encurta o intervalo; acertar o aumenta. Erros repetidos voltam com mais frequência.</p>
+{% if due %}
+<form method="post" action="{% url 'learning:start_spaced_review' %}" class="actions">{% csrf_token %}
+  <label for="count">Questões nesta rodada</label>
+  <select id="count" name="count">
+    <option value="5">5</option><option value="10">10</option><option value="15" selected>15</option><option value="20">20</option><option value="30">30</option>
+  </select>
+  <button class="btn" type="submit">Revisar {{ due|length }} pendente{{ due|length|pluralize }}</button>
+</form>
+<h2>Pendentes (por prioridade)</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Questão</th><th>Capítulo</th><th>Competência</th><th>Erros</th><th>Desde</th><th>Estado</th></tr></thead>
+<tbody>{% for r in due %}
+<tr><td class="fr" lang="fr">{{ r.exercise.prompt|truncatechars:70 }}{% if r.flagged %} <span class="tag">marcada</span>{% endif %}</td>
+<td>{{ r.exercise.chapter.number }}</td><td>{{ r.exercise.competency.name }}</td><td>{{ r.error_count }}</td>
+<td>{{ r.due_at|date:"d/m" }}</td><td>{% if r.recovery %}<span class="tag tag-{{ r.recovery }}">{{ r.get_recovery_display }}</span>{% else %}manutenção{% endif %}</td></tr>
+{% endfor %}</tbody></table></div>
+{% else %}
+<div class="empty"><p>Nenhuma revisão pendente agora.</p><p><a href="{% url 'learning:session_new' %}">Praticar algo novo</a></p></div>
+{% endif %}
+{% if upcoming %}
+<h2>Próximas</h2>
+<ul class="list-plain">{% for r in upcoming %}<li class="row"><span class="fr" lang="fr">{{ r.exercise.prompt|truncatechars:60 }}</span><span class="muted">{{ r.due_at|date:"d/m/Y" }} · etapa {{ r.stage|add:1 }} de 5</span></li>{% endfor %}</ul>
+{% endif %}
+{% endblock %}

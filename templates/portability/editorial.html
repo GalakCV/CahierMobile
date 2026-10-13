@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Painel editorial{% endblock %}
+{% block content %}
+<h1>Painel editorial</h1>
+<div class="actions">
+  <a class="btn" href="{% url 'admin:content_exercise_add' %}">Nova questão</a>
+  <a class="btn btn-quiet" href="{% url 'admin:content_passage_add' %}">Novo texto</a>
+  <a class="btn btn-quiet" href="{% url 'admin:content_chapter_changelist' %}">Capítulos</a>
+  <a class="btn btn-quiet" href="{% url 'admin:content_source_changelist' %}">Fontes e licenças</a>
+  <a class="btn btn-quiet" href="{% url 'dados:import' %}">Importar</a>
+  <a class="btn btn-quiet" href="{% url 'dados:home' %}">Exportar</a>
+</div>
+
+<h2>Problemas sinalizados ({{ issue_count }} abertos)</h2>
+{% if issues %}
+<div class="table-wrap"><table><thead><tr><th>Questão</th><th>Tipo</th><th>Comentário</th><th>Data</th></tr></thead><tbody>
+{% for i in issues %}<tr><td><a href="{% url 'content:exercise_preview' i.exercise.code %}"><code>{{ i.exercise.code }}</code></a> <small>(v{{ i.exercise_version }})</small></td>
+<td>{{ i.get_kind_display }}</td><td>{{ i.comment|default:"—" }}{% if i.user_answer %}<br><small class="muted">Resposta dada: {{ i.user_answer }}</small>{% endif %}</td>
+<td>{{ i.created_at|date:"d/m/Y" }} <a href="{% url 'admin:content_contentissue_change' i.pk %}">resolver</a></td></tr>{% endfor %}
+</tbody></table></div>
+{% else %}<p class="muted">Nenhum problema aberto.</p>{% endif %}
+
+<h2>Relatório de validação do conteúdo</h2>
+<p>{{ report.totals.exercises|default:0 }} questões ativas · {{ report.totals.errors|default:0 }} erro{{ report.totals.errors|pluralize }} · {{ report.totals.warnings|default:0 }} aviso{{ report.totals.warnings|pluralize }}.
+{% if report.missing_types %}<br>Tipos de exercício sem nenhuma questão: {{ report.missing_types|join:", " }}.{% else %}<br>Todos os 27 tipos de exercício têm questões.{% endif %}</p>
+<div class="table-wrap"><table><thead><tr><th>Capítulo</th><th>Situação</th><th>Tipos usados</th></tr></thead><tbody>
+{% for c in report.chapters %}<tr><td>{{ c.chapter }}</td><td>{% if c.problems %}<span class="tag tag-recent">{{ c.problems|join:"; " }}</span>{% else %}<span class="tag tag-overcome">completo</span>{% endif %}</td><td>{{ c.types|length }}</td></tr>{% endfor %}
+</tbody></table></div>
+{% if report.rows %}
+<details class="help"><summary>{{ report.rows|length }} questões com erros ou avisos</summary><div>
+<ul>{% for r in report.rows %}<li><a href="{% url 'content:exercise_preview' r.exercise.code %}"><code>{{ r.exercise.code }}</code></a>
+  {% if r.errors %}<strong style="color:var(--marge)">{{ r.errors|join:"; " }}</strong>{% endif %} {% if r.warnings %}<small class="muted">{{ r.warnings|join:"; " }}</small>{% endif %}</li>{% endfor %}</ul>
+</div></details>
+{% endif %}
+
+<div class="grid-2">
+<section><h2>Alterações recentes no painel</h2>
+<ul class="list-plain">{% for l in log %}<li><small class="muted">{{ l.action_time|date:"d/m/Y H:i" }}</small><br>{{ l.get_action_flag_display }} {{ l.content_type.name }}: {{ l.object_repr }}</li>{% empty %}<li class="muted">Nenhuma alteração ainda.</li>{% endfor %}</ul></section>
+<section><h2>Versões de questões</h2>
+<ul class="list-plain">{% for v in versions %}<li><a href="{% url 'content:exercise_preview' v.exercise.code %}"><code>{{ v.exercise.code }}</code></a> v{{ v.number }} <small class="muted">{{ v.created_at|date:"d/m/Y H:i" }} · {{ v.note }}</small></li>{% endfor %}</ul></section>
+</div>
+{% endblock %}

@@ -1,0 +1,3381 @@
+{
+ "format": "cahier-content",
+ "version": 1,
+ "chapters": [
+  {
+   "code": "ch02",
+   "number": 2,
+   "title": "Me voici !",
+   "theme": "Informações pessoais, família, passatempos e horas",
+   "description": "Dar e pedir informações pessoais, dizer a idade, falar da família, dos passatempos e do que você não gosta, fazer perguntas e dizer as horas.",
+   "cefr_level": "A1",
+   "reference_note": "Corresponde ao capítulo 2 do Français interactif (Me voici !): fiche d'identité, questions personnelles, la famille, les amis, mots interrogatifs, l'heure, passe-temps, pays et nationalités; gramática 02.1 a 02.9 (avoir, verbos em -er, possessivos, est-ce que, ne… pas, quel, adjetivos).",
+   "useful_expressions": [
+    {
+     "fr": "Tu as quel âge ? — J'ai vingt ans.",
+     "pt": "Quantos anos você tem? — Tenho vinte anos."
+    },
+    {
+     "fr": "Tu habites où ? — J'habite à Lyon.",
+     "pt": "Onde você mora? — Moro em Lyon."
+    },
+    {
+     "fr": "Quelle est ton adresse ?",
+     "pt": "Qual é o seu endereço?"
+    },
+    {
+     "fr": "Est-ce que tu as des frères et sœurs ?",
+     "pt": "Você tem irmãos?"
+    },
+    {
+     "fr": "J'adore… / J'aime bien… / Je n'aime pas… / Je déteste…",
+     "pt": "Adoro… / Gosto… / Não gosto… / Detesto…"
+    },
+    {
+     "fr": "Quelle heure est-il ? — Il est trois heures et demie.",
+     "pt": "Que horas são? — São três e meia."
+    },
+    {
+     "fr": "Bises / Bisous",
+     "pt": "Beijos (fim de mensagem informal)"
+    }
+   ],
+   "review_summary": [
+    "Idade é com avoir: J'ai vingt ans (nunca « je suis vingt ans »).",
+    "avoir: j'ai, tu as, il a, nous avons, vous avez, ils ont (ont ≠ sont).",
+    "Verbos em -er: -e, -es, -e, -ons, -ez, -ent; nous mangeons, nous commençons.",
+    "Negação: ne + verbo + pas (n' antes de vogal). Depois da negação, un/une/des viram de/d'.",
+    "Perguntas: Est-ce que… ? (Est-ce qu' antes de vogal) ou só a entonação.",
+    "Possessivos concordam com o objeto: Julie et son frère. mon antes de vogal: mon amie.",
+    "aimer + artigo: J'aime le football (gosto de futebol).",
+    "quel / quelle / quels / quelles concordam com o substantivo.",
+    "Nacionalidades: adjetivo com minúscula (Elle est française); feminino geralmente com -e."
+   ],
+   "objectives": [
+    {
+     "code": "ch02.obj.questions",
+     "description": "Fazer perguntas para conhecer alguém.",
+     "competencies": [
+      "grammaire",
+      "lecture"
+     ],
+     "position": 1
+    },
+    {
+     "code": "ch02.obj.age",
+     "description": "Dizer a minha idade e a de outra pessoa.",
+     "competencies": [
+      "conjugaison"
+     ],
+     "position": 2
+    },
+    {
+     "code": "ch02.obj.famille",
+     "description": "Descrever a minha família.",
+     "competencies": [
+      "vocabulaire",
+      "grammaire"
+     ],
+     "position": 3
+    },
+    {
+     "code": "ch02.obj.loisirs",
+     "description": "Falar dos meus passatempos e dos da minha família.",
+     "competencies": [
+      "conjugaison",
+      "vocabulaire"
+     ],
+     "position": 4
+    },
+    {
+     "code": "ch02.obj.naime",
+     "description": "Dizer o que não gosto de fazer.",
+     "competencies": [
+      "grammaire"
+     ],
+     "position": 5
+    },
+    {
+     "code": "ch02.obj.infos",
+     "description": "Pedir e dar informações pessoais (nome, nacionalidade, endereço).",
+     "competencies": [
+      "vocabulaire",
+      "lecture"
+     ],
+     "position": 6
+    },
+    {
+     "code": "ch02.obj.heure",
+     "description": "Perguntar e dizer as horas.",
+     "competencies": [
+      "vocabulaire"
+     ],
+     "position": 7
+    }
+   ],
+   "grammar_topics": [
+    {
+     "code": "ch02.g.avoir",
+     "title": "O verbo avoir (ter)",
+     "position": 1,
+     "summary": "Avoir é irregular. Além de « ter », é usado para a idade: J'ai vingt ans.",
+     "tables": [
+      {
+       "title": "avoir — presente",
+       "rows": [
+        [
+         "j'",
+         "ai"
+        ],
+        [
+         "tu",
+         "as"
+        ],
+        [
+         "il / elle / on",
+         "a"
+        ],
+        [
+         "nous",
+         "avons"
+        ],
+        [
+         "vous",
+         "avez"
+        ],
+        [
+         "ils / elles",
+         "ont"
+        ]
+       ]
+      }
+     ],
+     "examples": [
+      {
+       "fr": "J'ai deux frères.",
+       "pt": "Tenho dois irmãos."
+      },
+      {
+       "fr": "Elle a dix-neuf ans.",
+       "pt": "Ela tem dezenove anos."
+      }
+     ],
+     "notes": "Je + ai = j'ai (elisão obrigatória). Cuidado para não confundir ils ont (têm) e ils sont (são).",
+     "common_errors": [
+      {
+       "wrong": "Je suis vingt ans.",
+       "right": "J'ai vingt ans.",
+       "why": "Idade se expressa com avoir, como « ter » em português."
+      },
+      {
+       "wrong": "Je ai un chat.",
+       "right": "J'ai un chat.",
+       "why": "Je vira j' antes de vogal."
+      }
+     ]
+    },
+    {
+     "code": "ch02.g.er",
+     "title": "Verbos regulares em -er (presente)",
+     "position": 2,
+     "summary": "A maioria dos verbos franceses termina em -er (parler, aimer, habiter). Tire o -er e acrescente: -e, -es, -e, -ons, -ez, -ent. As formas je/tu/il/ils soam iguais; a diferença está na escrita.",
+     "tables": [
+      {
+       "title": "parler — presente",
+       "rows": [
+        [
+         "je",
+         "parle"
+        ],
+        [
+         "tu",
+         "parles"
+        ],
+        [
+         "il / elle / on",
+         "parle"
+        ],
+        [
+         "nous",
+         "parlons"
+        ],
+        [
+         "vous",
+         "parlez"
+        ],
+        [
+         "ils / elles",
+         "parlent"
+        ]
+       ]
+      }
+     ],
+     "examples": [
+      {
+       "fr": "Nous habitons à Rennes.",
+       "pt": "Nós moramos em Rennes."
+      },
+      {
+       "fr": "Ils jouent au tennis.",
+       "pt": "Eles jogam tênis."
+      }
+     ],
+     "notes": "Verbos em -ger e -cer mantêm o som com nous: nous mangeons, nous commençons.\naimer / adorer / détester + artigo definido: J'aime le cinéma. aimer + infinitivo: J'aime danser.",
+     "common_errors": [
+      {
+       "wrong": "Nous mangons",
+       "right": "Nous mangeons",
+       "why": "O e mantém o som « j » antes de o."
+      },
+      {
+       "wrong": "J'aime football.",
+       "right": "J'aime le football.",
+       "why": "Depois de aimer, o francês usa artigo."
+      }
+     ]
+    },
+    {
+     "code": "ch02.g.possessifs",
+     "title": "Possessivos (mon, ma, mes…)",
+     "position": 3,
+     "summary": "O possessivo concorda com o objeto possuído, não com o dono: Julie et son frère; Paulo et sa sœur.\nmon/ma/mes (meu), ton/ta/tes (teu/seu), son/sa/ses (dele/dela), notre/nos, votre/vos, leur/leurs.",
+     "tables": [
+      {
+       "title": "Possessivos",
+       "rows": [
+        [
+         "masc.",
+         "fem.",
+         "plural"
+        ],
+        [
+         "mon",
+         "ma",
+         "mes"
+        ],
+        [
+         "ton",
+         "ta",
+         "tes"
+        ],
+        [
+         "son",
+         "sa",
+         "ses"
+        ],
+        [
+         "notre",
+         "notre",
+         "nos"
+        ],
+        [
+         "votre",
+         "votre",
+         "vos"
+        ],
+        [
+         "leur",
+         "leur",
+         "leurs"
+        ]
+       ]
+      }
+     ],
+     "examples": [
+      {
+       "fr": "mon père, ma mère, mes parents",
+       "pt": "meu pai, minha mãe, meus pais"
+      },
+      {
+       "fr": "mon amie Julie",
+       "pt": "minha amiga Julie (mon antes de vogal)"
+      }
+     ],
+     "common_errors": [
+      {
+       "wrong": "Julie et sa frère",
+       "right": "Julie et son frère",
+       "why": "frère é masculino; o gênero da dona não importa."
+      },
+      {
+       "wrong": "ma amie",
+       "right": "mon amie",
+       "why": "Antes de vogal usa-se mon, mesmo no feminino."
+      }
+     ]
+    },
+    {
+     "code": "ch02.g.questions",
+     "title": "Perguntas sim/não: est-ce que, n'est-ce pas",
+     "position": 4,
+     "summary": "Três jeitos de perguntar: só a entonação (Tu aimes le jazz ?), com est-ce que (Est-ce que tu aimes le jazz ?) e com n'est-ce pas no fim, quando você espera confirmação (Tu es brésilien, n'est-ce pas ?).",
+     "examples": [
+      {
+       "fr": "Est-ce qu'il habite ici ?",
+       "pt": "Ele mora aqui?"
+      },
+      {
+       "fr": "Vous parlez anglais, n'est-ce pas ?",
+       "pt": "Você fala inglês, não é?"
+      }
+     ],
+     "notes": "Est-ce que vira est-ce qu' antes de vogal: est-ce qu'elle, est-ce qu'il.",
+     "common_errors": [
+      {
+       "wrong": "Est-ce que il parle français ?",
+       "right": "Est-ce qu'il parle français ?",
+       "why": "Elisão antes de vogal."
+      }
+     ]
+    },
+    {
+     "code": "ch02.g.negation",
+     "title": "Negação: ne… pas",
+     "position": 5,
+     "summary": "O verbo fica entre ne e pas: Je ne parle pas allemand. Antes de vogal, ne vira n': Elle n'aime pas le jazz.\nDepois da negação, un/une/des viram de (d'): J'ai un chien → Je n'ai pas de chien.",
+     "examples": [
+      {
+       "fr": "Nous ne sommes pas français.",
+       "pt": "Nós não somos franceses."
+      },
+      {
+       "fr": "Il n'a pas d'enfants.",
+       "pt": "Ele não tem filhos."
+      }
+     ],
+     "notes": "Le/la/les NÃO mudam: Je n'aime pas le football.",
+     "common_errors": [
+      {
+       "wrong": "Je ne ai pas un chien.",
+       "right": "Je n'ai pas de chien.",
+       "why": "n' antes de vogal, e un vira de."
+      },
+      {
+       "wrong": "Je pas parle anglais.",
+       "right": "Je ne parle pas anglais.",
+       "why": "Os dois elementos cercam o verbo."
+      }
+     ]
+    },
+    {
+     "code": "ch02.g.quel",
+     "title": "Quel (qual) e palavras interrogativas",
+     "position": 6,
+     "summary": "quel concorda com o substantivo: quel âge (m), quelle adresse (f), quels films (m pl), quelles langues (f pl).\nOutras palavras: où (onde), quand (quando), comment (como), pourquoi (por quê), qui (quem), combien (quanto).",
+     "examples": [
+      {
+       "fr": "Quelle est ta nationalité ?",
+       "pt": "Qual é a sua nacionalidade?"
+      },
+      {
+       "fr": "Tu habites où ?",
+       "pt": "Onde você mora?"
+      }
+     ],
+     "common_errors": [
+      {
+       "wrong": "Quel est ton adresse ?",
+       "right": "Quelle est ton adresse ?",
+       "why": "adresse é feminino."
+      }
+     ]
+    },
+    {
+     "code": "ch02.g.adjectifs",
+     "title": "Adjetivos: concordância e nacionalidades",
+     "position": 7,
+     "summary": "O adjetivo concorda em gênero e número: un ami français, une amie française, des amis français.\nFeminino: em geral + e (brésilien → brésilienne; sportif → sportive; canadien → canadienne).\nAdjetivos de nacionalidade se escrevem com minúscula; com maiúscula só o substantivo: les Français.",
+     "examples": [
+      {
+       "fr": "Elle est portugaise.",
+       "pt": "Ela é portuguesa."
+      },
+      {
+       "fr": "Ils sont japonais.",
+       "pt": "Eles são japoneses."
+      }
+     ],
+     "common_errors": [
+      {
+       "wrong": "Elle est Brésilienne.",
+       "right": "Elle est brésilienne.",
+       "why": "Adjetivo de nacionalidade vai com minúscula."
+      },
+      {
+       "wrong": "Elle est canadiene.",
+       "right": "Elle est canadienne.",
+       "why": "-ien → -ienne (dois n)."
+      }
+     ]
+    }
+   ],
+   "vocabulary_topics": [
+    {
+     "code": "ch02.v.identite",
+     "title": "Ficha de identidade",
+     "position": 1,
+     "items": [
+      {
+       "fr": "le nom / le prénom",
+       "pt": "o sobrenome / o nome"
+      },
+      {
+       "fr": "l'âge",
+       "pt": "a idade",
+       "gender": "m"
+      },
+      {
+       "fr": "l'adresse",
+       "pt": "o endereço",
+       "gender": "f"
+      },
+      {
+       "fr": "la nationalité",
+       "pt": "a nacionalidade",
+       "gender": "f"
+      },
+      {
+       "fr": "la profession",
+       "pt": "a profissão",
+       "gender": "f"
+      },
+      {
+       "fr": "habiter (à)",
+       "pt": "morar (em)"
+      },
+      {
+       "fr": "parler",
+       "pt": "falar"
+      },
+      {
+       "fr": "un numéro de téléphone",
+       "pt": "um número de telefone"
+      }
+     ]
+    },
+    {
+     "code": "ch02.v.famille",
+     "title": "A família",
+     "position": 2,
+     "items": [
+      {
+       "fr": "le père / la mère",
+       "pt": "o pai / a mãe"
+      },
+      {
+       "fr": "les parents",
+       "pt": "os pais (pai e mãe) / os parentes"
+      },
+      {
+       "fr": "le frère / la sœur",
+       "pt": "o irmão / a irmã"
+      },
+      {
+       "fr": "le fils / la fille",
+       "pt": "o filho / a filha"
+      },
+      {
+       "fr": "le grand-père / la grand-mère",
+       "pt": "o avô / a avó"
+      },
+      {
+       "fr": "les grands-parents",
+       "pt": "os avós"
+      },
+      {
+       "fr": "l'oncle / la tante",
+       "pt": "o tio / a tia"
+      },
+      {
+       "fr": "le cousin / la cousine",
+       "pt": "o primo / a prima"
+      },
+      {
+       "fr": "le mari / la femme",
+       "pt": "o marido / a esposa"
+      },
+      {
+       "fr": "un chat / un chien",
+       "pt": "um gato / um cachorro"
+      },
+      {
+       "fr": "un ami / une amie",
+       "pt": "um amigo / uma amiga"
+      }
+     ]
+    },
+    {
+     "code": "ch02.v.heure",
+     "title": "As horas",
+     "position": 3,
+     "items": [
+      {
+       "fr": "Quelle heure est-il ?",
+       "pt": "Que horas são?"
+      },
+      {
+       "fr": "Il est une heure.",
+       "pt": "É uma hora."
+      },
+      {
+       "fr": "et quart / et demie / moins le quart",
+       "pt": "e quinze / e meia / quinze para"
+      },
+      {
+       "fr": "midi / minuit",
+       "pt": "meio-dia / meia-noite"
+      },
+      {
+       "fr": "du matin / de l'après-midi / du soir",
+       "pt": "da manhã / da tarde / da noite"
+      },
+      {
+       "fr": "18 h 15 = dix-huit heures quinze",
+       "pt": "horário oficial (24 h)"
+      }
+     ]
+    },
+    {
+     "code": "ch02.v.loisirs",
+     "title": "Passatempos e atividades",
+     "position": 4,
+     "items": [
+      {
+       "fr": "aimer, adorer, détester",
+       "pt": "gostar, adorar, detestar"
+      },
+      {
+       "fr": "jouer au football / au tennis",
+       "pt": "jogar futebol / tênis"
+      },
+      {
+       "fr": "jouer de la guitare / du piano",
+       "pt": "tocar violão / piano"
+      },
+      {
+       "fr": "regarder un film / la télévision",
+       "pt": "ver um filme / televisão"
+      },
+      {
+       "fr": "écouter de la musique",
+       "pt": "ouvir música"
+      },
+      {
+       "fr": "danser, chanter, nager",
+       "pt": "dançar, cantar, nadar"
+      },
+      {
+       "fr": "voyager",
+       "pt": "viajar"
+      },
+      {
+       "fr": "le week-end",
+       "pt": "o fim de semana"
+      },
+      {
+       "fr": "souvent, parfois, beaucoup, bien",
+       "pt": "frequentemente, às vezes, muito, bem"
+      }
+     ]
+    },
+    {
+     "code": "ch02.v.pays",
+     "title": "Países e nacionalidades",
+     "position": 5,
+     "items": [
+      {
+       "fr": "le Brésil — brésilien(ne)",
+       "pt": "Brasil — brasileiro(a)"
+      },
+      {
+       "fr": "le Portugal — portugais(e)",
+       "pt": "Portugal — português(a)"
+      },
+      {
+       "fr": "la France — français(e)",
+       "pt": "França — francês(a)"
+      },
+      {
+       "fr": "le Canada — canadien(ne)",
+       "pt": "Canadá — canadense"
+      },
+      {
+       "fr": "l'Italie — italien(ne)",
+       "pt": "Itália — italiano(a)"
+      },
+      {
+       "fr": "l'Espagne — espagnol(e)",
+       "pt": "Espanha — espanhol(a)"
+      },
+      {
+       "fr": "le Japon — japonais(e)",
+       "pt": "Japão — japonês(a)"
+      },
+      {
+       "fr": "les États-Unis — américain(e)",
+       "pt": "Estados Unidos — americano(a)"
+      }
+     ]
+    }
+   ],
+   "passages": [
+    {
+     "code": "ch02.p.profil-leo",
+     "title": "Profil : échange de langues",
+     "text_type": "profile",
+     "difficulty": 2,
+     "body": "Je m'appelle Léo Moreau. J'ai vingt-deux ans et j'habite à Lyon avec mon frère, Hugo. Je suis étudiant en économie.\n\nJ'aime le cinéma, la musique brésilienne et le football. Je n'aime pas la télévision. Le samedi, je joue au football avec mes amis.\n\nJe parle français et anglais, et j'étudie le portugais. Je cherche un ou une partenaire pour parler portugais et français en ligne. Écrivez-moi !",
+     "translation_pt": "Meu nome é Léo Moreau. Tenho vinte e dois anos e moro em Lyon com meu irmão, Hugo. Sou estudante de economia.\n\nGosto de cinema, de música brasileira e de futebol. Não gosto de televisão. Aos sábados, jogo futebol com meus amigos.\n\nFalo francês e inglês, e estudo português. Procuro um ou uma parceira para falar português e francês on-line. Escrevam para mim!",
+     "key_vocabulary": [
+      {
+       "fr": "je cherche",
+       "pt": "procuro, estou procurando"
+      },
+      {
+       "fr": "un/une partenaire",
+       "pt": "um/uma parceiro(a)"
+      },
+      {
+       "fr": "en ligne",
+       "pt": "on-line"
+      },
+      {
+       "fr": "étudier",
+       "pt": "estudar"
+      }
+     ],
+     "useful_structures": [
+      {
+       "fr": "J'ai + idade + ans",
+       "pt": "dizer a idade"
+      },
+      {
+       "fr": "J'aime le… / Je n'aime pas la…",
+       "pt": "gostos com artigo"
+      },
+      {
+       "fr": "Le samedi, je…",
+       "pt": "hábito: todo sábado"
+      }
+     ],
+     "grammar_topics": [
+      "ch02.g.avoir",
+      "ch02.g.er",
+      "ch02.g.negation"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.loisirs",
+      "ch02.v.identite"
+     ],
+     "author": "Cahier (texto original)",
+     "source": "cahier-original",
+     "origin": "original",
+     "review_status": "reviewed",
+     "position": 1
+    },
+    {
+     "code": "ch02.p.message-camille",
+     "title": "Un message de Camille",
+     "text_type": "email",
+     "difficulty": 3,
+     "body": "Salut Bianca !\n\nMerci pour ton message. Voici ma famille ! Mon père s'appelle Paul : il a cinquante-deux ans et il est professeur. Ma mère, Isabelle, a quarante-neuf ans. Elle travaille dans un hôpital.\n\nJ'ai une sœur, Juliette. Elle a quinze ans et elle adore les chats. Nous avons un chat, Minou ! Mon frère Antoine n'habite pas avec nous : il habite à Montréal avec sa copine.\n\nEt toi ? Tu as des frères et sœurs ? Est-ce que tu as un animal ?\n\nBises,\nCamille",
+     "translation_pt": "Oi, Bianca!\n\nObrigada pela sua mensagem. Esta é a minha família! Meu pai se chama Paul: ele tem cinquenta e dois anos e é professor. Minha mãe, Isabelle, tem quarenta e nove anos. Ela trabalha num hospital.\n\nTenho uma irmã, Juliette. Ela tem quinze anos e adora gatos. Temos um gato, o Minou! Meu irmão Antoine não mora com a gente: ele mora em Montreal com a namorada.\n\nE você? Tem irmãos? Você tem algum bicho de estimação?\n\nBeijos,\nCamille",
+     "key_vocabulary": [
+      {
+       "fr": "travailler",
+       "pt": "trabalhar"
+      },
+      {
+       "fr": "un hôpital",
+       "pt": "um hospital"
+      },
+      {
+       "fr": "sa copine",
+       "pt": "a namorada dele"
+      },
+      {
+       "fr": "un animal",
+       "pt": "um animal (de estimação)"
+      },
+      {
+       "fr": "Bises",
+       "pt": "Beijos"
+      }
+     ],
+     "useful_structures": [
+      {
+       "fr": "Il a cinquante-deux ans.",
+       "pt": "idade com avoir"
+      },
+      {
+       "fr": "Il n'habite pas avec nous.",
+       "pt": "negação com n' antes de vogal"
+      },
+      {
+       "fr": "Est-ce que tu as… ?",
+       "pt": "pergunta sim/não"
+      }
+     ],
+     "grammar_topics": [
+      "ch02.g.avoir",
+      "ch02.g.possessifs",
+      "ch02.g.negation",
+      "ch02.g.questions"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.famille"
+     ],
+     "author": "Cahier (texto original)",
+     "source": "cahier-original",
+     "origin": "original",
+     "review_status": "reviewed",
+     "position": 2
+    },
+    {
+     "code": "ch02.p.mediatheque",
+     "title": "Horaires de la médiathèque",
+     "text_type": "schedule",
+     "difficulty": 3,
+     "body": "MÉDIATHÈQUE JEAN-MOULIN — Horaires d'ouverture\n\nLundi : fermé\nMardi, jeudi et vendredi : 10 h – 18 h\nMercredi : 10 h – 19 h\nSamedi : 9 h 30 – 17 h\nDimanche : fermé\n\nAteliers gratuits :\n- conversation en anglais : le mercredi à 18 h\n- club de lecture : le samedi à 11 h",
+     "translation_pt": "MIDIATECA JEAN-MOULIN — Horário de funcionamento\n\nSegunda: fechada\nTerça, quinta e sexta: 10h–18h\nQuarta: 10h–19h\nSábado: 9h30–17h\nDomingo: fechada\n\nOficinas gratuitas:\n- conversação em inglês: quarta às 18h\n- clube de leitura: sábado às 11h",
+     "key_vocabulary": [
+      {
+       "fr": "une médiathèque",
+       "pt": "biblioteca com livros, filmes e música"
+      },
+      {
+       "fr": "fermé",
+       "pt": "fechado"
+      },
+      {
+       "fr": "un atelier",
+       "pt": "uma oficina"
+      },
+      {
+       "fr": "gratuit",
+       "pt": "grátis"
+      },
+      {
+       "fr": "la lecture",
+       "pt": "a leitura"
+      }
+     ],
+     "useful_structures": [
+      {
+       "fr": "le mercredi à 18 h",
+       "pt": "toda quarta às 18h"
+      },
+      {
+       "fr": "10 h – 18 h",
+       "pt": "das 10h às 18h"
+      }
+     ],
+     "grammar_topics": [],
+     "vocabulary_topics": [
+      "ch02.v.heure"
+     ],
+     "author": "Cahier (texto original)",
+     "source": "cahier-original",
+     "origin": "original",
+     "review_status": "reviewed",
+     "position": 3
+    }
+   ],
+   "exercises": [
+    {
+     "code": "c2-avoir-age",
+     "type": "select_verb_form",
+     "instruction": "Escolha a forma correta.",
+     "prompt": "J'___ vingt ans.",
+     "explanation": "Idade em francês é com avoir: j'ai vingt ans. « Je suis vingt ans » é um erro típico de quem fala português… e de quem fala inglês!",
+     "difficulty": 2,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "ai",
+       "correct": true
+      },
+      {
+       "text": "suis",
+       "correct": false,
+       "feedback": "Idade se diz com avoir."
+      },
+      {
+       "text": "as",
+       "correct": false
+      },
+      {
+       "text": "a",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.age"
+     ],
+     "grammar_topics": [
+      "ch02.g.avoir"
+     ],
+     "translation_pt": "Tenho vinte anos.",
+     "position": 0
+    },
+    {
+     "code": "c2-avoir-nous",
+     "type": "conjugation",
+     "instruction": "Conjugue avoir.",
+     "prompt": "Nous ___ un chat et un chien.",
+     "explanation": "avoir com nous: nous avons.",
+     "difficulty": 2,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "avons",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.famille"
+     ],
+     "grammar_topics": [
+      "ch02.g.avoir"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.famille"
+     ],
+     "translation_pt": "Nós ___ um gato e um cachorro.",
+     "position": 1
+    },
+    {
+     "code": "c2-avoir-ils",
+     "type": "conjugation",
+     "instruction": "Conjugue avoir.",
+     "prompt": "Mes grands-parents ___ trois enfants.",
+     "explanation": "mes grands-parents = ils → ils ont. Cuidado: ont (têm) ≠ sont (são).",
+     "difficulty": 3,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "ont",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.famille"
+     ],
+     "grammar_topics": [
+      "ch02.g.avoir"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.famille"
+     ],
+     "translation_pt": "Meus avós ___ três filhos.",
+     "position": 2
+    },
+    {
+     "code": "c2-erreur-age",
+     "type": "identify_error",
+     "instruction": "Encontre a palavra errada.",
+     "prompt": "Je suis vingt-cinq ans.",
+     "explanation": "A idade se diz com avoir: « J'ai vingt-cinq ans ».",
+     "difficulty": 3,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Je",
+       "correct": false
+      },
+      {
+       "text": "suis",
+       "correct": true
+      },
+      {
+       "text": "vingt-cinq",
+       "correct": false
+      },
+      {
+       "text": "ans",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.age"
+     ],
+     "grammar_topics": [
+      "ch02.g.avoir"
+     ],
+     "position": 3
+    },
+    {
+     "code": "c2-corrige-age",
+     "type": "correct_sentence",
+     "instruction": "Reescreva a frase corretamente.",
+     "prompt": "Ma sœur est dix-huit ans.",
+     "explanation": "Idade com avoir: « Ma sœur a dix-huit ans ».",
+     "difficulty": 4,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Ma sœur a dix-huit ans.",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "Ma sœur a 18 ans.",
+       "blank": 0,
+       "primary": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.age"
+     ],
+     "grammar_topics": [
+      "ch02.g.avoir"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.famille"
+     ],
+     "position": 4
+    },
+    {
+     "code": "c2-trad-age",
+     "type": "translate_pt_fr",
+     "instruction": "Traduza para o francês.",
+     "prompt": "Tenho dezenove anos.",
+     "explanation": "Avoir + número + ans: « J'ai dix-neuf ans ». Não esqueça a palavra ans.",
+     "difficulty": 3,
+     "competency": "traduction",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "J'ai dix-neuf ans.",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "J'ai 19 ans.",
+       "blank": 0,
+       "primary": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.age"
+     ],
+     "grammar_topics": [
+      "ch02.g.avoir"
+     ],
+     "position": 5
+    },
+    {
+     "code": "c2-short-age",
+     "type": "short_answer",
+     "instruction": "Responda com uma frase completa, escrevendo o número por extenso.",
+     "prompt": "Tu as quel âge ? (Você tem 21 anos.)",
+     "explanation": "J'ai vingt et un ans — 21 usa « et un », sem hífen.",
+     "difficulty": 4,
+     "competency": "orthographe",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "J'ai vingt et un ans.",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "J'ai vingt-et-un ans.",
+       "blank": 0,
+       "primary": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.age"
+     ],
+     "grammar_topics": [
+      "ch02.g.avoir"
+     ],
+     "position": 6
+    },
+    {
+     "code": "c2-er-parler",
+     "type": "conjugation",
+     "instruction": "Conjugue o verbo entre parênteses.",
+     "prompt": "Tu ___ (parler) portugais ?",
+     "explanation": "parler com tu: radical parl- + -es → tu parles.",
+     "difficulty": 2,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "parles",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.infos"
+     ],
+     "grammar_topics": [
+      "ch02.g.er"
+     ],
+     "translation_pt": "Você ___ (falar) português?",
+     "position": 7
+    },
+    {
+     "code": "c2-er-habiter",
+     "type": "conjugation",
+     "instruction": "Conjugue o verbo entre parênteses.",
+     "prompt": "Nous ___ (habiter) à Rennes.",
+     "explanation": "habiter com nous: habit- + -ons → nous habitons.",
+     "difficulty": 3,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "habitons",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.infos"
+     ],
+     "grammar_topics": [
+      "ch02.g.er"
+     ],
+     "position": 8
+    },
+    {
+     "code": "c2-er-aimer",
+     "type": "conjugation",
+     "instruction": "Conjugue aimer nas duas lacunas.",
+     "prompt": "Elles ___ le sport et vous ___ la musique.",
+     "explanation": "elles aiment (-ent) / vous aimez (-ez).",
+     "difficulty": 3,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "aiment",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "aimez",
+       "blank": 1,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.loisirs"
+     ],
+     "grammar_topics": [
+      "ch02.g.er"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.loisirs"
+     ],
+     "position": 9
+    },
+    {
+     "code": "c2-er-jouer",
+     "type": "select_verb_form",
+     "instruction": "Escolha a forma correta.",
+     "prompt": "Ils ___ au football le samedi.",
+     "explanation": "ils → -ent: ils jouent. (O -ent não se pronuncia.)",
+     "difficulty": 2,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "jouent",
+       "correct": true
+      },
+      {
+       "text": "joues",
+       "correct": false
+      },
+      {
+       "text": "jouons",
+       "correct": false
+      },
+      {
+       "text": "jouez",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.loisirs"
+     ],
+     "grammar_topics": [
+      "ch02.g.er"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.loisirs"
+     ],
+     "position": 10
+    },
+    {
+     "code": "c2-er-manger",
+     "type": "conjugation",
+     "instruction": "Conjugue o verbo entre parênteses (atenção à ortografia).",
+     "prompt": "Nous ___ (manger) au restaurant universitaire.",
+     "explanation": "Verbos em -ger mantêm o e antes de -ons para conservar o som: nous mangeons.",
+     "difficulty": 4,
+     "competency": "orthographe",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "mangeons",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.loisirs"
+     ],
+     "grammar_topics": [
+      "ch02.g.er"
+     ],
+     "position": 11
+    },
+    {
+     "code": "c2-erreur-vous",
+     "type": "identify_error",
+     "instruction": "Encontre a palavra errada.",
+     "prompt": "Vous parlons très bien français.",
+     "explanation": "Com vous a terminação é -ez: vous parlez. -ons é para nous.",
+     "difficulty": 4,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Vous",
+       "correct": false
+      },
+      {
+       "text": "parlons",
+       "correct": true
+      },
+      {
+       "text": "très bien",
+       "correct": false
+      },
+      {
+       "text": "français",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.infos"
+     ],
+     "grammar_topics": [
+      "ch02.g.er"
+     ],
+     "position": 12
+    },
+    {
+     "code": "c2-neg-parler",
+     "type": "transform_negative",
+     "instruction": "Passe a frase para a negativa.",
+     "prompt": "Je parle allemand.",
+     "explanation": "ne + verbo + pas: Je ne parle pas allemand.",
+     "difficulty": 2,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Je ne parle pas allemand.",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.naime"
+     ],
+     "grammar_topics": [
+      "ch02.g.negation"
+     ],
+     "position": 13
+    },
+    {
+     "code": "c2-neg-etre",
+     "type": "transform_negative",
+     "instruction": "Passe a frase para a negativa.",
+     "prompt": "Tu es étudiant.",
+     "explanation": "Antes de vogal, ne vira n': Tu n'es pas étudiant.",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Tu n'es pas étudiant.",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.naime"
+     ],
+     "grammar_topics": [
+      "ch02.g.negation"
+     ],
+     "position": 14
+    },
+    {
+     "code": "c2-neg-aimer",
+     "type": "transform_negative",
+     "instruction": "Passe a frase para a negativa.",
+     "prompt": "Elle aime le football.",
+     "explanation": "n' antes de aime; o artigo le não muda: Elle n'aime pas le football.",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Elle n'aime pas le football.",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.naime"
+     ],
+     "grammar_topics": [
+      "ch02.g.negation"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.loisirs"
+     ],
+     "position": 15
+    },
+    {
+     "code": "c2-neg-pasde",
+     "type": "transform_negative",
+     "instruction": "Passe a frase para a negativa.",
+     "prompt": "J'ai un chien.",
+     "explanation": "Duas mudanças: j'ai → je n'ai pas, e un → de: « Je n'ai pas de chien ».",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Je n'ai pas de chien.",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.naime",
+      "ch02.obj.famille"
+     ],
+     "grammar_topics": [
+      "ch02.g.negation",
+      "ch02.g.avoir"
+     ],
+     "related": [
+      {
+       "code": "c2-aval-neg",
+       "kind": "similar"
+      }
+     ],
+     "position": 16
+    },
+    {
+     "code": "c2-natural-sport",
+     "type": "natural_response",
+     "instruction": "Escolha a resposta mais natural e correta.",
+     "prompt": "— Tu aimes le sport ?",
+     "explanation": "« Oui, j'adore le tennis ! » responde à pergunta e está correta. « Non, je n'aime le sport » está incompleta (falta pas).",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Oui, j'adore le tennis !",
+       "correct": true
+      },
+      {
+       "text": "Non, je n'aime le sport.",
+       "correct": false,
+       "feedback": "Falta o pas da negação."
+      },
+      {
+       "text": "Oui, je suis le sport.",
+       "correct": false
+      },
+      {
+       "text": "J'ai vingt ans.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.loisirs"
+     ],
+     "grammar_topics": [
+      "ch02.g.negation",
+      "ch02.g.er"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.loisirs"
+     ],
+     "translation_pt": "— Você gosta de esporte?",
+     "position": 17
+    },
+    {
+     "code": "c2-trad-foot",
+     "type": "translate_pt_fr",
+     "instruction": "Traduza para o francês.",
+     "prompt": "Eu não gosto de futebol.",
+     "explanation": "Negação ne… pas e, depois de aimer, o artigo definido: « Je n'aime pas le football » (também « le foot »).",
+     "difficulty": 4,
+     "competency": "traduction",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Je n'aime pas le football.",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "Je n'aime pas le foot.",
+       "blank": 0,
+       "primary": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.naime"
+     ],
+     "grammar_topics": [
+      "ch02.g.negation",
+      "ch02.g.er"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.loisirs"
+     ],
+     "position": 18
+    },
+    {
+     "code": "c2-q-estceque",
+     "type": "transform_question",
+     "instruction": "Transforme em pergunta usando est-ce que.",
+     "prompt": "Tu aimes le cinéma.",
+     "explanation": "Est-ce que + frase afirmativa + ? → « Est-ce que tu aimes le cinéma ? »",
+     "difficulty": 2,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Est-ce que tu aimes le cinéma ?",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.questions"
+     ],
+     "grammar_topics": [
+      "ch02.g.questions"
+     ],
+     "position": 19
+    },
+    {
+     "code": "c2-q-elision",
+     "type": "transform_question",
+     "instruction": "Transforme em pergunta usando est-ce que.",
+     "prompt": "Il habite à Lyon.",
+     "explanation": "Antes de il (vogal), est-ce que vira est-ce qu': « Est-ce qu'il habite à Lyon ? »",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Est-ce qu'il habite à Lyon ?",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.questions"
+     ],
+     "grammar_topics": [
+      "ch02.g.questions"
+     ],
+     "position": 20
+    },
+    {
+     "code": "c2-q-nestcepas",
+     "type": "mc_single",
+     "instruction": "Você acha que a senhora é brasileira e quer só confirmar. Qual pergunta é a mais adequada?",
+     "prompt": "Choisissez la question.",
+     "explanation": "« n'est-ce pas ? » no fim da frase pede confirmação (« não é? »).",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Vous êtes brésilienne, n'est-ce pas ?",
+       "correct": true
+      },
+      {
+       "text": "Est-ce que vous êtes où ?",
+       "correct": false
+      },
+      {
+       "text": "Quelle est brésilienne ?",
+       "correct": false
+      },
+      {
+       "text": "Vous n'êtes brésilienne ?",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.questions"
+     ],
+     "grammar_topics": [
+      "ch02.g.questions"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.pays"
+     ],
+     "position": 21
+    },
+    {
+     "code": "c2-q-ordre",
+     "type": "order_words",
+     "instruction": "Ordene as palavras para formar uma pergunta.",
+     "prompt": "Monte a pergunta:",
+     "explanation": "Est-ce que + sujeito + verbo + complemento.",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Est-ce",
+       "order": 1
+      },
+      {
+       "text": "que",
+       "order": 2
+      },
+      {
+       "text": "vous",
+       "order": 3
+      },
+      {
+       "text": "parlez",
+       "order": 4
+      },
+      {
+       "text": "anglais ?",
+       "order": 5
+      }
+     ],
+     "objectives": [
+      "ch02.obj.questions"
+     ],
+     "grammar_topics": [
+      "ch02.g.questions"
+     ],
+     "position": 22
+    },
+    {
+     "code": "c2-quelle-adresse",
+     "type": "select_article",
+     "instruction": "Escolha a forma de quel.",
+     "prompt": "___ est ton adresse ?",
+     "explanation": "adresse é feminino singular: quelle. (quel = masc. sing.; quels/quelles = plural.)",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Quelle",
+       "correct": true
+      },
+      {
+       "text": "Quel",
+       "correct": false,
+       "feedback": "adresse é feminino."
+      },
+      {
+       "text": "Quels",
+       "correct": false
+      },
+      {
+       "text": "Quelles",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.infos"
+     ],
+     "grammar_topics": [
+      "ch02.g.quel"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.identite"
+     ],
+     "translation_pt": "Qual é o seu endereço?",
+     "position": 23
+    },
+    {
+     "code": "c2-quel-age",
+     "type": "fill_blank",
+     "instruction": "Complete a pergunta.",
+     "prompt": "Tu as ___ âge ?",
+     "explanation": "âge é masculino: quel âge. « Tu as quel âge ? » é a forma informal de « Quel âge as-tu ? ».",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "quel",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.age",
+      "ch02.obj.questions"
+     ],
+     "grammar_topics": [
+      "ch02.g.quel",
+      "ch02.g.avoir"
+     ],
+     "translation_pt": "Quantos anos você tem?",
+     "position": 24
+    },
+    {
+     "code": "c2-interrog-match",
+     "type": "match_pairs",
+     "instruction": "Relacione as palavras interrogativas.",
+     "prompt": "Mots interrogatifs",
+     "explanation": "où = onde, quand = quando, comment = como, pourquoi = por quê, qui = quem.",
+     "difficulty": 2,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "où",
+       "match": "onde"
+      },
+      {
+       "text": "quand",
+       "match": "quando"
+      },
+      {
+       "text": "comment",
+       "match": "como"
+      },
+      {
+       "text": "pourquoi",
+       "match": "por quê"
+      },
+      {
+       "text": "qui",
+       "match": "quem"
+      }
+     ],
+     "objectives": [
+      "ch02.obj.questions"
+     ],
+     "grammar_topics": [
+      "ch02.g.quel"
+     ],
+     "position": 25
+    },
+    {
+     "code": "c2-poss-ma",
+     "type": "select_article",
+     "instruction": "Escolha o possessivo (meu/minha).",
+     "prompt": "C'est ___ mère.",
+     "explanation": "mère é feminino singular: ma mère.",
+     "difficulty": 2,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "ma",
+       "correct": true
+      },
+      {
+       "text": "mon",
+       "correct": false
+      },
+      {
+       "text": "mes",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.famille"
+     ],
+     "grammar_topics": [
+      "ch02.g.possessifs"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.famille"
+     ],
+     "position": 26
+    },
+    {
+     "code": "c2-poss-amie",
+     "type": "select_article",
+     "instruction": "Escolha o possessivo (minha).",
+     "prompt": "C'est ___ amie Julie.",
+     "explanation": "Antes de vogal usa-se mon, mesmo com palavra feminina: mon amie (evita o encontro « ma amie »).",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "mon",
+       "correct": true
+      },
+      {
+       "text": "ma",
+       "correct": false,
+       "feedback": "Antes de vogal, ma vira mon."
+      },
+      {
+       "text": "mes",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.famille"
+     ],
+     "grammar_topics": [
+      "ch02.g.possessifs"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.famille"
+     ],
+     "position": 27
+    },
+    {
+     "code": "c2-poss-son",
+     "type": "select_article",
+     "instruction": "Escolha o possessivo.",
+     "prompt": "Julie habite avec ___ frère.",
+     "explanation": "O possessivo concorda com o objeto (frère, masculino), não com a dona (Julie): son frère.",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "son",
+       "correct": true
+      },
+      {
+       "text": "sa",
+       "correct": false,
+       "feedback": "frère é masculino; o gênero da Julie não importa."
+      },
+      {
+       "text": "ses",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.famille"
+     ],
+     "grammar_topics": [
+      "ch02.g.possessifs"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.famille"
+     ],
+     "translation_pt": "Julie mora com o irmão (dela).",
+     "position": 28
+    },
+    {
+     "code": "c2-poss-leurs",
+     "type": "mc_single",
+     "instruction": "Escolha o possessivo.",
+     "prompt": "Pierre et Lucie habitent avec ___ parents.",
+     "explanation": "Dono no plural (eles) + objeto no plural (parents) = leurs.",
+     "difficulty": 5,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "leurs",
+       "correct": true
+      },
+      {
+       "text": "leur",
+       "correct": false,
+       "feedback": "leur é para um objeto só."
+      },
+      {
+       "text": "ses",
+       "correct": false,
+       "feedback": "ses = dele/dela (um dono)."
+      },
+      {
+       "text": "son",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.famille"
+     ],
+     "grammar_topics": [
+      "ch02.g.possessifs"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.famille"
+     ],
+     "position": 29
+    },
+    {
+     "code": "c2-poss-pluriel",
+     "type": "transform_plural",
+     "instruction": "Passe para o plural.",
+     "prompt": "mon frère",
+     "explanation": "mon → mes e frère → frères: mes frères.",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "comparison": "normalized",
+     "answers": [
+      {
+       "text": "mes frères",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.famille"
+     ],
+     "grammar_topics": [
+      "ch02.g.possessifs"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.famille"
+     ],
+     "position": 30
+    },
+    {
+     "code": "c2-adj-bresil",
+     "type": "transform_gender",
+     "instruction": "Passe para o feminino.",
+     "prompt": "Il est brésilien.",
+     "explanation": "il → elle; brésilien → brésilienne (-ien → -ienne).",
+     "difficulty": 2,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Elle est brésilienne.",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.infos"
+     ],
+     "grammar_topics": [
+      "ch02.g.adjectifs"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.pays"
+     ],
+     "position": 31
+    },
+    {
+     "code": "c2-adj-ami",
+     "type": "transform_gender",
+     "instruction": "Passe para o feminino.",
+     "prompt": "Mon ami est canadien et sportif.",
+     "explanation": "mon ami → mon amie (mon continua por causa da vogal); canadien → canadienne; sportif → sportive.",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Mon amie est canadienne et sportive.",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.infos"
+     ],
+     "grammar_topics": [
+      "ch02.g.adjectifs",
+      "ch02.g.possessifs"
+     ],
+     "position": 32
+    },
+    {
+     "code": "c2-adj-multi",
+     "type": "mc_multiple",
+     "instruction": "Marque TODAS as palavras que completam corretamente a frase.",
+     "prompt": "Elle est ___.",
+     "explanation": "Precisa ser adjetivo feminino singular: française, sympathique (igual nos dois gêneros), portugaise. américain é masculino; grands está no plural.",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "française",
+       "correct": true
+      },
+      {
+       "text": "sympathique",
+       "correct": true
+      },
+      {
+       "text": "portugaise",
+       "correct": true
+      },
+      {
+       "text": "américain",
+       "correct": false
+      },
+      {
+       "text": "grands",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.infos"
+     ],
+     "grammar_topics": [
+      "ch02.g.adjectifs"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.pays"
+     ],
+     "position": 33
+    },
+    {
+     "code": "c2-pays-match",
+     "type": "match_pairs",
+     "instruction": "Relacione o país à nacionalidade (masculino).",
+     "prompt": "Pays et nationalités",
+     "explanation": "Brésil → brésilien, Portugal → portugais, Italie → italien, Japon → japonais, Espagne → espagnol.",
+     "difficulty": 2,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "le Brésil",
+       "match": "brésilien"
+      },
+      {
+       "text": "le Portugal",
+       "match": "portugais"
+      },
+      {
+       "text": "l'Italie",
+       "match": "italien"
+      },
+      {
+       "text": "le Japon",
+       "match": "japonais"
+      },
+      {
+       "text": "l'Espagne",
+       "match": "espagnol"
+      }
+     ],
+     "objectives": [
+      "ch02.obj.infos"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.pays"
+     ],
+     "position": 34
+    },
+    {
+     "code": "c2-nation-maj",
+     "type": "true_false",
+     "instruction": "Verdadeiro ou falso?",
+     "prompt": "On écrit « Elle est Brésilienne » avec une majuscule.",
+     "explanation": "Falso: o adjetivo de nacionalidade vai com minúscula (Elle est brésilienne). A maiúscula é só para o substantivo: les Brésiliens.",
+     "difficulty": 3,
+     "competency": "orthographe",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answer": false,
+     "objectives": [
+      "ch02.obj.infos"
+     ],
+     "grammar_topics": [
+      "ch02.g.adjectifs"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.pays"
+     ],
+     "translation_pt": "Escreve-se « Elle est Brésilienne » com maiúscula.",
+     "position": 35
+    },
+    {
+     "code": "c2-fam-grandmere",
+     "type": "mc_single",
+     "instruction": "Complete.",
+     "prompt": "La mère de ma mère, c'est ma…",
+     "explanation": "A mãe da mãe é a avó: la grand-mère.",
+     "difficulty": 1,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "grand-mère",
+       "correct": true
+      },
+      {
+       "text": "tante",
+       "correct": false
+      },
+      {
+       "text": "sœur",
+       "correct": false
+      },
+      {
+       "text": "cousine",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.famille"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.famille"
+     ],
+     "translation_pt": "A mãe da minha mãe é a minha…",
+     "position": 36
+    },
+    {
+     "code": "c2-fam-match",
+     "type": "vocabulary_review",
+     "instruction": "Relacione.",
+     "prompt": "La famille",
+     "explanation": "père = pai, tante = tia, cousin = primo, grands-parents = avós, fils = filho.",
+     "difficulty": 2,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "interaction": "match",
+     "choices": [
+      {
+       "text": "le père",
+       "match": "o pai"
+      },
+      {
+       "text": "la tante",
+       "match": "a tia"
+      },
+      {
+       "text": "le cousin",
+       "match": "o primo"
+      },
+      {
+       "text": "les grands-parents",
+       "match": "os avós"
+      },
+      {
+       "text": "le fils",
+       "match": "o filho"
+      }
+     ],
+     "objectives": [
+      "ch02.obj.famille"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.famille"
+     ],
+     "position": 37
+    },
+    {
+     "code": "c2-fam-oncle",
+     "type": "fill_blank",
+     "instruction": "Complete com uma palavra.",
+     "prompt": "Le frère de mon père, c'est mon ___.",
+     "explanation": "O irmão do pai é o tio: l'oncle → mon oncle.",
+     "difficulty": 3,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "oncle",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.famille"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.famille"
+     ],
+     "translation_pt": "O irmão do meu pai é o meu ___.",
+     "position": 38
+    },
+    {
+     "code": "c2-fam-parents",
+     "type": "vocabulary_review",
+     "instruction": "Escolha a tradução certa.",
+     "prompt": "Mes parents habitent à Recife.",
+     "explanation": "Em francês, « les parents » quase sempre significa pai e mãe (os pais), e não « parentes » em geral.",
+     "difficulty": 3,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "interaction": "single",
+     "choices": [
+      {
+       "text": "Meus pais moram em Recife.",
+       "correct": true
+      },
+      {
+       "text": "Meus parentes moram em Recife.",
+       "correct": false,
+       "feedback": "Falso amigo: parents = pai e mãe."
+      },
+      {
+       "text": "Meus avós moram em Recife.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.famille"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.famille"
+     ],
+     "position": 39
+    },
+    {
+     "code": "c2-heure-mc",
+     "type": "mc_single",
+     "instruction": "Qual frase corresponde ao horário?",
+     "prompt": "14 h 30",
+     "explanation": "14 h 30 = duas e meia da tarde: « Il est deux heures et demie de l'après-midi » (ou « quatorze heures trente »).",
+     "difficulty": 2,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Il est deux heures et demie de l'après-midi.",
+       "correct": true
+      },
+      {
+       "text": "Il est deux heures et quart.",
+       "correct": false
+      },
+      {
+       "text": "Il est quatre heures et demie.",
+       "correct": false
+      },
+      {
+       "text": "Il est trois heures moins le quart.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.heure"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.heure"
+     ],
+     "position": 40
+    },
+    {
+     "code": "c2-heure-officielle",
+     "type": "short_answer",
+     "instruction": "Escreva a hora por extenso, no horário oficial (24 h).",
+     "prompt": "18 h 15",
+     "explanation": "No horário oficial diz-se a hora e os minutos: dix-huit heures quinze.",
+     "difficulty": 4,
+     "competency": "orthographe",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "dix-huit heures quinze",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "Il est dix-huit heures quinze.",
+       "blank": 0,
+       "primary": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.heure"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.heure"
+     ],
+     "position": 41
+    },
+    {
+     "code": "c2-heure-moins",
+     "type": "mc_single",
+     "instruction": "Que horas são?",
+     "prompt": "Il est neuf heures moins le quart.",
+     "explanation": "« moins le quart » = quinze para. Nove menos quinze = 8h45.",
+     "difficulty": 3,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "8 h 45",
+       "correct": true
+      },
+      {
+       "text": "9 h 15",
+       "correct": false
+      },
+      {
+       "text": "9 h 45",
+       "correct": false
+      },
+      {
+       "text": "8 h 15",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.heure"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.heure"
+     ],
+     "position": 42
+    },
+    {
+     "code": "c2-trad-gostos",
+     "type": "translate_fr_pt",
+     "instruction": "Traduza para o português.",
+     "prompt": "J'aime le cinéma et la musique.",
+     "explanation": "aimer + artigo em francês corresponde a « gostar de » em português: « Gosto de cinema e de música ».",
+     "difficulty": 2,
+     "competency": "traduction",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "comparison": "regex",
+     "accent_insensitive": true,
+     "answers": [
+      {
+       "text": "(eu )?gosto (de|do) cinema e (de |da )?música",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "model_answer": "Eu gosto de cinema e de música.",
+     "objectives": [
+      "ch02.obj.loisirs"
+     ],
+     "grammar_topics": [
+      "ch02.g.er"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.loisirs"
+     ],
+     "position": 43
+    },
+    {
+     "code": "c2-dial-complete",
+     "type": "complete_dialogue",
+     "instruction": "Complete o diálogo com os verbos habiter e avoir.",
+     "prompt": "— Bonjour ! Vous ___ à Paris ?\n— Non, je n'___ pas à Paris. J'habite à Nantes.\n— Et vous ___ quel âge ?\n— J'___ trente ans.",
+     "explanation": "vous habitez / je n'habite pas / vous avez / j'ai.",
+     "difficulty": 4,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "habitez",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "habite",
+       "blank": 1,
+       "primary": true
+      },
+      {
+       "text": "avez",
+       "blank": 2,
+       "primary": true
+      },
+      {
+       "text": "ai",
+       "blank": 3,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.questions",
+      "ch02.obj.age"
+     ],
+     "grammar_topics": [
+      "ch02.g.er",
+      "ch02.g.avoir",
+      "ch02.g.negation"
+     ],
+     "position": 44
+    },
+    {
+     "code": "c2-dial-age",
+     "type": "dialogue_comprehension",
+     "instruction": "Leia o diálogo.",
+     "prompt": "Quel âge a Renata Silva ?",
+     "explanation": "Ela diz: « J'ai trente-quatre ans » (34).",
+     "difficulty": 2,
+     "competency": "lecture",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "context": "Employée : Votre nom, s'il vous plaît ?\nMme Silva : Silva. S, I, L, V, A.\nEmployée : Et votre prénom ?\nMme Silva : Renata.\nEmployée : Quelle est votre nationalité ?\nMme Silva : Je suis brésilienne.\nEmployée : Vous avez quel âge ?\nMme Silva : J'ai trente-quatre ans.\nEmployée : Et votre profession ?\nMme Silva : Je suis infirmière.",
+     "choices": [
+      {
+       "text": "34 ans",
+       "correct": true
+      },
+      {
+       "text": "24 ans",
+       "correct": false
+      },
+      {
+       "text": "43 ans",
+       "correct": false
+      },
+      {
+       "text": "14 ans",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.age",
+      "ch02.obj.infos"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.identite"
+     ],
+     "position": 45
+    },
+    {
+     "code": "c2-dial-lieu",
+     "type": "dialogue_comprehension",
+     "instruction": "Leia o diálogo.",
+     "prompt": "Cette conversation, c'est…",
+     "explanation": "A funcionária pergunta nome, nacionalidade, idade e profissão: ela está preenchendo uma ficha (formulário).",
+     "difficulty": 3,
+     "competency": "lecture",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "context": "Employée : Votre nom, s'il vous plaît ?\nMme Silva : Silva. S, I, L, V, A.\nEmployée : Et votre prénom ?\nMme Silva : Renata.\nEmployée : Quelle est votre nationalité ?\nMme Silva : Je suis brésilienne.\nEmployée : Vous avez quel âge ?\nMme Silva : J'ai trente-quatre ans.\nEmployée : Et votre profession ?\nMme Silva : Je suis infirmière.",
+     "reading_skill": "inference",
+     "choices": [
+      {
+       "text": "pour remplir une fiche d'inscription.",
+       "correct": true
+      },
+      {
+       "text": "une conversation entre deux amies.",
+       "correct": false
+      },
+      {
+       "text": "un cours de français.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.infos"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.identite"
+     ],
+     "position": 46
+    },
+    {
+     "code": "c2-ordre-message",
+     "type": "order_sentences",
+     "instruction": "Coloque o bilhete na ordem.",
+     "prompt": "Ordene a mensagem:",
+     "explanation": "Cumprimento → notícia → pergunta/convite → despedida.",
+     "difficulty": 4,
+     "competency": "lecture",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Salut Léa !",
+       "order": 1
+      },
+      {
+       "text": "Samedi, je joue au tennis avec Marc.",
+       "order": 2
+      },
+      {
+       "text": "Tu aimes le tennis ? Tu joues avec nous ?",
+       "order": 3
+      },
+      {
+       "text": "Bises, Inès",
+       "order": 4
+      }
+     ],
+     "objectives": [
+      "ch02.obj.loisirs"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.loisirs"
+     ],
+     "position": 47
+    },
+    {
+     "code": "c2-ecrit-profil",
+     "type": "guided_writing",
+     "instruction": "Escreva seu perfil (5 a 7 frases).",
+     "prompt": "Vous cherchez un(e) partenaire d'échange de langues. Écrivez votre profil.",
+     "explanation": "Um perfil A1 traz informações pessoais simples, gostos (com artigo) e algo de que você não gosta (ne… pas).",
+     "difficulty": 5,
+     "competency": "ecriture",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "model_answer": "Je m'appelle Bia. J'ai vingt-six ans et j'habite à Belém, au Brésil. Je suis brésilienne et je parle portugais et espagnol. J'aime la musique, le cinéma et la cuisine. Je n'aime pas le football. Le dimanche, je regarde des films avec mes amis. Et toi, tu aimes le cinéma ?",
+     "criteria": [
+      "Disse meu nome e minha idade (j'ai… ans).",
+      "Disse onde moro (j'habite à…) e minha nacionalidade.",
+      "Falei de pelo menos dois gostos com artigo (j'aime le / la…).",
+      "Usei uma negação correta (ne… pas).",
+      "Conjuguei corretamente pelo menos dois verbos em -er.",
+      "Terminei com uma pergunta."
+     ],
+     "objectives": [
+      "ch02.obj.infos",
+      "ch02.obj.loisirs",
+      "ch02.obj.naime"
+     ],
+     "grammar_topics": [
+      "ch02.g.er",
+      "ch02.g.negation",
+      "ch02.g.avoir"
+     ],
+     "translation_pt": "Você procura um(a) parceiro(a) de intercâmbio de línguas. Escreva o seu perfil.",
+     "position": 48
+    },
+    {
+     "code": "c2-p1-age",
+     "type": "text_interpretation",
+     "instruction": "Leia o perfil de Léo.",
+     "prompt": "Léo a quel âge ?",
+     "explanation": "Léo escreve: « J'ai vingt-deux ans ».",
+     "difficulty": 1,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.profil-leo",
+     "reading_skill": "explicit",
+     "evidence": "J'ai vingt-deux ans",
+     "choices": [
+      {
+       "text": "22 ans",
+       "correct": true
+      },
+      {
+       "text": "12 ans",
+       "correct": false
+      },
+      {
+       "text": "26 ans",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.age"
+     ],
+     "position": 49
+    },
+    {
+     "code": "c2-p1-frere",
+     "type": "text_interpretation",
+     "instruction": "Leia o perfil de Léo e complete.",
+     "prompt": "Léo habite à Lyon avec son ___.",
+     "explanation": "« j'habite à Lyon avec mon frère, Hugo ».",
+     "difficulty": 2,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.profil-leo",
+     "interaction": "text",
+     "reading_skill": "complete",
+     "evidence": "j'habite à Lyon avec mon frère, Hugo",
+     "answers": [
+      {
+       "text": "frère",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch02.obj.famille"
+     ],
+     "position": 50
+    },
+    {
+     "code": "c2-p1-gouts",
+     "type": "text_interpretation",
+     "instruction": "Leia o perfil de Léo. Marque TUDO o que ele gosta.",
+     "prompt": "Léo aime…",
+     "explanation": "Ele gosta de cinema, música brasileira e futebol. Não gosta de televisão.",
+     "difficulty": 2,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.profil-leo",
+     "interaction": "multiple",
+     "reading_skill": "explicit",
+     "evidence": "J'aime le cinéma, la musique brésilienne et le football. Je n'aime pas la télévision.",
+     "choices": [
+      {
+       "text": "le cinéma",
+       "correct": true
+      },
+      {
+       "text": "la musique brésilienne",
+       "correct": true
+      },
+      {
+       "text": "le football",
+       "correct": true
+      },
+      {
+       "text": "la télévision",
+       "correct": false
+      },
+      {
+       "text": "le tennis",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.loisirs"
+     ],
+     "position": 51
+    },
+    {
+     "code": "c2-p1-tele-tf",
+     "type": "true_false",
+     "instruction": "Leia o perfil de Léo.",
+     "prompt": "Léo aime la télévision.",
+     "explanation": "Falso: « Je n'aime pas la télévision ».",
+     "difficulty": 2,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.profil-leo",
+     "reading_skill": "true_false",
+     "evidence": "Je n'aime pas la télévision.",
+     "answer": false,
+     "objectives": [
+      "ch02.obj.naime"
+     ],
+     "position": 52
+    },
+    {
+     "code": "c2-p1-cherche",
+     "type": "text_interpretation",
+     "instruction": "Leia o perfil de Léo.",
+     "prompt": "Dans le texte, « je cherche » signifie…",
+     "explanation": "« Je cherche un partenaire » = estou procurando um parceiro. Pelo contexto (ele quer praticar português), o sentido é « procurar ».",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.profil-leo",
+     "reading_skill": "meaning",
+     "evidence": "Je cherche un ou une partenaire pour parler portugais et français en ligne.",
+     "choices": [
+      {
+       "text": "procuro / estou procurando.",
+       "correct": true
+      },
+      {
+       "text": "encontrei.",
+       "correct": false
+      },
+      {
+       "text": "ensino.",
+       "correct": false
+      },
+      {
+       "text": "detesto.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.loisirs"
+     ],
+     "position": 53
+    },
+    {
+     "code": "c2-p1-intention",
+     "type": "text_interpretation",
+     "instruction": "Leia o perfil de Léo.",
+     "prompt": "Pourquoi Léo écrit ce profil ?",
+     "explanation": "No fim, ele explica que procura um parceiro para conversar em português e francês on-line.",
+     "difficulty": 4,
+     "competency": "interpretation",
+     "origin": "exam_inspired",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.profil-leo",
+     "reading_skill": "intent",
+     "adaptation_notes": "Inspirada no formato da compreensão escrita do DELF A1 (documento do cotidiano). Questão original; não é questão oficial.",
+     "evidence": "Je cherche un ou une partenaire pour parler portugais et français en ligne. Écrivez-moi !",
+     "choices": [
+      {
+       "text": "Pour trouver un partenaire d'échange de langues.",
+       "correct": true
+      },
+      {
+       "text": "Pour vendre des billets de cinéma.",
+       "correct": false
+      },
+      {
+       "text": "Pour présenter son frère Hugo.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.infos"
+     ],
+     "position": 54
+    },
+    {
+     "code": "c2-p1-langue",
+     "type": "text_interpretation",
+     "instruction": "Leia o perfil de Léo e responda com uma palavra.",
+     "prompt": "Quelle langue est-ce que Léo étudie ?",
+     "explanation": "« j'étudie le portugais ».",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.profil-leo",
+     "interaction": "text",
+     "reading_skill": "short",
+     "evidence": "Je parle français et anglais, et j'étudie le portugais.",
+     "answers": [
+      {
+       "text": "le portugais",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "portugais",
+       "blank": 0,
+       "primary": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.infos"
+     ],
+     "position": 55
+    },
+    {
+     "code": "c2-p2-pere",
+     "type": "text_interpretation",
+     "instruction": "Leia a mensagem de Camille.",
+     "prompt": "Le père de Camille…",
+     "explanation": "« Mon père s'appelle Paul : il a cinquante-deux ans et il est professeur. »",
+     "difficulty": 2,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.message-camille",
+     "reading_skill": "explicit",
+     "evidence": "Mon père s'appelle Paul : il a cinquante-deux ans et il est professeur.",
+     "choices": [
+      {
+       "text": "s'appelle Paul et il est professeur.",
+       "correct": true
+      },
+      {
+       "text": "travaille dans un hôpital.",
+       "correct": false
+      },
+      {
+       "text": "habite à Montréal.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.famille"
+     ],
+     "position": 56
+    },
+    {
+     "code": "c2-p2-antoine-tf",
+     "type": "true_false",
+     "instruction": "Leia a mensagem de Camille.",
+     "prompt": "Antoine habite avec Camille.",
+     "explanation": "Falso: « Mon frère Antoine n'habite pas avec nous : il habite à Montréal ».",
+     "difficulty": 2,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.message-camille",
+     "reading_skill": "true_false",
+     "evidence": "Mon frère Antoine n'habite pas avec nous : il habite à Montréal avec sa copine.",
+     "answer": false,
+     "objectives": [
+      "ch02.obj.famille"
+     ],
+     "position": 57
+    },
+    {
+     "code": "c2-p2-relier",
+     "type": "text_interpretation",
+     "instruction": "Relacione cada nome ao membro da família.",
+     "prompt": "La famille de Camille",
+     "explanation": "Paul é o pai; Isabelle, a mãe; Juliette, a irmã; Antoine, o irmão; Minou, o gato.",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.message-camille",
+     "interaction": "match",
+     "reading_skill": "relate",
+     "evidence": "Mon père s'appelle Paul… Ma mère, Isabelle… J'ai une sœur, Juliette… Nous avons un chat, Minou ! Mon frère Antoine…",
+     "choices": [
+      {
+       "text": "Paul",
+       "match": "le père"
+      },
+      {
+       "text": "Isabelle",
+       "match": "la mère"
+      },
+      {
+       "text": "Juliette",
+       "match": "la sœur"
+      },
+      {
+       "text": "Antoine",
+       "match": "le frère"
+      },
+      {
+       "text": "Minou",
+       "match": "le chat"
+      }
+     ],
+     "objectives": [
+      "ch02.obj.famille"
+     ],
+     "position": 58
+    },
+    {
+     "code": "c2-p2-chats",
+     "type": "text_interpretation",
+     "instruction": "Leia a mensagem de Camille.",
+     "prompt": "Qui adore les chats ?",
+     "explanation": "« Elle a quinze ans et elle adore les chats » — elle = Juliette.",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.message-camille",
+     "reading_skill": "character",
+     "evidence": "J'ai une sœur, Juliette. Elle a quinze ans et elle adore les chats.",
+     "choices": [
+      {
+       "text": "Juliette",
+       "correct": true
+      },
+      {
+       "text": "Isabelle",
+       "correct": false
+      },
+      {
+       "text": "Camille",
+       "correct": false
+      },
+      {
+       "text": "Bianca",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.loisirs"
+     ],
+     "position": 59
+    },
+    {
+     "code": "c2-p2-ou",
+     "type": "text_interpretation",
+     "instruction": "Leia a mensagem e responda.",
+     "prompt": "Où habite Antoine ?",
+     "explanation": "« il habite à Montréal ».",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.message-camille",
+     "interaction": "text",
+     "reading_skill": "place",
+     "evidence": "il habite à Montréal avec sa copine",
+     "answers": [
+      {
+       "text": "à Montréal",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "Montréal",
+       "blank": 0,
+       "primary": false
+      },
+      {
+       "text": "Il habite à Montréal.",
+       "blank": 0,
+       "primary": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.famille"
+     ],
+     "position": 60
+    },
+    {
+     "code": "c2-p2-fin",
+     "type": "text_interpretation",
+     "instruction": "Leia a mensagem de Camille.",
+     "prompt": "À la fin du message, Camille…",
+     "explanation": "O último parágrafo tem duas perguntas para Bianca: ela quer saber sobre a família da amiga.",
+     "difficulty": 4,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.message-camille",
+     "reading_skill": "intent",
+     "evidence": "Et toi ? Tu as des frères et sœurs ? Est-ce que tu as un animal ?",
+     "choices": [
+      {
+       "text": "pose des questions à Bianca sur sa famille.",
+       "correct": true
+      },
+      {
+       "text": "présente son chat à Bianca.",
+       "correct": false
+      },
+      {
+       "text": "dit qu'elle habite à Montréal.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.questions"
+     ],
+     "position": 61
+    },
+    {
+     "code": "c2-p3-ferme",
+     "type": "text_interpretation",
+     "instruction": "Leia os horários da midiateca. Marque TODOS os dias em que ela está fechada.",
+     "prompt": "La médiathèque est fermée…",
+     "explanation": "Fermé (fechada) aparece na segunda e no domingo.",
+     "difficulty": 2,
+     "competency": "interpretation",
+     "origin": "exam_inspired",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.mediatheque",
+     "interaction": "multiple",
+     "reading_skill": "time",
+     "adaptation_notes": "Inspirada no formato da compreensão escrita do DELF A1 (documento do cotidiano). Questão original; não é questão oficial.",
+     "evidence": "Lundi : fermé … Dimanche : fermé",
+     "choices": [
+      {
+       "text": "le lundi",
+       "correct": true
+      },
+      {
+       "text": "le dimanche",
+       "correct": true
+      },
+      {
+       "text": "le mercredi",
+       "correct": false
+      },
+      {
+       "text": "le samedi",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.heure"
+     ],
+     "position": 62
+    },
+    {
+     "code": "c2-p3-samedi",
+     "type": "text_interpretation",
+     "instruction": "Leia os horários da midiateca.",
+     "prompt": "Le samedi, la médiathèque ouvre à…",
+     "explanation": "Samedi : 9 h 30 – 17 h. Abre às 9h30.",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "exam_inspired",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.mediatheque",
+     "reading_skill": "time",
+     "adaptation_notes": "Inspirada no formato da compreensão escrita do DELF A1 (documento do cotidiano). Questão original; não é questão oficial.",
+     "evidence": "Samedi : 9 h 30 – 17 h",
+     "choices": [
+      {
+       "text": "9 h 30",
+       "correct": true
+      },
+      {
+       "text": "10 h",
+       "correct": false
+      },
+      {
+       "text": "11 h",
+       "correct": false
+      },
+      {
+       "text": "17 h",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.heure"
+     ],
+     "position": 63
+    },
+    {
+     "code": "c2-p3-gratuit",
+     "type": "text_interpretation",
+     "instruction": "Leia os horários da midiateca.",
+     "prompt": "« Ateliers gratuits » : les ateliers…",
+     "explanation": "gratuit = grátis, sem custo.",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.mediatheque",
+     "reading_skill": "meaning",
+     "evidence": "Ateliers gratuits",
+     "choices": [
+      {
+       "text": "ne coûtent rien.",
+       "correct": true
+      },
+      {
+       "text": "sont fermés.",
+       "correct": false
+      },
+      {
+       "text": "sont le dimanche.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.infos"
+     ],
+     "position": 64
+    },
+    {
+     "code": "c2-p3-club",
+     "type": "text_interpretation",
+     "instruction": "Leia os horários e responda com o dia da semana.",
+     "prompt": "Le club de lecture, c'est quel jour ?",
+     "explanation": "« club de lecture : le samedi à 11 h ».",
+     "difficulty": 4,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.mediatheque",
+     "interaction": "text",
+     "reading_skill": "time",
+     "evidence": "club de lecture : le samedi à 11 h",
+     "answers": [
+      {
+       "text": "le samedi",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "samedi",
+       "blank": 0,
+       "primary": false
+      }
+     ],
+     "objectives": [
+      "ch02.obj.heure"
+     ],
+     "position": 65
+    },
+    {
+     "code": "c2-p3-mercredi-tf",
+     "type": "true_false",
+     "instruction": "Leia os horários da midiateca.",
+     "prompt": "Le mercredi, la médiathèque ferme à 18 h.",
+     "explanation": "Falso: na quarta ela fecha às 19h (10 h – 19 h). Às 18h começa a oficina de conversação.",
+     "difficulty": 5,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.mediatheque",
+     "reading_skill": "true_false",
+     "evidence": "Mercredi : 10 h – 19 h",
+     "answer": false,
+     "objectives": [
+      "ch02.obj.heure"
+     ],
+     "position": 66
+    },
+    {
+     "code": "c2-aval-avoir",
+     "type": "select_verb_form",
+     "instruction": "Escolha a forma correta.",
+     "prompt": "Mes cousins ___ dix ans.",
+     "explanation": "Idade com avoir; mes cousins = ils → ont.",
+     "difficulty": 2,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "ont",
+       "correct": true
+      },
+      {
+       "text": "sont",
+       "correct": false
+      },
+      {
+       "text": "avons",
+       "correct": false
+      },
+      {
+       "text": "a",
+       "correct": false
+      }
+     ],
+     "is_assessment": true,
+     "objectives": [
+      "ch02.obj.age"
+     ],
+     "grammar_topics": [
+      "ch02.g.avoir"
+     ],
+     "position": 67
+    },
+    {
+     "code": "c2-aval-er",
+     "type": "conjugation",
+     "instruction": "Conjugue o verbo entre parênteses.",
+     "prompt": "Vous ___ (regarder) la télévision ?",
+     "explanation": "vous → -ez: vous regardez.",
+     "difficulty": 2,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "regardez",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "is_assessment": true,
+     "objectives": [
+      "ch02.obj.loisirs"
+     ],
+     "grammar_topics": [
+      "ch02.g.er"
+     ],
+     "position": 68
+    },
+    {
+     "code": "c2-aval-neg",
+     "type": "transform_negative",
+     "instruction": "Passe para a negativa.",
+     "prompt": "Nous avons un ordinateur.",
+     "explanation": "Nous n'avons pas d'ordinateur: n' antes de vogal, e un → de, que vira d' antes de vogal.",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Nous n'avons pas d'ordinateur.",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "is_assessment": true,
+     "objectives": [
+      "ch02.obj.naime"
+     ],
+     "grammar_topics": [
+      "ch02.g.negation",
+      "ch02.g.avoir"
+     ],
+     "position": 69
+    },
+    {
+     "code": "c2-aval-q",
+     "type": "transform_question",
+     "instruction": "Transforme em pergunta com est-ce que.",
+     "prompt": "Elle parle italien.",
+     "explanation": "Est-ce qu' + elle: « Est-ce qu'elle parle italien ? »",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Est-ce qu'elle parle italien ?",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "is_assessment": true,
+     "objectives": [
+      "ch02.obj.questions"
+     ],
+     "grammar_topics": [
+      "ch02.g.questions"
+     ],
+     "position": 70
+    },
+    {
+     "code": "c2-aval-poss",
+     "type": "select_article",
+     "instruction": "Escolha o possessivo.",
+     "prompt": "Paulo et ___ sœur habitent à Natal.",
+     "explanation": "sœur é feminino: sa sœur (mesmo sendo o Paulo o « dono »).",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "sa",
+       "correct": true
+      },
+      {
+       "text": "son",
+       "correct": false
+      },
+      {
+       "text": "ses",
+       "correct": false
+      }
+     ],
+     "is_assessment": true,
+     "objectives": [
+      "ch02.obj.famille"
+     ],
+     "grammar_topics": [
+      "ch02.g.possessifs"
+     ],
+     "position": 71
+    },
+    {
+     "code": "c2-aval-quel",
+     "type": "select_article",
+     "instruction": "Escolha a forma de quel.",
+     "prompt": "___ langues est-ce que tu parles ?",
+     "explanation": "langues: feminino plural → quelles.",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Quelles",
+       "correct": true
+      },
+      {
+       "text": "Quel",
+       "correct": false
+      },
+      {
+       "text": "Quels",
+       "correct": false
+      },
+      {
+       "text": "Quelle",
+       "correct": false
+      }
+     ],
+     "is_assessment": true,
+     "objectives": [
+      "ch02.obj.questions"
+     ],
+     "grammar_topics": [
+      "ch02.g.quel"
+     ],
+     "position": 72
+    },
+    {
+     "code": "c2-aval-heure",
+     "type": "mc_single",
+     "instruction": "Qual horário corresponde?",
+     "prompt": "Il est onze heures et quart.",
+     "explanation": "et quart = e quinze: 11h15.",
+     "difficulty": 2,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "11 h 15",
+       "correct": true
+      },
+      {
+       "text": "11 h 45",
+       "correct": false
+      },
+      {
+       "text": "10 h 45",
+       "correct": false
+      },
+      {
+       "text": "11 h 30",
+       "correct": false
+      }
+     ],
+     "is_assessment": true,
+     "objectives": [
+      "ch02.obj.heure"
+     ],
+     "vocabulary_topics": [
+      "ch02.v.heure"
+     ],
+     "position": 73
+    },
+    {
+     "code": "c2-aval-texte",
+     "type": "text_interpretation",
+     "instruction": "Leia a mensagem de Camille.",
+     "prompt": "Isabelle travaille…",
+     "explanation": "« Elle travaille dans un hôpital. »",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch02.p.message-camille",
+     "reading_skill": "explicit",
+     "evidence": "Ma mère, Isabelle, a quarante-neuf ans. Elle travaille dans un hôpital.",
+     "choices": [
+      {
+       "text": "dans un hôpital.",
+       "correct": true
+      },
+      {
+       "text": "dans une école.",
+       "correct": false
+      },
+      {
+       "text": "à Montréal.",
+       "correct": false
+      }
+     ],
+     "is_assessment": true,
+     "objectives": [
+      "ch02.obj.famille"
+     ],
+     "position": 74
+    },
+    {
+     "code": "c2-aval-trad",
+     "type": "translate_pt_fr",
+     "instruction": "Traduza para o francês.",
+     "prompt": "Minha irmã tem quinze anos.",
+     "explanation": "ma sœur + avoir para idade: « Ma sœur a quinze ans ».",
+     "difficulty": 4,
+     "competency": "traduction",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Ma sœur a quinze ans.",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "Ma sœur a 15 ans.",
+       "blank": 0,
+       "primary": false
+      }
+     ],
+     "is_assessment": true,
+     "objectives": [
+      "ch02.obj.age",
+      "ch02.obj.famille"
+     ],
+     "grammar_topics": [
+      "ch02.g.avoir",
+      "ch02.g.possessifs"
+     ],
+     "position": 75
+    },
+    {
+     "code": "c2-aval-ecrit",
+     "type": "guided_writing",
+     "instruction": "Responda a mensagem de Camille (4 a 6 frases).",
+     "prompt": "Répondez à Camille : présentez votre famille et dites si vous avez un animal.",
+     "explanation": "Para responder: cumprimente, apresente 2 ou 3 pessoas com nome e idade (avoir), diga se tem um animal e se despeça.",
+     "difficulty": 5,
+     "competency": "ecriture",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "model_answer": "Salut Camille !\nMerci pour ton message. J'ai un frère, Pedro. Il a dix-huit ans et il adore le football. Ma mère s'appelle Lúcia, elle a cinquante ans. Je n'ai pas d'animal, mais j'aime beaucoup les chiens !\nBises,\nBianca",
+     "criteria": [
+      "Cumprimentei e me despedi como numa mensagem informal.",
+      "Apresentei pelo menos dois familiares com possessivos (mon/ma/mes).",
+      "Usei avoir para dizer idades.",
+      "Respondi à pergunta sobre o animal (com negação se necessário: pas de/d')."
+     ],
+     "is_assessment": true,
+     "objectives": [
+      "ch02.obj.famille",
+      "ch02.obj.age"
+     ],
+     "grammar_topics": [
+      "ch02.g.possessifs",
+      "ch02.g.avoir",
+      "ch02.g.negation"
+     ],
+     "translation_pt": "Responda à Camille: apresente sua família e diga se você tem um animal de estimação.",
+     "position": 76
+    }
+   ]
+  }
+ ]
+}

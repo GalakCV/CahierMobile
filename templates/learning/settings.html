@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Preferências{% endblock %}
+{% block content %}
+<h1>Preferências</h1>
+<form method="post" class="form-grid" novalidate>
+  {% csrf_token %}
+  {% for field in form %}
+  <div class="field">{% if field.field.widget.input_type == "checkbox" %}<label>{{ field }} {{ field.label }}</label>{% else %}{{ field.label_tag }} {{ field }}{% endif %}{{ field.errors }}</div>
+  {% endfor %}
+  <div class="actions"><button class="btn" type="submit">Salvar preferências</button></div>
+</form>
+<p class="muted">Não há contas nem senhas: esta aplicação é só sua e roda no seu computador.</p>
+{% endblock %}

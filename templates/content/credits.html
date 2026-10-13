@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Créditos e fontes{% endblock %}
+{% block content %}
+<h1>Créditos e atribuições</h1>
+<p>Toda questão e todo texto registram autoria, fonte, licença e origem. Questões apenas parecidas com o formato do DELF são descritas como “inspiradas no formato DELF” — nenhuma é apresentada como oficial.</p>
+{% if course.reference_source %}
+<div class="panel">
+  <h2 style="margin-top:0">Referência curricular</h2>
+  <p><em>{{ course.reference_source.title }}</em> — {{ course.reference_source.author }}. <a href="{{ course.reference_source.url }}" rel="noreferrer noopener">{{ course.reference_source.url }}</a>.
+  Licença: <a href="{{ course.reference_source.license_url }}" rel="noreferrer noopener">{{ course.reference_source.license_name }}</a>.</p>
+  <p class="prewrap muted">{{ course.reference_source.notes }}</p>
+</div>
+{% endif %}
+<h2>Origem do conteúdo</h2>
+<div class="table-wrap"><table><thead><tr><th>Origem</th><th>Questões</th><th>Textos</th></tr></thead>
+<tbody>{% for label, ex, pa in origins %}<tr><td>{{ label }}</td><td>{{ ex }}</td><td>{{ pa }}</td></tr>{% endfor %}</tbody></table></div>
+<h2>Fontes registradas</h2>
+<div class="table-wrap"><table><thead><tr><th>Fonte</th><th>Autoria</th><th>Licença</th><th>Uso</th></tr></thead>
+<tbody>{% for s in sources %}
+<tr><td><a href="{{ s.get_absolute_url }}">{{ s.title }}</a></td><td>{{ s.author }}</td>
+<td>{% if s.license_url %}<a href="{{ s.license_url }}" rel="noreferrer noopener">{{ s.license_name }}</a>{% else %}{{ s.license_name }}{% endif %}</td>
+<td>{{ s.n_ex }} questões, {{ s.n_pas }} textos</td></tr>
+{% endfor %}</tbody></table></div>
+<p class="muted" style="margin-top:1.5rem">Software: Django (licença BSD). Nenhum dado sai do seu computador: não há telemetria nem chamadas externas.</p>
+{% endblock %}

@@ -1,0 +1,3001 @@
+{
+ "format": "cahier-content",
+ "version": 1,
+ "chapters": [
+  {
+   "code": "ch03",
+   "number": 3,
+   "title": "Les vacances en France",
+   "theme": "Tempo, lugares, transportes e planos de férias",
+   "description": "Falar do tempo e das estações, dizer aonde você vai e de onde vem, falar de atividades de férias, meios de transporte, planos para o futuro próximo e números de 70 a 100.",
+   "cefr_level": "A1",
+   "reference_note": "Corresponde ao capítulo 3 do Français interactif (Les vacances en France): le temps, les saisons, la géographie, les points cardinaux, l'Hexagone, les activités, les transports, nombres 70-100; gramática 03.1 a 03.7 (faire, expressões com faire, partir/sortir/dormir, verbos com mudança de radical, aller, futur proche, preposições com lugares).",
+   "useful_expressions": [
+    {
+     "fr": "Quel temps fait-il ? — Il fait beau / Il pleut.",
+     "pt": "Como está o tempo? — Está bonito / Está chovendo."
+    },
+    {
+     "fr": "Je vais à Paris / en France / au Portugal / aux États-Unis.",
+     "pt": "Vou a Paris / à França / a Portugal / aos EUA."
+    },
+    {
+     "fr": "Je vais partir en vacances.",
+     "pt": "Vou sair de férias."
+    },
+    {
+     "fr": "On prend le train ? — Non, on y va en voiture.",
+     "pt": "Vamos de trem? — Não, vamos de carro."
+    },
+    {
+     "fr": "à pied / à vélo / en voiture / en train / en avion",
+     "pt": "a pé / de bicicleta / de carro / de trem / de avião"
+    },
+    {
+     "fr": "Bonnes vacances !",
+     "pt": "Boas férias!"
+    }
+   ],
+   "review_summary": [
+    "faire: je fais, tu fais, il fait, nous faisons, vous faites, ils font.",
+    "Tempo: il fait beau / chaud / froid; il pleut; il neige; il y a du vent / du soleil.",
+    "aller: je vais, tu vas, il va, nous allons, vous allez, ils vont.",
+    "Futur proche: aller (presente) + infinitivo — Je vais voyager. Negação: Je ne vais pas voyager.",
+    "Cidades: à / de. Países femininos (em -e): en / de. Masculinos: au / du. Plurais: aux / des.",
+    "partir, sortir, dormir: je pars, nous partons — sem a consoante final no singular.",
+    "préférer: je préfère, nous préférons; acheter: j'achète; appeler: j'appelle.",
+    "70 soixante-dix, 80 quatre-vingts, 90 quatre-vingt-dix, 71 soixante et onze, 81 quatre-vingt-un.",
+    "Meios de transporte: en (dentro: en voiture, en train) × à (por cima: à vélo, à pied)."
+   ],
+   "objectives": [
+    {
+     "code": "ch03.obj.meteo",
+     "description": "Dizer que tempo faz.",
+     "competencies": [
+      "vocabulaire",
+      "grammaire"
+     ],
+     "position": 1
+    },
+    {
+     "code": "ch03.obj.saisons",
+     "description": "Relacionar estações, meses e atividades.",
+     "competencies": [
+      "vocabulaire"
+     ],
+     "position": 2
+    },
+    {
+     "code": "ch03.obj.lieux",
+     "description": "Dizer aonde vou e de onde venho (cidades e países).",
+     "competencies": [
+      "grammaire"
+     ],
+     "position": 3
+    },
+    {
+     "code": "ch03.obj.activites",
+     "description": "Falar de atividades de férias e de lazer.",
+     "competencies": [
+      "conjugaison",
+      "vocabulaire"
+     ],
+     "position": 4
+    },
+    {
+     "code": "ch03.obj.projets",
+     "description": "Falar dos meus planos com o futur proche.",
+     "competencies": [
+      "conjugaison",
+      "ecriture"
+     ],
+     "position": 5
+    },
+    {
+     "code": "ch03.obj.transports",
+     "description": "Dizer como me desloco (meios de transporte).",
+     "competencies": [
+      "vocabulaire",
+      "grammaire"
+     ],
+     "position": 6
+    },
+    {
+     "code": "ch03.obj.nombres",
+     "description": "Reconhecer e escrever os números de 70 a 100.",
+     "competencies": [
+      "orthographe"
+     ],
+     "position": 7
+    }
+   ],
+   "grammar_topics": [
+    {
+     "code": "ch03.g.faire",
+     "title": "O verbo faire (fazer)",
+     "position": 1,
+     "summary": "Faire é irregular e muito frequente. Atenção às formas vous faites e ils font.",
+     "tables": [
+      {
+       "title": "faire — presente",
+       "rows": [
+        [
+         "je",
+         "fais"
+        ],
+        [
+         "tu",
+         "fais"
+        ],
+        [
+         "il / elle / on",
+         "fait"
+        ],
+        [
+         "nous",
+         "faisons"
+        ],
+        [
+         "vous",
+         "faites"
+        ],
+        [
+         "ils / elles",
+         "font"
+        ]
+       ]
+      }
+     ],
+     "examples": [
+      {
+       "fr": "Qu'est-ce que tu fais le week-end ?",
+       "pt": "O que você faz no fim de semana?"
+      },
+      {
+       "fr": "Vous faites du sport ?",
+       "pt": "Você faz esporte?"
+      }
+     ],
+     "common_errors": [
+      {
+       "wrong": "vous faisez",
+       "right": "vous faites",
+       "why": "Forma irregular, como vous êtes e vous dites."
+      }
+     ]
+    },
+    {
+     "code": "ch03.g.expressions-faire",
+     "title": "Expressões com faire: tempo e atividades",
+     "position": 2,
+     "summary": "Para o tempo: il fait beau, chaud, froid, frais, mauvais. Mas: il pleut (chove), il neige (neva), il y a du vent / du soleil / des nuages.\nPara atividades: faire du sport, du vélo, de la natation, du ski, de la randonnée, du camping, les courses.",
+     "examples": [
+      {
+       "fr": "En été, il fait chaud.",
+       "pt": "No verão faz calor."
+      },
+      {
+       "fr": "Nous faisons du vélo le dimanche.",
+       "pt": "Andamos de bicicleta aos domingos."
+      }
+     ],
+     "notes": "faire + du (masc.) / de la (fem.) / de l' (vogal): faire du ski, faire de la natation, faire de l'escalade.",
+     "common_errors": [
+      {
+       "wrong": "Il est chaud aujourd'hui.",
+       "right": "Il fait chaud aujourd'hui.",
+       "why": "Para o clima, use il fait."
+      },
+      {
+       "wrong": "Il fait pluie.",
+       "right": "Il pleut.",
+       "why": "Chover tem verbo próprio: pleuvoir → il pleut."
+      }
+     ]
+    },
+    {
+     "code": "ch03.g.partir-sortir-dormir",
+     "title": "partir, sortir, dormir",
+     "position": 3,
+     "summary": "No singular, esses verbos perdem a consoante do radical: je pars, je sors, je dors. No plural, ela volta: nous partons, nous sortons, nous dormons.",
+     "tables": [
+      {
+       "title": "partir — presente",
+       "rows": [
+        [
+         "je",
+         "pars"
+        ],
+        [
+         "tu",
+         "pars"
+        ],
+        [
+         "il / elle / on",
+         "part"
+        ],
+        [
+         "nous",
+         "partons"
+        ],
+        [
+         "vous",
+         "partez"
+        ],
+        [
+         "ils / elles",
+         "partent"
+        ]
+       ]
+      },
+      {
+       "title": "dormir — presente",
+       "rows": [
+        [
+         "je",
+         "dors"
+        ],
+        [
+         "tu",
+         "dors"
+        ],
+        [
+         "il / elle / on",
+         "dort"
+        ],
+        [
+         "nous",
+         "dormons"
+        ],
+        [
+         "vous",
+         "dormez"
+        ],
+        [
+         "ils / elles",
+         "dorment"
+        ]
+       ]
+      }
+     ],
+     "examples": [
+      {
+       "fr": "Je pars en vacances demain.",
+       "pt": "Saio de férias amanhã."
+      },
+      {
+       "fr": "Ils sortent le samedi soir.",
+       "pt": "Eles saem sábado à noite."
+      }
+     ],
+     "common_errors": [
+      {
+       "wrong": "je parte",
+       "right": "je pars",
+       "why": "Não segue o modelo dos verbos em -er."
+      }
+     ]
+    },
+    {
+     "code": "ch03.g.changement-radical",
+     "title": "Verbos em -er com mudança no radical",
+     "position": 4,
+     "summary": "Alguns verbos em -er mudam o radical quando a terminação é muda (je, tu, il, ils), mas não com nous e vous:\npréférer → je préfère, nous préférons; acheter → j'achète, nous achetons; appeler → j'appelle, nous appelons.",
+     "tables": [
+      {
+       "title": "préférer — presente",
+       "rows": [
+        [
+         "je",
+         "préfère"
+        ],
+        [
+         "tu",
+         "préfères"
+        ],
+        [
+         "il / elle / on",
+         "préfère"
+        ],
+        [
+         "nous",
+         "préférons"
+        ],
+        [
+         "vous",
+         "préférez"
+        ],
+        [
+         "ils / elles",
+         "préfèrent"
+        ]
+       ]
+      }
+     ],
+     "examples": [
+      {
+       "fr": "Tu préfères la mer ou la montagne ?",
+       "pt": "Você prefere o mar ou a montanha?"
+      }
+     ],
+     "common_errors": [
+      {
+       "wrong": "nous préfèrons",
+       "right": "nous préférons",
+       "why": "Com nous e vous o acento continua agudo."
+      }
+     ]
+    },
+    {
+     "code": "ch03.g.aller",
+     "title": "O verbo aller (ir)",
+     "position": 5,
+     "summary": "Aller é irregular. Também é usado em « Ça va ? » e para formar o futuro próximo.",
+     "tables": [
+      {
+       "title": "aller — presente",
+       "rows": [
+        [
+         "je",
+         "vais"
+        ],
+        [
+         "tu",
+         "vas"
+        ],
+        [
+         "il / elle / on",
+         "va"
+        ],
+        [
+         "nous",
+         "allons"
+        ],
+        [
+         "vous",
+         "allez"
+        ],
+        [
+         "ils / elles",
+         "vont"
+        ]
+       ]
+      }
+     ],
+     "examples": [
+      {
+       "fr": "Nous allons à la plage.",
+       "pt": "Vamos à praia."
+      },
+      {
+       "fr": "Ils vont en Italie.",
+       "pt": "Eles vão para a Itália."
+      }
+     ],
+     "common_errors": [
+      {
+       "wrong": "je va",
+       "right": "je vais",
+       "why": "Com je a forma é vais."
+      }
+     ]
+    },
+    {
+     "code": "ch03.g.futur-proche",
+     "title": "Futur proche (futuro próximo)",
+     "position": 6,
+     "summary": "aller no presente + verbo no infinitivo: Je vais visiter Paris. É como « vou visitar » em português.\nNegação em volta de aller: Je ne vais pas travailler.",
+     "examples": [
+      {
+       "fr": "Demain, on va faire du vélo.",
+       "pt": "Amanhã a gente vai andar de bicicleta."
+      },
+      {
+       "fr": "Elles ne vont pas partir en juillet.",
+       "pt": "Elas não vão viajar em julho."
+      }
+     ],
+     "common_errors": [
+      {
+       "wrong": "Je vais visite Paris.",
+       "right": "Je vais visiter Paris.",
+       "why": "Depois de aller, o verbo fica no infinitivo."
+      },
+      {
+       "wrong": "Je vais ne pas partir.",
+       "right": "Je ne vais pas partir.",
+       "why": "ne… pas envolve o verbo conjugado (aller)."
+      }
+     ]
+    },
+    {
+     "code": "ch03.g.prepositions-lieux",
+     "title": "Preposições com cidades e países",
+     "position": 7,
+     "summary": "Para ir/estar: à + cidade (à Lyon); en + país feminino ou começado por vogal (en France, en Italie, en Iran); au + país masculino (au Brésil, au Canada); aux + país no plural (aux États-Unis).\nPara vir de: de/d' + cidade (de Lyon, d'Amiens); de/d' + país feminino (de France, d'Italie); du + masculino (du Brésil); des + plural (des États-Unis).",
+     "tables": [
+      {
+       "title": "Resumo",
+       "rows": [
+        [
+         "",
+         "ir / estar",
+         "vir de"
+        ],
+        [
+         "cidade",
+         "à Paris",
+         "de Paris"
+        ],
+        [
+         "país feminino",
+         "en France",
+         "de France"
+        ],
+        [
+         "país masculino",
+         "au Japon",
+         "du Japon"
+        ],
+        [
+         "país plural",
+         "aux États-Unis",
+         "des États-Unis"
+        ]
+       ]
+      }
+     ],
+     "notes": "Países terminados em -e costumam ser femininos (la France, l'Italie). Exceções: le Mexique, le Cambodge.",
+     "common_errors": [
+      {
+       "wrong": "Je vais à France.",
+       "right": "Je vais en France.",
+       "why": "País feminino pede en."
+      },
+      {
+       "wrong": "Je suis de le Brésil.",
+       "right": "Je suis du Brésil.",
+       "why": "de + le = du (contração)."
+      }
+     ]
+    }
+   ],
+   "vocabulary_topics": [
+    {
+     "code": "ch03.v.meteo",
+     "title": "O tempo e as estações",
+     "position": 1,
+     "items": [
+      {
+       "fr": "Quel temps fait-il ?",
+       "pt": "Como está o tempo?"
+      },
+      {
+       "fr": "il fait beau / mauvais",
+       "pt": "está bonito / feio"
+      },
+      {
+       "fr": "il fait chaud / froid / frais",
+       "pt": "está quente / frio / fresco"
+      },
+      {
+       "fr": "il pleut",
+       "pt": "chove"
+      },
+      {
+       "fr": "il neige",
+       "pt": "neva"
+      },
+      {
+       "fr": "il y a du vent / du soleil",
+       "pt": "está ventando / faz sol"
+      },
+      {
+       "fr": "le printemps (au printemps)",
+       "pt": "a primavera (na primavera)"
+      },
+      {
+       "fr": "l'été (en été)",
+       "pt": "o verão (no verão)"
+      },
+      {
+       "fr": "l'automne (en automne)",
+       "pt": "o outono (no outono)"
+      },
+      {
+       "fr": "l'hiver (en hiver)",
+       "pt": "o inverno (no inverno)"
+      }
+     ]
+    },
+    {
+     "code": "ch03.v.geographie",
+     "title": "Geografia e pontos cardeais",
+     "position": 2,
+     "items": [
+      {
+       "fr": "le nord, le sud, l'est, l'ouest",
+       "pt": "o norte, o sul, o leste, o oeste"
+      },
+      {
+       "fr": "la mer / la plage",
+       "pt": "o mar / a praia"
+      },
+      {
+       "fr": "la montagne",
+       "pt": "a montanha"
+      },
+      {
+       "fr": "la campagne",
+       "pt": "o campo"
+      },
+      {
+       "fr": "la ville",
+       "pt": "a cidade"
+      },
+      {
+       "fr": "le pays",
+       "pt": "o país"
+      },
+      {
+       "fr": "l'Hexagone",
+       "pt": "a França continental (por sua forma)"
+      }
+     ]
+    },
+    {
+     "code": "ch03.v.activites",
+     "title": "Atividades de férias",
+     "position": 3,
+     "items": [
+      {
+       "fr": "faire du vélo",
+       "pt": "andar de bicicleta"
+      },
+      {
+       "fr": "faire de la randonnée",
+       "pt": "fazer trilha"
+      },
+      {
+       "fr": "faire du camping",
+       "pt": "acampar"
+      },
+      {
+       "fr": "faire du ski",
+       "pt": "esquiar"
+      },
+      {
+       "fr": "nager / faire de la natation",
+       "pt": "nadar / praticar natação"
+      },
+      {
+       "fr": "visiter un musée",
+       "pt": "visitar um museu"
+      },
+      {
+       "fr": "partir en vacances",
+       "pt": "sair de férias"
+      },
+      {
+       "fr": "sortir",
+       "pt": "sair (à noite, com amigos)"
+      },
+      {
+       "fr": "dormir",
+       "pt": "dormir"
+      },
+      {
+       "fr": "acheter un billet",
+       "pt": "comprar uma passagem/um ingresso"
+      }
+     ]
+    },
+    {
+     "code": "ch03.v.transports",
+     "title": "Meios de transporte",
+     "position": 4,
+     "items": [
+      {
+       "fr": "en voiture",
+       "pt": "de carro"
+      },
+      {
+       "fr": "en train",
+       "pt": "de trem"
+      },
+      {
+       "fr": "en avion",
+       "pt": "de avião"
+      },
+      {
+       "fr": "en bus / en car",
+       "pt": "de ônibus (urbano / de viagem)"
+      },
+      {
+       "fr": "à vélo",
+       "pt": "de bicicleta"
+      },
+      {
+       "fr": "à pied",
+       "pt": "a pé"
+      },
+      {
+       "fr": "la gare / l'aéroport",
+       "pt": "a estação de trem / o aeroporto"
+      },
+      {
+       "fr": "un billet aller-retour",
+       "pt": "uma passagem de ida e volta"
+      }
+     ]
+    },
+    {
+     "code": "ch03.v.nombres",
+     "title": "Números de 70 a 100",
+     "position": 5,
+     "items": [
+      {
+       "fr": "soixante-dix (70), soixante et onze (71), soixante-douze (72)",
+       "pt": "60 + 10, 60 + 11…"
+      },
+      {
+       "fr": "quatre-vingts (80)",
+       "pt": "4 × 20 — com s"
+      },
+      {
+       "fr": "quatre-vingt-un (81)",
+       "pt": "sem s e sem « et »"
+      },
+      {
+       "fr": "quatre-vingt-dix (90), quatre-vingt-onze (91)",
+       "pt": "4 × 20 + 10…"
+      },
+      {
+       "fr": "quatre-vingt-dix-neuf (99)",
+       "pt": "99"
+      },
+      {
+       "fr": "cent (100)",
+       "pt": "100"
+      }
+     ]
+    }
+   ],
+   "passages": [
+    {
+     "code": "ch03.p.carte-nice",
+     "title": "Une carte postale de Nice",
+     "text_type": "message",
+     "difficulty": 3,
+     "body": "Nice, le 12 juillet\n\nChère Mamie,\n\nJe suis en vacances à Nice avec Lucas et ses parents. Il fait très beau et très chaud : il y a du soleil tous les jours ! Le matin, nous allons à la plage et nous nageons dans la mer. L'après-midi, je dors un peu, et le soir nous sortons dans la vieille ville.\n\nDemain, nous allons visiter le musée Matisse. Samedi, nous allons partir en train pour Marseille.\n\nJe vais rentrer à Lille le 20 juillet. Gros bisous !\n\nInès",
+     "translation_pt": "Nice, 12 de julho\n\nQuerida vovó,\n\nEstou de férias em Nice com o Lucas e os pais dele. Está muito bonito e muito quente: faz sol todos os dias! De manhã vamos à praia e nadamos no mar. À tarde eu durmo um pouco e, à noite, saímos na cidade velha.\n\nAmanhã vamos visitar o museu Matisse. No sábado vamos partir de trem para Marselha.\n\nVou voltar para Lille no dia 20 de julho. Um beijão!\n\nInès",
+     "key_vocabulary": [
+      {
+       "fr": "Chère Mamie",
+       "pt": "Querida vovó"
+      },
+      {
+       "fr": "tous les jours",
+       "pt": "todos os dias"
+      },
+      {
+       "fr": "la vieille ville",
+       "pt": "a cidade velha, o centro histórico"
+      },
+      {
+       "fr": "rentrer",
+       "pt": "voltar para casa"
+      },
+      {
+       "fr": "Gros bisous",
+       "pt": "Um beijão"
+      }
+     ],
+     "useful_structures": [
+      {
+       "fr": "Il fait très beau et très chaud.",
+       "pt": "falar do tempo"
+      },
+      {
+       "fr": "Nous allons visiter…",
+       "pt": "futur proche"
+      },
+      {
+       "fr": "partir en train pour Marseille",
+       "pt": "partir + meio de transporte + destino"
+      }
+     ],
+     "grammar_topics": [
+      "ch03.g.expressions-faire",
+      "ch03.g.aller",
+      "ch03.g.futur-proche",
+      "ch03.g.partir-sortir-dormir"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.meteo",
+      "ch03.v.activites",
+      "ch03.v.transports"
+     ],
+     "author": "Cahier (texto original)",
+     "source": "cahier-original",
+     "origin": "original",
+     "review_status": "reviewed",
+     "position": 1
+    },
+    {
+     "code": "ch03.p.offre-bordeaux",
+     "title": "Offre spéciale : un week-end à Bordeaux",
+     "text_type": "ad",
+     "difficulty": 4,
+     "body": "OFFRE SPÉCIALE — UN WEEK-END À BORDEAUX\n\nVous habitez à Paris ? Partez deux jours à Bordeaux, dans le sud-ouest de la France !\n\nTrain aller-retour Paris – Bordeaux : 89 €\nHôtel du Centre (une nuit, petit-déjeuner compris) : 75 €\nVisite guidée de la ville à vélo : 20 €\n\nDépart le samedi à 8 h 10, gare Montparnasse. Retour le dimanche à 19 h 40.\nOffre valable en septembre et en octobre. Réservation : agence Voyages Liberté.",
+     "translation_pt": "OFERTA ESPECIAL — UM FIM DE SEMANA EM BORDEAUX\n\nVocê mora em Paris? Vá passar dois dias em Bordeaux, no sudoeste da França!\n\nTrem ida e volta Paris – Bordeaux: 89 €\nHotel do Centro (uma noite, café da manhã incluído): 75 €\nVisita guiada pela cidade de bicicleta: 20 €\n\nPartida no sábado às 8h10, estação Montparnasse. Volta no domingo às 19h40.\nOferta válida em setembro e outubro. Reservas: agência Voyages Liberté.",
+     "key_vocabulary": [
+      {
+       "fr": "une offre",
+       "pt": "uma oferta"
+      },
+      {
+       "fr": "aller-retour",
+       "pt": "ida e volta"
+      },
+      {
+       "fr": "le petit-déjeuner",
+       "pt": "o café da manhã"
+      },
+      {
+       "fr": "compris",
+       "pt": "incluído"
+      },
+      {
+       "fr": "valable",
+       "pt": "válido(a)"
+      },
+      {
+       "fr": "le départ / le retour",
+       "pt": "a partida / a volta"
+      }
+     ],
+     "useful_structures": [
+      {
+       "fr": "Partez deux jours à Bordeaux !",
+       "pt": "imperativo de partir (anúncio)"
+      },
+      {
+       "fr": "dans le sud-ouest de la France",
+       "pt": "localização"
+      }
+     ],
+     "grammar_topics": [
+      "ch03.g.prepositions-lieux",
+      "ch03.g.partir-sortir-dormir"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.transports",
+      "ch03.v.nombres",
+      "ch03.v.geographie"
+     ],
+     "author": "Cahier (texto original)",
+     "source": "cahier-original",
+     "origin": "original",
+     "review_status": "reviewed",
+     "position": 2
+    }
+   ],
+   "exercises": [
+    {
+     "code": "c3-faire-conj",
+     "type": "conjugation",
+     "instruction": "Conjugue faire.",
+     "prompt": "Vous ___ du sport le week-end ?",
+     "explanation": "Forma irregular: vous faites (não « faisez »).",
+     "difficulty": 2,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "faites",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.activites"
+     ],
+     "grammar_topics": [
+      "ch03.g.faire"
+     ],
+     "translation_pt": "Você(s) ___ esporte no fim de semana?",
+     "related": [
+      {
+       "code": "c3-aval-faire",
+       "kind": "similar"
+      }
+     ],
+     "position": 0
+    },
+    {
+     "code": "c3-faire-ils",
+     "type": "select_verb_form",
+     "instruction": "Escolha a forma correta.",
+     "prompt": "Mes amis ___ du camping en été.",
+     "explanation": "ils → font (irregular, como ils sont, ils ont, ils vont).",
+     "difficulty": 2,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "font",
+       "correct": true
+      },
+      {
+       "text": "faisent",
+       "correct": false
+      },
+      {
+       "text": "faites",
+       "correct": false
+      },
+      {
+       "text": "fait",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.activites"
+     ],
+     "grammar_topics": [
+      "ch03.g.faire"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.activites"
+     ],
+     "position": 1
+    },
+    {
+     "code": "c3-meteo-img",
+     "type": "mc_single",
+     "instruction": "Escolha a frase que descreve o tempo.",
+     "prompt": "Dehors, il y a de la pluie. →",
+     "explanation": "Para chuva usa-se o verbo pleuvoir: il pleut. « Il fait pluie » não existe.",
+     "difficulty": 1,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Il pleut.",
+       "correct": true
+      },
+      {
+       "text": "Il fait pluie.",
+       "correct": false
+      },
+      {
+       "text": "Il fait chaud.",
+       "correct": false
+      },
+      {
+       "text": "Il neige.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.meteo"
+     ],
+     "grammar_topics": [
+      "ch03.g.expressions-faire"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.meteo"
+     ],
+     "translation_pt": "Lá fora está chovendo. →",
+     "position": 2
+    },
+    {
+     "code": "c3-meteo-chaud",
+     "type": "select_verb_form",
+     "instruction": "Escolha o verbo.",
+     "prompt": "En août, à Marseille, il ___ très chaud.",
+     "explanation": "Clima com adjetivo: il fait chaud. « Il est chaud » se diria de uma coisa quente (um prato, por exemplo).",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "fait",
+       "correct": true
+      },
+      {
+       "text": "est",
+       "correct": false,
+       "feedback": "Para o tempo, use il fait."
+      },
+      {
+       "text": "a",
+       "correct": false
+      },
+      {
+       "text": "va",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.meteo"
+     ],
+     "grammar_topics": [
+      "ch03.g.expressions-faire"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.meteo"
+     ],
+     "position": 3
+    },
+    {
+     "code": "c3-erreur-meteo",
+     "type": "identify_error",
+     "instruction": "Encontre a parte errada.",
+     "prompt": "Aujourd'hui, il est froid et il y a du vent.",
+     "explanation": "Para o tempo, use il fait: « il fait froid ». « Il y a du vent » está correto.",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Aujourd'hui",
+       "correct": false
+      },
+      {
+       "text": "il est froid",
+       "correct": true
+      },
+      {
+       "text": "il y a du vent",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.meteo"
+     ],
+     "grammar_topics": [
+      "ch03.g.expressions-faire"
+     ],
+     "position": 4
+    },
+    {
+     "code": "c3-saisons-match",
+     "type": "match_pairs",
+     "instruction": "Relacione a estação ao tempo típico na França.",
+     "prompt": "Les saisons en France",
+     "explanation": "Na França (hemisfério norte): inverno frio e com neve nas montanhas; verão quente; outono com chuva e vento; primavera amena.",
+     "difficulty": 2,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "en hiver",
+       "match": "il fait froid et il neige"
+      },
+      {
+       "text": "en été",
+       "match": "il fait chaud"
+      },
+      {
+       "text": "en automne",
+       "match": "il pleut et il y a du vent"
+      },
+      {
+       "text": "au printemps",
+       "match": "il fait doux"
+      }
+     ],
+     "objectives": [
+      "ch03.obj.saisons",
+      "ch03.obj.meteo"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.meteo"
+     ],
+     "position": 5
+    },
+    {
+     "code": "c3-saison-prep",
+     "type": "fill_blank",
+     "instruction": "Complete com a preposição.",
+     "prompt": "___ printemps, il y a des fleurs partout.",
+     "explanation": "As estações usam en (en été, en automne, en hiver), mas com printemps é au: au printemps.",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Au",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.saisons"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.meteo"
+     ],
+     "translation_pt": "Na primavera há flores por toda parte.",
+     "position": 6
+    },
+    {
+     "code": "c3-saison-tf",
+     "type": "true_false",
+     "instruction": "Verdadeiro ou falso?",
+     "prompt": "En France, Noël est en hiver.",
+     "explanation": "Verdadeiro: no hemisfério norte, dezembro é inverno. No Brasil, o Natal cai no verão.",
+     "difficulty": 2,
+     "competency": "lecture",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answer": true,
+     "objectives": [
+      "ch03.obj.saisons"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.meteo"
+     ],
+     "translation_pt": "Na França, o Natal é no inverno.",
+     "position": 7
+    },
+    {
+     "code": "c3-activ-du",
+     "type": "select_article",
+     "instruction": "Escolha a forma correta.",
+     "prompt": "Le dimanche, nous faisons ___ randonnée.",
+     "explanation": "randonnée é feminino: faire de la randonnée.",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "de la",
+       "correct": true
+      },
+      {
+       "text": "du",
+       "correct": false
+      },
+      {
+       "text": "de l'",
+       "correct": false
+      },
+      {
+       "text": "des",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.activites"
+     ],
+     "grammar_topics": [
+      "ch03.g.expressions-faire"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.activites"
+     ],
+     "position": 8
+    },
+    {
+     "code": "c3-aller-conj",
+     "type": "conjugation",
+     "instruction": "Conjugue aller.",
+     "prompt": "Nous ___ à la plage cet après-midi.",
+     "explanation": "aller com nous: nous allons.",
+     "difficulty": 2,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "allons",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.lieux"
+     ],
+     "grammar_topics": [
+      "ch03.g.aller"
+     ],
+     "position": 9
+    },
+    {
+     "code": "c3-aller-double",
+     "type": "conjugation",
+     "instruction": "Conjugue aller nas duas lacunas.",
+     "prompt": "Je ___ à Rome et mes parents ___ à Lisbonne.",
+     "explanation": "je vais / ils vont.",
+     "difficulty": 3,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "vais",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "vont",
+       "blank": 1,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.lieux"
+     ],
+     "grammar_topics": [
+      "ch03.g.aller"
+     ],
+     "position": 10
+    },
+    {
+     "code": "c3-futur-form",
+     "type": "select_verb_form",
+     "instruction": "Escolha a forma do futur proche.",
+     "prompt": "Demain, je ___ le musée.",
+     "explanation": "Futur proche = aller conjugado + infinitivo: je vais visiter.",
+     "difficulty": 2,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "vais visiter",
+       "correct": true
+      },
+      {
+       "text": "vais visite",
+       "correct": false
+      },
+      {
+       "text": "va visiter",
+       "correct": false
+      },
+      {
+       "text": "vais à visiter",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.projets"
+     ],
+     "grammar_topics": [
+      "ch03.g.futur-proche"
+     ],
+     "position": 11
+    },
+    {
+     "code": "c3-futur-transf",
+     "type": "fill_blank",
+     "instruction": "Reescreva no futur proche (complete as lacunas).",
+     "prompt": "Nous visitons Paris. → Nous ___ ___ Paris.",
+     "explanation": "aller com nous (allons) + infinitivo (visiter).",
+     "difficulty": 3,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "allons",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "visiter",
+       "blank": 1,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.projets"
+     ],
+     "grammar_topics": [
+      "ch03.g.futur-proche",
+      "ch03.g.aller"
+     ],
+     "position": 12
+    },
+    {
+     "code": "c3-futur-neg",
+     "type": "transform_negative",
+     "instruction": "Passe para a negativa.",
+     "prompt": "Elle va partir en juillet.",
+     "explanation": "No futur proche, ne… pas envolve aller: « Elle ne va pas partir en juillet. »",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Elle ne va pas partir en juillet.",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.projets"
+     ],
+     "grammar_topics": [
+      "ch03.g.futur-proche"
+     ],
+     "position": 13
+    },
+    {
+     "code": "c3-futur-question",
+     "type": "transform_question",
+     "instruction": "Transforme em pergunta com est-ce que.",
+     "prompt": "Vous allez faire du ski.",
+     "explanation": "Est-ce que + frase: « Est-ce que vous allez faire du ski ? »",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Est-ce que vous allez faire du ski ?",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.projets"
+     ],
+     "grammar_topics": [
+      "ch03.g.futur-proche"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.activites"
+     ],
+     "position": 14
+    },
+    {
+     "code": "c3-futur-ordre",
+     "type": "order_words",
+     "instruction": "Ordene as palavras.",
+     "prompt": "Monte a frase:",
+     "explanation": "Sujeito + ne + aller + pas + infinitivo: « Je ne vais pas travailler demain. »",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Je",
+       "order": 1
+      },
+      {
+       "text": "ne",
+       "order": 2
+      },
+      {
+       "text": "vais",
+       "order": 3
+      },
+      {
+       "text": "pas",
+       "order": 4
+      },
+      {
+       "text": "travailler",
+       "order": 5
+      },
+      {
+       "text": "demain.",
+       "order": 6
+      }
+     ],
+     "objectives": [
+      "ch03.obj.projets"
+     ],
+     "grammar_topics": [
+      "ch03.g.futur-proche"
+     ],
+     "position": 15
+    },
+    {
+     "code": "c3-futur-erreur",
+     "type": "correct_sentence",
+     "instruction": "Corrija a frase.",
+     "prompt": "Ce soir, nous allons regardons un film.",
+     "explanation": "Depois de aller, o segundo verbo fica no infinitivo: « nous allons regarder ».",
+     "difficulty": 4,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Ce soir, nous allons regarder un film.",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.projets"
+     ],
+     "grammar_topics": [
+      "ch03.g.futur-proche"
+     ],
+     "position": 16
+    },
+    {
+     "code": "c3-partir",
+     "type": "conjugation",
+     "instruction": "Conjugue partir.",
+     "prompt": "Je ___ en vacances samedi.",
+     "explanation": "No singular, partir perde o t do radical: je pars.",
+     "difficulty": 3,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "pars",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.activites"
+     ],
+     "grammar_topics": [
+      "ch03.g.partir-sortir-dormir"
+     ],
+     "position": 17
+    },
+    {
+     "code": "c3-dormir",
+     "type": "select_verb_form",
+     "instruction": "Escolha a forma correta.",
+     "prompt": "Les enfants ___ dans la tente.",
+     "explanation": "dormir com ils: ils dorment (o m volta no plural).",
+     "difficulty": 3,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "dorment",
+       "correct": true
+      },
+      {
+       "text": "dorms",
+       "correct": false
+      },
+      {
+       "text": "dormez",
+       "correct": false
+      },
+      {
+       "text": "dort",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.activites"
+     ],
+     "grammar_topics": [
+      "ch03.g.partir-sortir-dormir"
+     ],
+     "position": 18
+    },
+    {
+     "code": "c3-sortir",
+     "type": "conjugation",
+     "instruction": "Conjugue sortir nas duas lacunas.",
+     "prompt": "Tu ___ ce soir ? Nous, nous ___ avec Paul.",
+     "explanation": "tu sors (sem t) / nous sortons (com t).",
+     "difficulty": 4,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "sors",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "sortons",
+       "blank": 1,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.activites"
+     ],
+     "grammar_topics": [
+      "ch03.g.partir-sortir-dormir"
+     ],
+     "position": 19
+    },
+    {
+     "code": "c3-preferer",
+     "type": "conjugation",
+     "instruction": "Conjugue préférer (atenção aos acentos).",
+     "prompt": "Je ___ la montagne, mais vous ___ la mer.",
+     "explanation": "je préfère (è: terminação muda) / vous préférez (é: terminação pronunciada).",
+     "difficulty": 4,
+     "competency": "orthographe",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "préfère",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "préférez",
+       "blank": 1,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.activites"
+     ],
+     "grammar_topics": [
+      "ch03.g.changement-radical"
+     ],
+     "position": 20
+    },
+    {
+     "code": "c3-acheter",
+     "type": "select_verb_form",
+     "instruction": "Escolha a forma correta.",
+     "prompt": "J'___ deux billets de train.",
+     "explanation": "acheter ganha acento grave com je: j'achète.",
+     "difficulty": 3,
+     "competency": "orthographe",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "achète",
+       "correct": true
+      },
+      {
+       "text": "achete",
+       "correct": false
+      },
+      {
+       "text": "achètons",
+       "correct": false
+      },
+      {
+       "text": "achetes",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.transports"
+     ],
+     "grammar_topics": [
+      "ch03.g.changement-radical"
+     ],
+     "position": 21
+    },
+    {
+     "code": "c3-prep-france",
+     "type": "select_preposition",
+     "instruction": "Escolha a preposição.",
+     "prompt": "Cet été, je vais ___ France.",
+     "explanation": "France é feminino: en France.",
+     "difficulty": 2,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "en",
+       "correct": true
+      },
+      {
+       "text": "à",
+       "correct": false,
+       "feedback": "à é para cidades."
+      },
+      {
+       "text": "au",
+       "correct": false
+      },
+      {
+       "text": "aux",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.lieux"
+     ],
+     "grammar_topics": [
+      "ch03.g.prepositions-lieux"
+     ],
+     "position": 22
+    },
+    {
+     "code": "c3-prep-bresil",
+     "type": "select_preposition",
+     "instruction": "Escolha a preposição.",
+     "prompt": "Elle habite ___ Brésil.",
+     "explanation": "Brésil é masculino: au Brésil (à + le).",
+     "difficulty": 2,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "au",
+       "correct": true
+      },
+      {
+       "text": "en",
+       "correct": false,
+       "feedback": "en é para países femininos."
+      },
+      {
+       "text": "à",
+       "correct": false
+      },
+      {
+       "text": "aux",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.lieux"
+     ],
+     "grammar_topics": [
+      "ch03.g.prepositions-lieux"
+     ],
+     "position": 23
+    },
+    {
+     "code": "c3-prep-mix",
+     "type": "fill_blank",
+     "instruction": "Complete com à, en, au ou aux.",
+     "prompt": "Ils vont ___ Tokyo, ___ Japon, puis ___ États-Unis.",
+     "explanation": "cidade → à Tokyo; país masculino → au Japon; país no plural → aux États-Unis.",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "à",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "au",
+       "blank": 1,
+       "primary": true
+      },
+      {
+       "text": "aux",
+       "blank": 2,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.lieux"
+     ],
+     "grammar_topics": [
+      "ch03.g.prepositions-lieux"
+     ],
+     "position": 24
+    },
+    {
+     "code": "c3-prep-du",
+     "type": "select_preposition",
+     "instruction": "Escolha a forma correta.",
+     "prompt": "Ce train arrive ___ Portugal.",
+     "explanation": "Vir de + país masculino: de + le = du Portugal.",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "du",
+       "correct": true
+      },
+      {
+       "text": "de le",
+       "correct": false,
+       "feedback": "de + le contrai em du."
+      },
+      {
+       "text": "de",
+       "correct": false
+      },
+      {
+       "text": "au",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.lieux"
+     ],
+     "grammar_topics": [
+      "ch03.g.prepositions-lieux"
+     ],
+     "position": 25
+    },
+    {
+     "code": "c3-prep-erreur",
+     "type": "identify_error",
+     "instruction": "Encontre a parte errada.",
+     "prompt": "Je vais à Italie avec ma sœur.",
+     "explanation": "Itália é país feminino: en Italie. à é para cidades.",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Je vais",
+       "correct": false
+      },
+      {
+       "text": "à Italie",
+       "correct": true
+      },
+      {
+       "text": "avec ma sœur",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.lieux"
+     ],
+     "grammar_topics": [
+      "ch03.g.prepositions-lieux"
+     ],
+     "position": 26
+    },
+    {
+     "code": "c3-prep-multi",
+     "type": "mc_multiple",
+     "instruction": "Marque TODAS as frases corretas.",
+     "prompt": "Quelles phrases sont correctes ?",
+     "explanation": "Corretas: en Espagne (feminino), au Canada (masculino), à Montréal (cidade). Erradas: « à Portugal » (deveria ser au) e « en Japon » (deveria ser au).",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Je vais en Espagne.",
+       "correct": true
+      },
+      {
+       "text": "Il habite au Canada.",
+       "correct": true
+      },
+      {
+       "text": "Nous sommes à Montréal.",
+       "correct": true
+      },
+      {
+       "text": "Elles vont à Portugal.",
+       "correct": false
+      },
+      {
+       "text": "Tu vas en Japon ?",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.lieux"
+     ],
+     "grammar_topics": [
+      "ch03.g.prepositions-lieux"
+     ],
+     "position": 27
+    },
+    {
+     "code": "c3-transport-match",
+     "type": "vocabulary_review",
+     "instruction": "Relacione.",
+     "prompt": "Les transports",
+     "explanation": "en voiture = de carro, en avion = de avião, à vélo = de bicicleta, à pied = a pé, en train = de trem.",
+     "difficulty": 2,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "interaction": "match",
+     "choices": [
+      {
+       "text": "en voiture",
+       "match": "de carro"
+      },
+      {
+       "text": "en avion",
+       "match": "de avião"
+      },
+      {
+       "text": "à vélo",
+       "match": "de bicicleta"
+      },
+      {
+       "text": "à pied",
+       "match": "a pé"
+      },
+      {
+       "text": "en train",
+       "match": "de trem"
+      }
+     ],
+     "objectives": [
+      "ch03.obj.transports"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.transports"
+     ],
+     "position": 28
+    },
+    {
+     "code": "c3-transport-prep",
+     "type": "select_preposition",
+     "instruction": "Escolha a preposição.",
+     "prompt": "Je vais à l'université ___ vélo.",
+     "explanation": "Com meios em que vamos por cima (bicicleta, a pé, cavalo), usa-se à: à vélo, à pied. Dentro do veículo: en voiture, en train.",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "à",
+       "correct": true
+      },
+      {
+       "text": "en",
+       "correct": false
+      },
+      {
+       "text": "au",
+       "correct": false
+      },
+      {
+       "text": "de",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.transports"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.transports"
+     ],
+     "position": 29
+    },
+    {
+     "code": "c3-natural-gare",
+     "type": "natural_response",
+     "instruction": "Escolha a frase mais natural.",
+     "prompt": "Vous êtes à la gare. Vous allez à Lyon et vous rentrez demain. Vous dites :",
+     "explanation": "Na bilheteria: « Un aller-retour pour Lyon, s'il vous plaît. » É curto, educado e preciso.",
+     "difficulty": 4,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Un aller-retour pour Lyon, s'il vous plaît.",
+       "correct": true
+      },
+      {
+       "text": "Je vais à Lyon, au revoir.",
+       "correct": false
+      },
+      {
+       "text": "Il fait beau à Lyon ?",
+       "correct": false
+      },
+      {
+       "text": "Bonne nuit, un billet.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.transports"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.transports"
+     ],
+     "translation_pt": "Você está na estação. Vai a Lyon e volta amanhã. Você diz:",
+     "position": 30
+    },
+    {
+     "code": "c3-num-70",
+     "type": "vocabulary_review",
+     "instruction": "Escreva por extenso, em francês.",
+     "prompt": "70",
+     "explanation": "70 = soixante-dix (60 + 10).",
+     "difficulty": 2,
+     "competency": "orthographe",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "soixante-dix",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.nombres"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.nombres"
+     ],
+     "position": 31
+    },
+    {
+     "code": "c3-num-80",
+     "type": "vocabulary_review",
+     "instruction": "Escreva por extenso, em francês.",
+     "prompt": "80",
+     "explanation": "80 = quatre-vingts, com s porque vingt está multiplicado e não há nada depois.",
+     "difficulty": 3,
+     "competency": "orthographe",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "quatre-vingts",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.nombres"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.nombres"
+     ],
+     "position": 32
+    },
+    {
+     "code": "c3-num-91",
+     "type": "vocabulary_review",
+     "instruction": "Escreva por extenso, em francês.",
+     "prompt": "91",
+     "explanation": "91 = quatre-vingt-onze (4 × 20 + 11). Sem s em vingt, porque vem algo depois, e sem « et ».",
+     "difficulty": 5,
+     "competency": "orthographe",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "quatre-vingt-onze",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.nombres"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.nombres"
+     ],
+     "position": 33
+    },
+    {
+     "code": "c3-num-match",
+     "type": "match_pairs",
+     "instruction": "Relacione.",
+     "prompt": "Les nombres de 70 à 100",
+     "explanation": "71 soixante et onze; 75 soixante-quinze; 81 quatre-vingt-un; 99 quatre-vingt-dix-neuf; 100 cent.",
+     "difficulty": 3,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "71",
+       "match": "soixante et onze"
+      },
+      {
+       "text": "75",
+       "match": "soixante-quinze"
+      },
+      {
+       "text": "81",
+       "match": "quatre-vingt-un"
+      },
+      {
+       "text": "99",
+       "match": "quatre-vingt-dix-neuf"
+      },
+      {
+       "text": "100",
+       "match": "cent"
+      }
+     ],
+     "objectives": [
+      "ch03.obj.nombres"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.nombres"
+     ],
+     "position": 34
+    },
+    {
+     "code": "c3-num-lire",
+     "type": "mc_single",
+     "instruction": "Que número é este?",
+     "prompt": "quatre-vingt-seize",
+     "explanation": "4 × 20 + 16 = 96.",
+     "difficulty": 3,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "96",
+       "correct": true
+      },
+      {
+       "text": "86",
+       "correct": false
+      },
+      {
+       "text": "76",
+       "correct": false
+      },
+      {
+       "text": "416",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.nombres"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.nombres"
+     ],
+     "position": 35
+    },
+    {
+     "code": "c3-trad-frpt",
+     "type": "translate_fr_pt",
+     "instruction": "Traduza para o português.",
+     "prompt": "Il fait froid et il neige à la montagne.",
+     "explanation": "il fait froid = está frio (faz frio); il neige = está nevando (neva); à la montagne = na montanha.",
+     "difficulty": 3,
+     "competency": "traduction",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "comparison": "regex",
+     "accent_insensitive": true,
+     "answers": [
+      {
+       "text": "(está|faz) frio e (está nevando|neva|está a nevar) na(s)? montanhas?",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "model_answer": "Está frio e está nevando na montanha.",
+     "objectives": [
+      "ch03.obj.meteo"
+     ],
+     "grammar_topics": [
+      "ch03.g.expressions-faire"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.meteo"
+     ],
+     "position": 36
+    },
+    {
+     "code": "c3-trad-ptfr",
+     "type": "translate_pt_fr",
+     "instruction": "Traduza para o francês.",
+     "prompt": "Vamos viajar para o Canadá em dezembro.",
+     "explanation": "Futur proche (nous allons voyager) + au Canada (país masculino) + en décembre. Com « on », também: « On va voyager… ».",
+     "difficulty": 4,
+     "competency": "traduction",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "comparison": "regex",
+     "answers": [
+      {
+       "text": "(nous allons|on va) (voyager|partir) au canada en décembre",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "model_answer": "Nous allons voyager au Canada en décembre.",
+     "objectives": [
+      "ch03.obj.projets",
+      "ch03.obj.lieux"
+     ],
+     "grammar_topics": [
+      "ch03.g.futur-proche",
+      "ch03.g.prepositions-lieux"
+     ],
+     "position": 37
+    },
+    {
+     "code": "c3-dial-transport",
+     "type": "dialogue_comprehension",
+     "instruction": "Leia o diálogo.",
+     "prompt": "Comment Mehdi va voyager ?",
+     "explanation": "Sara pergunta « En voiture ? » e Mehdi responde « Non, en train ».",
+     "difficulty": 2,
+     "competency": "lecture",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "context": "Sara : Tu pars où en vacances ?\nMehdi : Je vais en Bretagne, à Saint-Malo.\nSara : En voiture ?\nMehdi : Non, en train. C'est plus simple.\nSara : Et qu'est-ce que tu vas faire là-bas ?\nMehdi : Je vais faire du vélo et je vais manger des crêpes !",
+     "choices": [
+      {
+       "text": "En train.",
+       "correct": true
+      },
+      {
+       "text": "En voiture.",
+       "correct": false,
+       "feedback": "Ele diz « Non » para o carro."
+      },
+      {
+       "text": "En avion.",
+       "correct": false
+      },
+      {
+       "text": "À vélo.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.transports"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.transports"
+     ],
+     "position": 38
+    },
+    {
+     "code": "c3-dial-activites",
+     "type": "dialogue_comprehension",
+     "instruction": "Leia o diálogo. Marque TUDO o que Mehdi vai fazer.",
+     "prompt": "À Saint-Malo, Mehdi va…",
+     "explanation": "« Je vais faire du vélo et je vais manger des crêpes ! »",
+     "difficulty": 3,
+     "competency": "lecture",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "context": "Sara : Tu pars où en vacances ?\nMehdi : Je vais en Bretagne, à Saint-Malo.\nSara : En voiture ?\nMehdi : Non, en train. C'est plus simple.\nSara : Et qu'est-ce que tu vas faire là-bas ?\nMehdi : Je vais faire du vélo et je vais manger des crêpes !",
+     "interaction": "multiple",
+     "choices": [
+      {
+       "text": "faire du vélo",
+       "correct": true
+      },
+      {
+       "text": "manger des crêpes",
+       "correct": true
+      },
+      {
+       "text": "faire du ski",
+       "correct": false
+      },
+      {
+       "text": "visiter Paris",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.projets"
+     ],
+     "grammar_topics": [
+      "ch03.g.futur-proche"
+     ],
+     "position": 39
+    },
+    {
+     "code": "c3-dial-complete",
+     "type": "complete_dialogue",
+     "instruction": "Complete o diálogo.",
+     "prompt": "— Tu ___ (aller) où cet été ?\n— Je vais ___ Portugal, à Porto.\n— Et quel temps fait-il là-bas ?\n— En été, il ___ chaud !",
+     "explanation": "tu vas / au Portugal (masculino) / il fait chaud.",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "vas",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "au",
+       "blank": 1,
+       "primary": true
+      },
+      {
+       "text": "fait",
+       "blank": 2,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.lieux",
+      "ch03.obj.meteo"
+     ],
+     "grammar_topics": [
+      "ch03.g.aller",
+      "ch03.g.prepositions-lieux",
+      "ch03.g.expressions-faire"
+     ],
+     "position": 40
+    },
+    {
+     "code": "c3-ordre-projet",
+     "type": "order_sentences",
+     "instruction": "Ordene o plano de viagem de Clara.",
+     "prompt": "Ordene as frases:",
+     "explanation": "Primeiro a partida (samedi matin), depois a chegada (à midi), a visita à tarde e, por fim, a volta no domingo à noite.",
+     "difficulty": 3,
+     "competency": "lecture",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Samedi matin, je vais partir en train pour Nantes.",
+       "order": 1
+      },
+      {
+       "text": "À midi, je vais arriver à Nantes.",
+       "order": 2
+      },
+      {
+       "text": "L'après-midi, nous allons visiter le château.",
+       "order": 3
+      },
+      {
+       "text": "Dimanche soir, je vais rentrer à Paris.",
+       "order": 4
+      }
+     ],
+     "objectives": [
+      "ch03.obj.projets"
+     ],
+     "grammar_topics": [
+      "ch03.g.futur-proche"
+     ],
+     "position": 41
+    },
+    {
+     "code": "c3-short-saison",
+     "type": "short_answer",
+     "instruction": "Responda com uma frase completa.",
+     "prompt": "Quelle saison est-ce que tu préfères ? Pourquoi ?",
+     "explanation": "Não há uma única resposta certa: compare com a resposta-modelo e avalie se usou préférer e uma expressão de tempo.",
+     "difficulty": 4,
+     "competency": "ecriture",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "comparison": "self",
+     "model_answer": "Je préfère l'été parce qu'il fait chaud et je vais à la plage.",
+     "objectives": [
+      "ch03.obj.saisons",
+      "ch03.obj.meteo"
+     ],
+     "grammar_topics": [
+      "ch03.g.changement-radical",
+      "ch03.g.expressions-faire"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.meteo"
+     ],
+     "position": 42
+    },
+    {
+     "code": "c3-ecrit-carte",
+     "type": "guided_writing",
+     "instruction": "Escreva um cartão-postal (5 a 7 frases).",
+     "prompt": "Vous êtes en vacances. Écrivez une carte postale à un(e) ami(e) : où vous êtes, le temps, vos activités et vos projets.",
+     "explanation": "Um cartão-postal A1: data e lugar, saudação, onde você está (à/en/au), o tempo (il fait…), atividades no presente e planos no futur proche.",
+     "difficulty": 5,
+     "competency": "ecriture",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "model_answer": "Florianópolis, le 3 janvier\nSalut Marie !\nJe suis en vacances à Florianópolis, au Brésil. Il fait très chaud et il y a du soleil. Le matin, je vais à la plage et l'après-midi je fais du vélo. Demain, je vais visiter une île avec mes cousins.\nBisous,\nLívia",
+     "criteria": [
+      "Escrevi o lugar e a data, uma saudação e uma despedida.",
+      "Usei a preposição certa com a cidade e/ou o país.",
+      "Falei do tempo com il fait / il pleut / il y a.",
+      "Descrevi pelo menos duas atividades no presente.",
+      "Usei o futur proche (aller + infinitivo) pelo menos uma vez."
+     ],
+     "objectives": [
+      "ch03.obj.projets",
+      "ch03.obj.meteo",
+      "ch03.obj.lieux"
+     ],
+     "grammar_topics": [
+      "ch03.g.futur-proche",
+      "ch03.g.prepositions-lieux",
+      "ch03.g.expressions-faire"
+     ],
+     "translation_pt": "Você está de férias. Escreva um cartão-postal a um(a) amigo(a): onde você está, o tempo, suas atividades e seus planos.",
+     "position": 43
+    },
+    {
+     "code": "c3-p1-ou",
+     "type": "text_interpretation",
+     "instruction": "Leia o cartão-postal de Inès.",
+     "prompt": "Où est Inès ?",
+     "explanation": "« Je suis en vacances à Nice ».",
+     "difficulty": 1,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch03.p.carte-nice",
+     "reading_skill": "place",
+     "evidence": "Je suis en vacances à Nice avec Lucas et ses parents.",
+     "choices": [
+      {
+       "text": "À Nice.",
+       "correct": true
+      },
+      {
+       "text": "À Lille.",
+       "correct": false
+      },
+      {
+       "text": "À Marseille.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.lieux"
+     ],
+     "position": 44
+    },
+    {
+     "code": "c3-p1-meteo-tf",
+     "type": "true_false",
+     "instruction": "Leia o cartão-postal de Inès.",
+     "prompt": "À Nice, il pleut beaucoup.",
+     "explanation": "Falso: « Il fait très beau et très chaud : il y a du soleil tous les jours ! »",
+     "difficulty": 2,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch03.p.carte-nice",
+     "reading_skill": "true_false",
+     "evidence": "Il fait très beau et très chaud : il y a du soleil tous les jours !",
+     "answer": false,
+     "objectives": [
+      "ch03.obj.meteo"
+     ],
+     "position": 45
+    },
+    {
+     "code": "c3-p1-ordre",
+     "type": "text_interpretation",
+     "instruction": "Leia o cartão-postal. Coloque o dia de Inès na ordem.",
+     "prompt": "La journée d'Inès",
+     "explanation": "Manhã: praia; tarde: dorme; noite: saem na cidade velha.",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch03.p.carte-nice",
+     "interaction": "order",
+     "reading_skill": "sequence",
+     "evidence": "Le matin, nous allons à la plage… L'après-midi, je dors un peu, et le soir nous sortons dans la vieille ville.",
+     "choices": [
+      {
+       "text": "Elle va à la plage.",
+       "order": 1
+      },
+      {
+       "text": "Elle dort un peu.",
+       "order": 2
+      },
+      {
+       "text": "Elle sort dans la vieille ville.",
+       "order": 3
+      }
+     ],
+     "objectives": [
+      "ch03.obj.activites"
+     ],
+     "position": 46
+    },
+    {
+     "code": "c3-p1-demain",
+     "type": "text_interpretation",
+     "instruction": "Leia o cartão-postal de Inès.",
+     "prompt": "Qu'est-ce qu'Inès va faire demain ?",
+     "explanation": "« Demain, nous allons visiter le musée Matisse. » A viagem a Marselha é no sábado.",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch03.p.carte-nice",
+     "reading_skill": "time",
+     "evidence": "Demain, nous allons visiter le musée Matisse.",
+     "choices": [
+      {
+       "text": "Visiter le musée Matisse.",
+       "correct": true
+      },
+      {
+       "text": "Partir pour Marseille.",
+       "correct": false,
+       "feedback": "Isso é no sábado."
+      },
+      {
+       "text": "Rentrer à Lille.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.projets"
+     ],
+     "position": 47
+    },
+    {
+     "code": "c3-p1-retour",
+     "type": "text_interpretation",
+     "instruction": "Leia o cartão-postal e complete com a data.",
+     "prompt": "Inès va rentrer à Lille le ___ juillet.",
+     "explanation": "« Je vais rentrer à Lille le 20 juillet. »",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch03.p.carte-nice",
+     "interaction": "text",
+     "reading_skill": "time",
+     "evidence": "Je vais rentrer à Lille le 20 juillet.",
+     "answers": [
+      {
+       "text": "20",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "vingt",
+       "blank": 0,
+       "primary": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.projets"
+     ],
+     "position": 48
+    },
+    {
+     "code": "c3-p1-lille",
+     "type": "text_interpretation",
+     "instruction": "Leia o cartão-postal de Inès.",
+     "prompt": "Où habite Inès, probablement ?",
+     "explanation": "Ela está de férias em Nice e vai « rentrer à Lille » (voltar para casa em Lille): ela provavelmente mora em Lille.",
+     "difficulty": 5,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch03.p.carte-nice",
+     "reading_skill": "inference",
+     "evidence": "Je vais rentrer à Lille le 20 juillet.",
+     "choices": [
+      {
+       "text": "À Lille.",
+       "correct": true
+      },
+      {
+       "text": "À Nice.",
+       "correct": false
+      },
+      {
+       "text": "À Marseille.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.lieux"
+     ],
+     "position": 49
+    },
+    {
+     "code": "c3-p2-prix-train",
+     "type": "text_interpretation",
+     "instruction": "Leia o anúncio.",
+     "prompt": "Combien coûte le train aller-retour ?",
+     "explanation": "« Train aller-retour Paris – Bordeaux : 89 € » (quatre-vingt-neuf euros).",
+     "difficulty": 2,
+     "competency": "interpretation",
+     "origin": "exam_inspired",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch03.p.offre-bordeaux",
+     "reading_skill": "explicit",
+     "adaptation_notes": "Inspirada no formato da compreensão escrita do DELF A1 (documento do cotidiano). Questão original; não é questão oficial.",
+     "evidence": "Train aller-retour Paris – Bordeaux : 89 €",
+     "choices": [
+      {
+       "text": "89 €",
+       "correct": true
+      },
+      {
+       "text": "75 €",
+       "correct": false
+      },
+      {
+       "text": "20 €",
+       "correct": false
+      },
+      {
+       "text": "99 €",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.nombres",
+      "ch03.obj.transports"
+     ],
+     "position": 50
+    },
+    {
+     "code": "c3-p2-prix-lettres",
+     "type": "text_interpretation",
+     "instruction": "Leia o anúncio. Escreva por extenso o preço do hotel (só o número).",
+     "prompt": "L'hôtel coûte ___ euros.",
+     "explanation": "75 = soixante-quinze.",
+     "difficulty": 4,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch03.p.offre-bordeaux",
+     "interaction": "text",
+     "reading_skill": "explicit",
+     "evidence": "Hôtel du Centre (une nuit, petit-déjeuner compris) : 75 €",
+     "answers": [
+      {
+       "text": "soixante-quinze",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "objectives": [
+      "ch03.obj.nombres"
+     ],
+     "position": 51
+    },
+    {
+     "code": "c3-p2-depart",
+     "type": "text_interpretation",
+     "instruction": "Leia o anúncio.",
+     "prompt": "Le départ est…",
+     "explanation": "« Départ le samedi à 8 h 10, gare Montparnasse. »",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "exam_inspired",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch03.p.offre-bordeaux",
+     "reading_skill": "time",
+     "adaptation_notes": "Inspirada no formato da compreensão escrita do DELF A1 (documento do cotidiano). Questão original; não é questão oficial.",
+     "evidence": "Départ le samedi à 8 h 10, gare Montparnasse.",
+     "choices": [
+      {
+       "text": "le samedi à 8 h 10.",
+       "correct": true
+      },
+      {
+       "text": "le dimanche à 19 h 40.",
+       "correct": false,
+       "feedback": "Esse é o horário da volta."
+      },
+      {
+       "text": "le vendredi soir.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.transports"
+     ],
+     "position": 52
+    },
+    {
+     "code": "c3-p2-compris",
+     "type": "text_interpretation",
+     "instruction": "Leia o anúncio.",
+     "prompt": "« petit-déjeuner compris » signifie que le petit-déjeuner…",
+     "explanation": "compris = incluído no preço.",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch03.p.offre-bordeaux",
+     "reading_skill": "meaning",
+     "evidence": "une nuit, petit-déjeuner compris",
+     "choices": [
+      {
+       "text": "est inclus dans le prix.",
+       "correct": true
+      },
+      {
+       "text": "n'est pas possible.",
+       "correct": false
+      },
+      {
+       "text": "coûte 20 €.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.activites"
+     ],
+     "position": 53
+    },
+    {
+     "code": "c3-p2-ou",
+     "type": "text_interpretation",
+     "instruction": "Leia o anúncio.",
+     "prompt": "Bordeaux est dans quelle région de la France ?",
+     "explanation": "« dans le sud-ouest de la France » — sudoeste.",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch03.p.offre-bordeaux",
+     "reading_skill": "place",
+     "evidence": "Partez deux jours à Bordeaux, dans le sud-ouest de la France !",
+     "choices": [
+      {
+       "text": "Dans le sud-ouest.",
+       "correct": true
+      },
+      {
+       "text": "Dans le nord.",
+       "correct": false
+      },
+      {
+       "text": "Dans l'est.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.lieux"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.geographie"
+     ],
+     "position": 54
+    },
+    {
+     "code": "c3-p2-pour-qui",
+     "type": "text_interpretation",
+     "instruction": "Leia o anúncio.",
+     "prompt": "Cette offre est pour…",
+     "explanation": "O anúncio começa com « Vous habitez à Paris ? » e a viagem sai de Paris: o público são pessoas que moram em Paris.",
+     "difficulty": 5,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch03.p.offre-bordeaux",
+     "reading_skill": "inference",
+     "evidence": "Vous habitez à Paris ? Partez deux jours à Bordeaux",
+     "choices": [
+      {
+       "text": "des personnes qui habitent à Paris.",
+       "correct": true
+      },
+      {
+       "text": "des personnes qui habitent à Bordeaux.",
+       "correct": false
+      },
+      {
+       "text": "des étudiants en vélo.",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.lieux"
+     ],
+     "position": 55
+    },
+    {
+     "code": "c3-p2-mois",
+     "type": "text_interpretation",
+     "instruction": "Leia o anúncio. Marque TODOS os meses em que a oferta é válida.",
+     "prompt": "L'offre est valable en…",
+     "explanation": "« Offre valable en septembre et en octobre. »",
+     "difficulty": 4,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch03.p.offre-bordeaux",
+     "interaction": "multiple",
+     "reading_skill": "time",
+     "evidence": "Offre valable en septembre et en octobre.",
+     "choices": [
+      {
+       "text": "septembre",
+       "correct": true
+      },
+      {
+       "text": "octobre",
+       "correct": true
+      },
+      {
+       "text": "juillet",
+       "correct": false
+      },
+      {
+       "text": "décembre",
+       "correct": false
+      }
+     ],
+     "objectives": [
+      "ch03.obj.saisons"
+     ],
+     "position": 56
+    },
+    {
+     "code": "c3-aval-faire",
+     "type": "conjugation",
+     "instruction": "Conjugue faire.",
+     "prompt": "Nous ___ du vélo le dimanche.",
+     "explanation": "nous faisons.",
+     "difficulty": 2,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "faisons",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "is_assessment": true,
+     "objectives": [
+      "ch03.obj.activites"
+     ],
+     "grammar_topics": [
+      "ch03.g.faire"
+     ],
+     "position": 57
+    },
+    {
+     "code": "c3-aval-meteo",
+     "type": "mc_single",
+     "instruction": "Escolha a frase correta.",
+     "prompt": "Le temps aujourd'hui :",
+     "explanation": "il fait beau (tempo com adjetivo usa faire).",
+     "difficulty": 2,
+     "competency": "vocabulaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "Il fait beau.",
+       "correct": true
+      },
+      {
+       "text": "Il est beau temps.",
+       "correct": false
+      },
+      {
+       "text": "Il a beau.",
+       "correct": false
+      },
+      {
+       "text": "Il pleut beau.",
+       "correct": false
+      }
+     ],
+     "is_assessment": true,
+     "objectives": [
+      "ch03.obj.meteo"
+     ],
+     "grammar_topics": [
+      "ch03.g.expressions-faire"
+     ],
+     "position": 58
+    },
+    {
+     "code": "c3-aval-prep",
+     "type": "fill_blank",
+     "instruction": "Complete com à, en, au ou aux.",
+     "prompt": "Je vais ___ Mexique et ma sœur va ___ Espagne.",
+     "explanation": "le Mexique é masculino (exceção: termina em -e) → au Mexique; l'Espagne é feminino → en Espagne.",
+     "difficulty": 4,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "au",
+       "blank": 0,
+       "primary": true
+      },
+      {
+       "text": "en",
+       "blank": 1,
+       "primary": true
+      }
+     ],
+     "is_assessment": true,
+     "objectives": [
+      "ch03.obj.lieux"
+     ],
+     "grammar_topics": [
+      "ch03.g.prepositions-lieux"
+     ],
+     "position": 59
+    },
+    {
+     "code": "c3-aval-futur",
+     "type": "transform_negative",
+     "instruction": "Passe para a negativa.",
+     "prompt": "Ils vont voyager en avion.",
+     "explanation": "« Ils ne vont pas voyager en avion. » A negação fica em volta de aller.",
+     "difficulty": 3,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "Ils ne vont pas voyager en avion.",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "is_assessment": true,
+     "objectives": [
+      "ch03.obj.projets"
+     ],
+     "grammar_topics": [
+      "ch03.g.futur-proche"
+     ],
+     "position": 60
+    },
+    {
+     "code": "c3-aval-partir",
+     "type": "select_verb_form",
+     "instruction": "Escolha a forma correta.",
+     "prompt": "Elle ___ à huit heures.",
+     "explanation": "elle part (sem s, com t).",
+     "difficulty": 3,
+     "competency": "conjugaison",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "part",
+       "correct": true
+      },
+      {
+       "text": "pars",
+       "correct": false
+      },
+      {
+       "text": "partent",
+       "correct": false
+      },
+      {
+       "text": "parte",
+       "correct": false
+      }
+     ],
+     "is_assessment": true,
+     "objectives": [
+      "ch03.obj.activites"
+     ],
+     "grammar_topics": [
+      "ch03.g.partir-sortir-dormir"
+     ],
+     "position": 61
+    },
+    {
+     "code": "c3-aval-num",
+     "type": "vocabulary_review",
+     "instruction": "Escreva por extenso.",
+     "prompt": "85",
+     "explanation": "85 = quatre-vingt-cinq.",
+     "difficulty": 4,
+     "competency": "orthographe",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "answers": [
+      {
+       "text": "quatre-vingt-cinq",
+       "blank": 0,
+       "primary": true
+      }
+     ],
+     "is_assessment": true,
+     "objectives": [
+      "ch03.obj.nombres"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.nombres"
+     ],
+     "position": 62
+    },
+    {
+     "code": "c3-aval-transport",
+     "type": "select_preposition",
+     "instruction": "Escolha a preposição.",
+     "prompt": "Nous allons au parc ___ pied.",
+     "explanation": "à pied (a pé).",
+     "difficulty": 2,
+     "competency": "grammaire",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "choices": [
+      {
+       "text": "à",
+       "correct": true
+      },
+      {
+       "text": "en",
+       "correct": false
+      },
+      {
+       "text": "au",
+       "correct": false
+      }
+     ],
+     "is_assessment": true,
+     "objectives": [
+      "ch03.obj.transports"
+     ],
+     "vocabulary_topics": [
+      "ch03.v.transports"
+     ],
+     "position": 63
+    },
+    {
+     "code": "c3-aval-texte",
+     "type": "text_interpretation",
+     "instruction": "Leia o cartão-postal de Inès.",
+     "prompt": "Avec qui est Inès à Nice ?",
+     "explanation": "« avec Lucas et ses parents ».",
+     "difficulty": 3,
+     "competency": "interpretation",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "passage": "ch03.p.carte-nice",
+     "reading_skill": "character",
+     "evidence": "Je suis en vacances à Nice avec Lucas et ses parents.",
+     "choices": [
+      {
+       "text": "Avec Lucas et ses parents.",
+       "correct": true
+      },
+      {
+       "text": "Avec sa grand-mère.",
+       "correct": false
+      },
+      {
+       "text": "Seule.",
+       "correct": false
+      }
+     ],
+     "is_assessment": true,
+     "objectives": [
+      "ch03.obj.activites"
+     ],
+     "position": 64
+    },
+    {
+     "code": "c3-aval-ecrit",
+     "type": "guided_writing",
+     "instruction": "Escreva 4 a 5 frases.",
+     "prompt": "Écrivez vos projets pour le week-end prochain : où vous allez, comment, avec qui et ce que vous allez faire.",
+     "explanation": "Use o futur proche em todas as frases de plano e a preposição certa para o lugar e o transporte.",
+     "difficulty": 5,
+     "competency": "ecriture",
+     "origin": "original",
+     "source": "cahier-original",
+     "review_status": "reviewed",
+     "model_answer": "Samedi, je vais aller à Petrópolis avec ma copine. Nous allons partir en voiture le matin. Nous allons visiter le musée et faire une randonnée. Dimanche, je ne vais pas travailler : je vais dormir !",
+     "criteria": [
+      "Usei o futur proche (aller + infinitivo) corretamente.",
+      "Usei a preposição certa para o lugar.",
+      "Disse o meio de transporte com en ou à.",
+      "Incluí uma negação no futur proche ou outra atividade."
+     ],
+     "is_assessment": true,
+     "objectives": [
+      "ch03.obj.projets",
+      "ch03.obj.transports"
+     ],
+     "grammar_topics": [
+      "ch03.g.futur-proche",
+      "ch03.g.prepositions-lieux"
+     ],
+     "translation_pt": "Escreva seus planos para o próximo fim de semana: aonde vai, como, com quem e o que vai fazer.",
+     "position": 65
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2 @@
+# Única dependência da aplicação. Testado com Django 5.2 (LTS) e Python 3.10 a 3.13.
+Django>=5.2,<5.3

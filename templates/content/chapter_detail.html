@@ -1,0 +1,82 @@
+{% extends "base.html" %}{% load cahier %}
+{% block title %}{{ ch.title }}{% endblock %}
+{% block content %}
+<p class="muted"><a href="{% url 'content:chapter_list' %}">Capítulos</a> / {{ ch.number }}</p>
+<h1 lang="fr">{{ ch.number }}. {{ ch.title }}</h1>
+<p>{{ ch.description }}</p>
+<div class="row" style="flex-wrap:wrap;justify-content:flex-start;gap:1rem">
+  <span class="tag tag-status-{{ info.status }}">{{ info.status_label }}</span>
+  <span>Domínio estimado: <strong>{{ info.mastery|pct }}</strong> ({{ info.mastery_level }})</span>
+  <span class="muted">{{ n_exercises }} exercícios · {{ info.progress|pct }} respondidos</span>
+</div>
+<div style="max-width:26rem;margin-top:.4rem">{% meter info.mastery %}</div>
+
+<div class="actions">
+  <a class="btn" href="{% url 'learning:session_new' %}?capitulo={{ ch.code }}">Praticar este capítulo</a>
+  <form method="post" action="{% url 'learning:start_chapter_review' ch.code %}" class="inline">{% csrf_token %}<button class="btn btn-quiet" type="submit">Revisão do capítulo</button></form>
+  {% if info.assessment_available %}
+  <form method="post" action="{% url 'learning:start_chapter_assessment' ch.code %}" class="inline">{% csrf_token %}<button class="btn btn-quiet" type="submit">Avaliação final ({{ info.assessment_count }} questões)</button></form>
+  {% endif %}
+</div>
+{% if info.status == "needs_review" %}<p class="messages"><span>Há {{ info.due_errors }} erros deste capítulo esperando revisão. Comece pela revisão do capítulo.</span></p>{% endif %}
+
+<nav class="tabs" aria-label="Seções do capítulo">
+  <a href="?aba=visao" {% if tab == "visao" %}aria-current="page"{% endif %}>Visão geral</a>
+  <a href="?aba=gramatica" {% if tab == "gramatica" %}aria-current="page"{% endif %}>Explicações</a>
+  <a href="?aba=vocabulario" {% if tab == "vocabulario" %}aria-current="page"{% endif %}>Vocabulário</a>
+  <a href="?aba=textos" {% if tab == "textos" %}aria-current="page"{% endif %}>Textos</a>
+  <a href="?aba=revisao" {% if tab == "revisao" %}aria-current="page"{% endif %}>Revisão</a>
+</nav>
+
+{% if tab == "gramatica" %}
+  {% for g in grammar %}{% with t=g.topic %}
+  <section aria-labelledby="g{{ t.pk }}" class="panel">
+    <div class="row"><h2 id="g{{ t.pk }}" style="margin-top:0">{{ t.title }}</h2>{% if g.score is not None %}<small class="muted">domínio {{ g.score|pct }}</small>{% endif %}</div>
+    <div class="prewrap">{{ t.summary }}</div>
+    {% if t.examples %}<h3>Exemplos</h3><ul class="examples">{% for e in t.examples %}<li><span class="fr" lang="fr">{{ e.fr }}</span><span class="pt">{{ e.pt }}</span></li>{% endfor %}</ul>{% endif %}
+    {% if t.tables %}<div>{% for tb in t.tables %}<table class="conj"><caption lang="fr">{{ tb.title }}</caption><tbody>{% for row in tb.rows %}<tr>{% for cell in row %}<td lang="fr">{{ cell }}</td>{% endfor %}</tr>{% endfor %}</tbody></table>{% endfor %}</div>{% endif %}
+    {% if t.notes %}<h3>Observações</h3><div class="prewrap">{{ t.notes }}</div>{% endif %}
+    {% if t.common_errors %}<h3>Erros frequentes de quem fala português</h3>
+      {% for e in t.common_errors %}<div class="pitfall"><s lang="fr">{{ e.wrong }}</s> → <strong lang="fr">{{ e.right }}</strong><br><small>{{ e.why }}</small></div>{% endfor %}{% endif %}
+  </section>
+  {% endwith %}{% endfor %}
+{% elif tab == "vocabulario" %}
+  {% for v in vocabulary %}
+  <section aria-labelledby="v{{ v.pk }}"><h2 id="v{{ v.pk }}">{{ v.title }}</h2>
+    <ul class="vocab">{% for i in v.items.all %}<li><span class="fr" lang="fr">{{ i.french }}</span>{% if i.gender %}<span class="g">({{ i.gender }})</span>{% endif %} — {{ i.portuguese }}{% if i.example %}<span class="ex" lang="fr">{{ i.example }}</span>{% endif %}</li>{% endfor %}</ul>
+  </section>
+  {% endfor %}
+  {% if ch.useful_expressions %}<h2>Expressões úteis</h2><ul class="examples">{% for e in ch.useful_expressions %}<li><span class="fr" lang="fr">{{ e.fr }}</span><span class="pt">{{ e.pt }}</span></li>{% endfor %}</ul>{% endif %}
+{% elif tab == "textos" %}
+  <p class="muted">Leia o texto e responda às perguntas. No fim você vê o trecho que fundamenta cada resposta.</p>
+  <ul class="list-plain">
+  {% for p in passages %}
+    <li><div class="row"><div><a href="{{ p.get_absolute_url }}" lang="fr"><strong>{{ p.title }}</strong></a><br>
+      <small class="muted">{{ p.get_text_type_display }} · {{ p.word_count }} palavras · dificuldade {{ p.difficulty }} · {{ p.n_questions }} pergunta{{ p.n_questions|pluralize }}</small></div>
+      <form method="post" action="{% url 'learning:start_passage' p.code %}">{% csrf_token %}<button class="btn btn-small" type="submit">Ler e responder</button></form></div></li>
+  {% empty %}<li class="muted">Nenhum texto cadastrado.</li>{% endfor %}
+  </ul>
+{% elif tab == "revisao" %}
+  <h2>Pontos para revisar antes da avaliação</h2>
+  <ul>{% for line in ch.review_points %}<li>{{ line }}</li>{% endfor %}</ul>
+  <div class="actions">
+    <form method="post" action="{% url 'learning:start_chapter_review' ch.code %}" class="inline">{% csrf_token %}<button class="btn" type="submit">Começar revisão do capítulo</button></form>
+    {% if info.assessment_available %}<form method="post" action="{% url 'learning:start_chapter_assessment' ch.code %}" class="inline">{% csrf_token %}<button class="btn btn-quiet" type="submit">Fazer a avaliação final</button></form>{% endif %}
+  </div>
+  <p class="muted">A avaliação final usa o modo avaliação (correção só no final). Com 70% ou mais o capítulo fica concluído{% if info.best_assessment is not None %}; seu melhor resultado até agora é {{ info.best_assessment }}%{% endif %}.</p>
+{% else %}
+  <div class="grid-2">
+    <section><h2 style="margin-top:0">Ao fim do capítulo, você consegue…</h2>
+      <ul class="list-plain">{% for o in objectives %}<li><div class="row"><span>{{ o.obj.description }}</span>{% if o.score is not None %}<small class="muted">{{ o.score|pct }}</small>{% endif %}</div></li>{% endfor %}</ul></section>
+    <section><h2 style="margin-top:0">Gramática</h2>
+      <ul class="list-plain">{% for g in grammar %}<li><div class="row"><a href="?aba=gramatica#g{{ g.topic.pk }}">{{ g.topic.title }}</a>{% if g.score is not None %}<small class="muted">{{ g.score|pct }}</small>{% endif %}</div></li>{% endfor %}</ul>
+      <h2>Vocabulário</h2>
+      <p>{% for v in vocabulary %}<a href="?aba=vocabulario#v{{ v.pk }}">{{ v.title }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+    </section>
+  </div>
+  <h2>Exercícios disponíveis</h2>
+  <p>{% for label, n in type_counts %}<span class="tag">{{ label }}: {{ n }}</span> {% endfor %}</p>
+  <p class="muted">Por dificuldade: {% for d, n in difficulty_counts %}nível {{ d }} ({{ n }}){% if not forloop.last %}, {% endif %}{% endfor %}.</p>
+  {% if ch.reference_note %}<p class="muted" style="font-size:.9rem">{{ ch.reference_note }}</p>{% endif %}
+{% endif %}
+{% endblock %}

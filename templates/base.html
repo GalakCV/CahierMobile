@@ -1,0 +1,57 @@
+{% load static %}<!doctype html>
+<html lang="pt-BR" data-theme="{{ user_setting.theme|default:'auto' }}" data-font="{{ user_setting.font_size|default:'normal' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="same-origin">
+  <title>{% block title %}Cahier{% endblock %} · Cahier</title>
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2334479a'/%3E%3Cpath d='M8 0v32' stroke='%23c8324b' stroke-width='2'/%3E%3Ctext x='19' y='23' font-family='Georgia' font-style='italic' font-size='18' fill='white' text-anchor='middle'%3Ec%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+{% with path=request.path %}
+<div class="shell">
+  <aside class="side">
+    <div class="side-head">
+      <a class="brand" href="{% url 'learning:dashboard' %}">
+        <span class="brand-name">Cahier</span>
+        <span class="brand-sub">Exercícios de francês · A1</span>
+      </a>
+      <button class="btn btn-quiet btn-small menu-toggle" type="button" data-menu-toggle aria-expanded="false">Menu</button>
+    </div>
+    <nav aria-label="Navegação principal">
+      <ul class="nav">
+        <li><a href="{% url 'learning:dashboard' %}" {% if path == '/' %}aria-current="page"{% endif %}>Painel</a></li>
+        <li><a href="{% url 'content:chapter_list' %}" {% if '/capitulos/' in path or '/textos/' in path %}aria-current="page"{% endif %}>Capítulos</a></li>
+        <li><a href="{% url 'learning:session_new' %}" {% if '/sessao/' in path %}aria-current="page"{% endif %}>Praticar</a></li>
+        <li><a href="{% url 'learning:review_queue' %}" {% if path == '/revisoes/' %}aria-current="page"{% endif %}>Revisões {% if due_reviews_count %}<span class="badge" aria-label="{{ due_reviews_count }} pendentes">{{ due_reviews_count }}</span>{% endif %}</a></li>
+        <li><a href="{% url 'learning:notebook' %}" {% if '/caderno-de-erros/' in path %}aria-current="page"{% endif %}>Caderno de erros</a></li>
+        <li><a href="{% url 'learning:written_list' %}" {% if '/producao-escrita/' in path %}aria-current="page"{% endif %}>Produção escrita</a></li>
+        <li><a href="{% url 'learning:progress' %}" {% if path == '/progresso/' %}aria-current="page"{% endif %}>Progresso</a></li>
+      </ul>
+      <div class="nav-sep" role="separator"></div>
+      <ul class="nav">
+        <li><a href="{% url 'content:curriculum_map' %}" {% if '/mapa-curricular/' in path %}aria-current="page"{% endif %}>Mapa curricular</a></li>
+        <li><a href="{% url 'learning:session_history' %}" {% if path == '/sessoes/' or path == '/historico/' %}aria-current="page"{% endif %}>Histórico</a></li>
+        <li><a href="{% url 'dados:home' %}" {% if '/dados/' in path %}aria-current="page"{% endif %}>Dados e backup</a></li>
+        <li><a href="{% url 'dados:editorial' %}" {% if '/editorial/' in path %}aria-current="page"{% endif %}>Editorial</a></li>
+        <li><a href="{% url 'admin:index' %}">Administração</a></li>
+        <li><a href="{% url 'content:credits' %}" {% if '/creditos/' in path or '/fontes/' in path %}aria-current="page"{% endif %}>Créditos e fontes</a></li>
+        <li><a href="{% url 'learning:settings' %}" {% if path == '/preferencias/' %}aria-current="page"{% endif %}>Preferências</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main" id="conteudo">
+    {% if messages %}
+    <ul class="messages" role="status">
+      {% for m in messages %}<li class="{{ m.tags }}">{{ m }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+    {% block content %}{% endblock %}
+  </main>
+</div>
+{% endwith %}
+<script src="{% static 'js/app.js' %}" defer></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{% extends "base.html" %}{% load cahier %}
+{% block title %}Progresso{% endblock %}
+{% block content %}
+<h1>Progresso</h1>
+{% if overall %}<p>Domínio geral estimado: <strong>{{ overall.score|pct }}</strong> ({{ overall.details.level }}).</p>{% meter overall.score %}{% endif %}
+
+<details class="help" open>
+  <summary>Como o domínio é calculado</summary>
+  <div>
+    <p>O domínio não conta só quantos exercícios você fez. Ele combina <strong>precisão</strong> e <strong>confiança</strong>:</p>
+    <ul>
+      <li><strong>Precisão</strong>: média das suas notas, dando mais peso a questões difíceis, às respostas mais recentes e a acertos depois de alguns dias (retenção). Respostas muito lentas pesam um pouco menos.</li>
+      <li><strong>Confiança</strong>: metade vem da <em>cobertura</em> (quantas questões diferentes do tema você já respondeu), um quarto da <em>variedade</em> de tipos de exercício e um quarto da <em>quantidade de evidência</em> (até {{ constants.evidence }} respostas).</li>
+      <li>Com poucas respostas a confiança fica limitada (no máximo 30% + 70% da evidência), mesmo num tema com poucas questões.</li>
+      <li>Domínio = precisão × confiança. Errar duas vezes seguidas a mesma questão tira 5 pontos (até 20).</li>
+      <li>Sem prova de retenção (acertar de novo depois de 3 dias), o domínio fica limitado a {{ constants.cap }}%.</li>
+    </ul>
+    <p>Por isso uma única resposta certa nunca vira 100%. Detalhes em <code>docs/ALGORITMOS.md</code>.</p>
+  </div>
+</details>
+
+{% for g in groups %}
+<h2>{{ g.label }}</h2>
+{% if g.rows %}
+<div class="table-wrap"><table>
+<thead><tr><th>Nome</th><th style="width:22%">Domínio</th><th>Precisão</th><th>Cobertura</th><th>Variedade</th><th>Respostas</th></tr></thead>
+<tbody>{% for m in g.rows %}
+<tr><td>{{ m.label }}</td><td>{{ m.score|pct }} <small class="muted">{{ m.details.level }}</small>{% meter m.score True %}</td>
+<td>{{ m.details.accuracy|pct }}</td><td>{{ m.details.coverage|pct }}</td><td>{{ m.details.variety|pct }}</td>
+<td>{{ m.details.attempts }}{% if m.details.repeated_errors %} <small class="muted">({{ m.details.repeated_errors }} com erro repetido)</small>{% endif %}</td></tr>
+{% endfor %}</tbody></table></div>
+{% else %}<p class="muted">Sem dados ainda.</p>{% endif %}
+{% endfor %}
+{% endblock %}

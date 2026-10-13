@@ -1,0 +1,30 @@
+{% extends "base.html" %}{% load cahier %}
+{% block title %}{{ ex.code }}{% endblock %}
+{% block content %}
+<p class="muted"><a href="{% url 'dados:editorial' %}">Editorial</a> / pré-visualização</p>
+<h1><code>{{ ex.code }}</code></h1>
+<p>{{ ex.get_exercise_type_display }} · {{ ex.get_interaction_display }} · capítulo {{ ex.chapter.number }} · v{{ ex.version }} · {{ ex.get_review_status_display }}{% if not ex.is_active %} · <strong>desativada</strong>{% endif %}
+ · <a href="{% url 'admin:content_exercise_change' ex.pk %}">Editar no painel</a></p>
+{% if errors %}<div class="messages"><span class="error">Erros: {{ errors|join:"; " }}</span></div>{% endif %}
+{% if warnings %}<p class="muted">Avisos: {{ warnings|join:"; " }}</p>{% endif %}
+<div class="workspace{% if ex.passage %} with-text{% endif %}">
+  {% if ex.passage %}{% include "includes/passage_panel.html" with passage=ex.passage %}{% endif %}
+  <div class="sheet">
+    <p class="instruction">{{ ex.instruction }}</p>
+    {% if ex.context %}<div class="context" lang="fr">{{ ex.context|dialogue }}</div>{% endif %}
+    <p class="prompt" lang="fr">{{ ex.prompt }}</p>
+    {% if choices %}<ul>{% for c in choices %}<li lang="fr">{{ c.text }}{% if c.is_correct %} <strong>✓</strong>{% endif %}{% if c.correct_position %} <small>(posição {{ c.correct_position }})</small>{% endif %}{% if c.match_text %} → {{ c.match_text }}{% endif %}{% if c.feedback %} <small class="muted">— {{ c.feedback }}</small>{% endif %}</li>{% endfor %}</ul>{% endif %}
+    {% if answers %}<p><strong>Respostas aceitas ({{ ex.get_comparison_mode_display|lower }}{% if ex.accent_insensitive %}, tolerando acentos{% endif %}):</strong></p>
+      <ul>{% for a in answers %}<li lang="fr">lacuna {{ a.blank_index|add:1 }}: {{ a.text }}{% if a.is_primary %} <small>(principal)</small>{% endif %}</li>{% endfor %}</ul>{% endif %}
+    {% if ex.model_answer %}<p><strong>Resposta-modelo:</strong> <span lang="fr" class="prewrap">{{ ex.model_answer }}</span></p>{% endif %}
+    <p><strong>Resposta exibida como correta:</strong> <span lang="fr">{{ correct }}</span></p>
+    <div class="explanation prewrap">{{ ex.explanation }}</div>
+    {% if ex.evidence %}<blockquote class="evidence" lang="fr">{{ ex.evidence }}</blockquote>{% endif %}
+    {% if ex.translation_pt %}<p class="muted prewrap">Tradução: {{ ex.translation_pt }}</p>{% endif %}
+  </div>
+</div>
+<p class="muted">Fonte: <a href="{{ ex.source.get_absolute_url }}">{{ ex.source.title }}</a> · {{ ex.get_origin_display }}{% if ex.adaptation_notes %} · {{ ex.adaptation_notes }}{% endif %}</p>
+<h2>Versões</h2>
+<ul>{% for v in versions %}<li>v{{ v.number }} — {{ v.created_at|date:"d/m/Y H:i" }} {{ v.note }}</li>{% endfor %}</ul>
+{% if issues %}<h2>Problemas sinalizados</h2><ul>{% for i in issues %}<li>{{ i.get_kind_display }} ({{ i.get_status_display }}): {{ i.comment }}</li>{% endfor %}</ul>{% endif %}
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "base.html" %}{% load cahier %}
+{% block title %}Correção da questão {{ number }}{% endblock %}
+{% block content %}
+<div class="session-head">
+  <div class="session-progress">
+    <strong>{{ session }}</strong>
+    <div class="muted" style="font-size:.9rem">Questão {{ number }} de {{ total }}</div>
+    {% meter progress_pct True %}
+  </div>
+</div>
+
+<div class="workspace{% if ex.passage %} with-text{% endif %}">
+  {% if ex.passage %}{% include "includes/passage_panel.html" with passage=ex.passage %}{% endif %}
+  <section class="sheet" aria-live="polite">
+    <div class="sheet-meta"><span class="tag">{{ ex.get_exercise_type_display }}</span>{% difficulty_dots ex.difficulty %}</div>
+    <p class="instruction">{{ ex.instruction }}</p>
+    {% if ex.context %}<div class="context" lang="fr">{{ ex.context|dialogue }}</div>{% endif %}
+    <p class="prompt" lang="fr">{{ ex.prompt }}</p>
+
+    <div class="verdict verdict-{{ attempt.result }}" role="status">
+      <span class="mark" aria-hidden="true">{{ attempt.result|result_mark }}</span>
+      <span>{% if attempt.result == "correct" %}Correto!{% elif attempt.result == "partial" %}Parcialmente correto{% elif attempt.result == "pending" %}Resposta guardada — agora avalie{% else %}Não foi dessa vez{% endif %}</span>
+    </div>
+    {% if attempt.feedback %}<p>{{ attempt.feedback }}</p>{% endif %}
+
+    {% if attempt.result != "pending" %}
+    <dl class="answer-compare">
+      <dt>Sua resposta</dt><dd lang="fr" class="{% if attempt.result != 'correct' %}wrong{% endif %}">{{ attempt.answer_display }}</dd>
+      {% if attempt.result != "correct" %}<dt>Resposta correta</dt><dd lang="fr" class="right">{{ attempt.correct_display }}</dd>{% endif %}
+    </dl>
+    {% endif %}
+
+    <div class="explanation"><strong>Por quê?</strong><div class="prewrap">{{ ex.explanation }}</div></div>
+    {% if ex.evidence %}<p class="muted" style="margin-bottom:0">Trecho do texto que fundamenta a resposta:</p><blockquote class="evidence" lang="fr">{{ ex.evidence }}</blockquote>{% endif %}
+    {% if ex.translation_pt %}<details class="help"><summary>Ver tradução</summary><div class="prewrap">{{ ex.translation_pt }}</div></details>{% endif %}
+
+    {% if written %}
+      <h2>Compare com a resposta-modelo</h2>
+      <div class="model" lang="fr">{{ ex.model_answer }}</div>
+      <h3>Seu texto</h3>
+      <div class="model" lang="fr">{{ written.text }}</div>
+      <form method="post" action="{% url 'learning:written_assess' written.pk %}">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{% if next_item %}{% url 'learning:session_play' session.pk %}{% else %}{% url 'learning:session_result' session.pk %}{% endif %}">
+        {% if ex.criteria_list %}
+        <fieldset style="border:0;padding:0"><legend><strong>Autoavaliação:</strong> marque o que seu texto cumpre</legend>
+          <ul class="criteria">{% for c in ex.criteria_list %}<li><label><input type="checkbox" name="criteria" value="{{ forloop.counter0 }}"> {{ c }}</label></li>{% endfor %}</ul>
+        </fieldset>
+        {% else %}
+        <fieldset style="border:0;padding:0"><legend><strong>Como foi?</strong></legend>
+          <label><input type="radio" name="overall" value="correct"> Acertei</label>
+          <label><input type="radio" name="overall" value="partial"> Acertei em parte</label>
+          <label><input type="radio" name="overall" value="incorrect" checked> Errei</label>
+        </fieldset>
+        {% endif %}
+        <p><label><input type="checkbox" name="marked_for_review" value="1"> Quero rever este texto depois</label></p>
+        <div class="actions"><button class="btn" type="submit">Registrar avaliação e continuar</button>
+          <a class="btn btn-quiet" href="{% if next_item %}{% url 'learning:session_play' session.pk %}{% else %}{% url 'learning:session_result' session.pk %}{% endif %}">Avaliar mais tarde</a></div>
+      </form>
+    {% else %}
+      <div class="actions">
+        {% if next_item %}<a class="btn" href="{% url 'learning:session_play' session.pk %}" autofocus>Próxima questão</a>
+        {% else %}<a class="btn" href="{% url 'learning:session_result' session.pk %}" autofocus>Ver resultado da sessão</a>{% endif %}
+      </div>
+    {% endif %}
+  </section>
+</div>
+
+<div class="actions" style="font-size:.9rem">
+  {% if not review_item.flagged %}
+  <form method="post" action="{% url 'learning:mark_for_review' ex.code %}" class="inline">{% csrf_token %}
+    <input type="hidden" name="next" value="{{ request.path }}">
+    <button class="btn btn-quiet btn-small" type="submit">Marcar para revisão</button>
+  </form>
+  {% else %}<span class="tag">Marcada para revisão</span>{% endif %}
+  <a class="btn btn-quiet btn-small" href="{% url 'learning:flag_issue' ex.code %}?next={{ request.path|urlencode }}&amp;resposta={{ attempt.answer_display|urlencode }}">Sinalizar problema nesta questão</a>
+  {% if review_item and review_item.due_at %}<span class="muted">Próxima revisão: {{ review_item.due_at|date:"d/m/Y" }}</span>{% endif %}
+</div>
+{% endblock %}

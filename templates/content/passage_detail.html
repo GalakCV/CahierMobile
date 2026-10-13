@@ -1,0 +1,20 @@
+{% extends "base.html" %}{% load cahier %}
+{% block title %}{{ p.title }}{% endblock %}
+{% block content %}
+<p class="muted"><a href="{{ p.chapter.get_absolute_url }}?aba=textos">{{ p.chapter.number }}. {{ p.chapter.title }}</a> / textos</p>
+<h1 lang="fr">{{ p.title }}</h1>
+<p class="muted">{{ p.get_text_type_display }} · nível {{ p.cefr_level }} · dificuldade {{ p.difficulty }} · {{ p.word_count }} palavras · {{ questions|length }} perguntas</p>
+<div class="workspace with-text">
+  <div class="sheet" style="padding-top:1.4rem"><div class="fr" lang="fr">{{ p.body|dialogue }}</div></div>
+  <div>
+    <h2 style="margin-top:0">Antes de ler</h2>
+    {% if p.key_vocabulary %}<p>Palavras-chave:</p><ul class="vocab" style="columns:1">{% for v in p.key_vocabulary %}<li><span class="fr" lang="fr">{{ v.fr }}</span> — {{ v.pt }}</li>{% endfor %}</ul>{% endif %}
+    {% if p.grammar_topics.all %}<p class="muted">Gramática presente: {% for g in p.grammar_topics.all %}{{ g.title }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>{% endif %}
+    <div class="actions">
+      <form method="post" action="{% url 'learning:start_passage' p.code %}" class="inline">{% csrf_token %}<input type="hidden" name="mode" value="practice"><button class="btn" type="submit">Responder (prática)</button></form>
+      <form method="post" action="{% url 'learning:start_passage' p.code %}" class="inline">{% csrf_token %}<input type="hidden" name="mode" value="assessment"><button class="btn btn-quiet" type="submit">Responder (avaliação)</button></form>
+    </div>
+    <p class="muted" style="font-size:.85rem">Autoria: {{ p.author }} · {{ p.get_origin_display }} · fonte: <a href="{{ p.source.get_absolute_url }}">{{ p.source.title }}</a> ({{ p.source.license_name }}){% if p.adaptation_notes %}<br>Adaptação: {{ p.adaptation_notes }}{% endif %}</p>
+  </div>
+</div>
+{% endblock %}

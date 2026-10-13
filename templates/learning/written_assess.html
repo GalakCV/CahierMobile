@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Avaliar texto{% endblock %}
+{% block content %}
+<h1>Avaliar texto</h1>
+<p class="instruction">{{ ex.instruction }}</p>
+<p class="fr prewrap" lang="fr">{{ ex.prompt }}</p>
+<div class="grid-2">
+  <section><h2>Seu texto</h2><div class="model" lang="fr">{{ written.text }}</div>
+    <p class="muted" style="font-size:.85rem">Escrito em {{ written.attempt.created_at|date:"d/m/Y H:i" }}</p></section>
+  <section><h2>Resposta-modelo</h2><div class="model" lang="fr">{{ ex.model_answer }}</div>
+    <div class="explanation prewrap">{{ ex.explanation }}</div></section>
+</div>
+<form method="post" class="form-grid" style="margin-top:1rem">
+  {% csrf_token %}
+  <input type="hidden" name="next" value="{{ request.GET.next|default:'' }}">
+  {% if criteria %}
+  <fieldset style="border:0;padding:0"><legend><strong>Critérios atendidos</strong></legend>
+    <ul class="criteria">{% for i, c in criteria %}<li><label><input type="checkbox" name="criteria" value="{{ i }}"{% if i in written.criteria_checked %} checked{% endif %}> {{ c }}</label></li>{% endfor %}</ul>
+  </fieldset>
+  {% else %}
+  <fieldset style="border:0;padding:0"><legend><strong>Resultado</strong></legend>
+    <label><input type="radio" name="overall" value="correct"> Correta</label>
+    <label><input type="radio" name="overall" value="partial"> Parcial</label>
+    <label><input type="radio" name="overall" value="incorrect"> Incorreta</label></fieldset>
+  {% endif %}
+  <div class="field"><label for="notes">Anotações para você mesmo</label><textarea id="notes" name="notes" rows="3">{{ written.notes }}</textarea></div>
+  <fieldset style="border:0;padding:0"><legend>Quem está avaliando?</legend>
+    <label><input type="radio" name="by" value="self"{% if written.assessed_by != "manual" %} checked{% endif %}> Autoavaliação</label>
+    <label><input type="radio" name="by" value="manual"{% if written.assessed_by == "manual" %} checked{% endif %}> Correção manual (professor ou revisão posterior)</label></fieldset>
+  <label><input type="checkbox" name="marked_for_review" value="1"{% if written.marked_for_review %} checked{% endif %}> Marcar para revisar depois</label>
+  <div class="actions"><button class="btn" type="submit">Salvar avaliação</button><a class="btn btn-quiet" href="{% url 'learning:written_list' %}">Voltar</a></div>
+</form>
+{% endblock %}
