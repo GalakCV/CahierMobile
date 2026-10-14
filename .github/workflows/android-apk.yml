@@ -33,7 +33,7 @@ jobs:
           python manage.py migrate --noinput
           python manage.py seed_content
           python manage.py build_mobile --out android/app/src/main/assets/www
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: "17"
@@ -63,6 +63,7 @@ jobs:
         run: |
           gradle -p android assembleRelease --no-daemon --stacktrace
           cp android/app/build/outputs/apk/release/app-release.apk Cahier.apk
+          echo "::notice::APK versão 1.2.$CAHIER_VERSION_CODE, $(du -k Cahier.apk | cut -f1) KB"
           rm -f "$RUNNER_TEMP/cahier.jks"
       - name: Conferir assinatura
         if: steps.key.outputs.signed == 'true'
@@ -70,7 +71,6 @@ jobs:
           APKSIGNER=$(ls "$ANDROID_HOME"/build-tools/*/apksigner | sort -V | tail -1)
           "$APKSIGNER" verify --print-certs Cahier.apk | tee assinatura.txt
           grep -q "CN=GalakCV" assinatura.txt
-          ls -la Cahier.apk
       - uses: actions/upload-artifact@v4
         with:
           name: Cahier-apk

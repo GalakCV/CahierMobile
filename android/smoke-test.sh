@@ -20,9 +20,9 @@ found() {  # $1 = rótulo; demais = textos que precisam estar na tela
     adb pull /sdcard/ui.xml "$OUT/$label.xml" >/dev/null 2>&1 || continue
     local all=1
     for t in "$@"; do grep -q "$t" "$OUT/$label.xml" || all=""; done
-    if [ -n "$all" ]; then echo "ok: $label"; return 0; fi
+    if [ -n "$all" ]; then echo "::notice::Emulador ok: $label ($*)"; return 0; fi
   done
-  echo "falhou: $label (esperado: $*)"
+  echo "::error::Emulador falhou: $label (esperado: $*)"
   return 1
 }
 
@@ -39,7 +39,7 @@ if [ $status -eq 0 ]; then
     found capitulos "Bonjour et bienvenue" "Les gens" || status=1
     adb exec-out screencap -p > "$OUT/capitulos.png"
   else
-    echo "aviso: botão Capítulos sem coordenadas; pulando a navegação"
+    echo "::warning::Emulador: aba Capítulos sem coordenadas na árvore de acessibilidade; navegação não testada"
   fi
 fi
 
@@ -50,6 +50,8 @@ found reaberto "Praticar" || status=1
 
 adb logcat -d > "$OUT/logcat.txt" 2>/dev/null || true
 if grep -E "chromium.*(Uncaught|CONSOLE.*[Ee]rror)" "$OUT/logcat.txt" > "$OUT/erros-js.txt"; then
-  echo "erros de JavaScript:"; cat "$OUT/erros-js.txt"; status=1
+  echo "::error::Erros de JavaScript no WebView:"; cat "$OUT/erros-js.txt"; status=1
+else
+  echo "::notice::Emulador: nenhum erro de JavaScript no log"
 fi
 exit $status
