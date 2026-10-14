@@ -4,6 +4,27 @@
 <h1>Dados e backup</h1>
 <p class="muted">Tudo fica no seu computador, na pasta <code>{{ backup_dir }}</code> e no banco SQLite ao lado dela.</p>
 
+<section class="panel" aria-labelledby="sync" style="margin-bottom:1.5rem">
+  <h2 id="sync" style="margin-top:0">Sincronizar com o celular</h2>
+  <p>O app para celular funciona offline em <a href="{{ mobile_url }}" rel="noreferrer noopener">{{ mobile_url }}</a>
+    (abra no celular e escolha “Adicionar à tela inicial”). Para juntar o progresso dos dois aparelhos:</p>
+  <ol>
+    <li>No celular: <em>Mais → Sincronizar → Exportar progresso</em> e envie o arquivo para este computador.</li>
+    <li>Aqui: importe o arquivo abaixo. As respostas são somadas sem duplicar; a revisão e o domínio são recalculados.</li>
+    <li>Para levar o progresso do computador ao celular, baixe o arquivo abaixo e importe-o no app.</li>
+  </ol>
+  <div class="actions">
+    <form method="post" action="{% url 'dados:sync_import' %}" enctype="multipart/form-data" class="actions" style="margin:0">
+      {% csrf_token %}
+      <label for="syncfile" class="visually-hidden">Arquivo de sincronização</label>
+      <input id="syncfile" type="file" name="file" accept=".json,application/json" required>
+      <button class="btn" type="submit">Importar progresso do celular</button>
+    </form>
+    <a class="btn btn-quiet" href="{% url 'dados:sync_export' %}">Baixar progresso para o celular</a>
+  </div>
+  <p class="muted" style="font-size:.88rem;margin:0">Um backup é criado automaticamente antes de cada importação.</p>
+</section>
+
 <div class="grid-2">
 <section>
   <h2>Exportar</h2>

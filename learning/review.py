@@ -16,7 +16,7 @@ from django.utils import timezone
 
 from content.models import Exercise
 
-from .models import ReviewItem
+from .models import ReviewFlag, ReviewItem
 
 INTERVALS = ReviewItem.INTERVALS
 FIRST_CORRECT_STAGE = 2
@@ -96,8 +96,10 @@ def register(exercise: Exercise, score: float, answer_display: str = "", now=Non
     return item
 
 
-def flag(exercise: Exercise, now=None) -> ReviewItem:
+def flag(exercise: Exercise, now=None, record: bool = True) -> ReviewItem:
     now = now or timezone.now()
+    if record:
+        ReviewFlag.objects.create(exercise=exercise, created_at=now)
     item, created = ReviewItem.objects.get_or_create(exercise=exercise, defaults={"due_at": now})
     item.flagged = True
     item.due_at = now

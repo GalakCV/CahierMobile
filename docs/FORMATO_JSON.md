@@ -123,3 +123,29 @@ description, routine, narrative, city, other.
 - `cahier-full`: conteúdo + progresso + caderno.
 
 Para levar o progresso para outro computador, use o **backup do banco** (arquivo `.sqlite3`), que é restaurável.
+
+## Sincronização (`cahier-sync`)
+
+Arquivo trocado entre o celular e o computador (ver [CELULAR.md](CELULAR.md)). O mesmo formato vale nos
+dois sentidos; a importação soma por `uid` e recalcula a revisão e o domínio.
+
+```json
+{
+  "format": "cahier-sync", "version": 1, "device": "mobile", "exported_at": "2026-10-14T12:00:00Z",
+  "attempts": [{
+    "uid": "6f1c…", "exercise": "c1-etre-vous", "version": 1, "mode": "practice", "from_review": false,
+    "answer": {"blanks": ["êtes"]}, "answer_display": "êtes", "correct_display": "êtes",
+    "result": "correct", "score": 1.0, "feedback": "", "duration_seconds": 9, "used_translation": false,
+    "created_at": "2026-10-14T11:58:02Z", "device": "mobile",
+    "written": null
+  }],
+  "flags": [{"uid": "…", "exercise": "c1-art-stylo", "created_at": "…"}],
+  "assessments": [{"uid": "…", "chapter": "ch01", "result_score": 0.9, "finished_at": "…", "title": "…"}],
+  "issues": [{"uid": "…", "exercise": "…", "version": 1, "kind": "ambiguous", "comment": "…", "created_at": "…"}]
+}
+```
+
+- `result`: `correct`, `partial`, `incorrect` ou `pending` (texto livre); `score` de 0 a 1.
+- `written` (só para `pending`): `text`, `criteria_checked`, `assessed_score`, `assessed_by`, `assessed_at`,
+  `marked_for_review`, `notes`.
+- Questões que não existem no aparelho de destino são ignoradas (e informadas no relatório).

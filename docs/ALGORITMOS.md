@@ -2,6 +2,8 @@
 
 Este documento descreve exatamente o que o código faz (`learning/grading.py`, `learning/mastery.py`,
 `learning/review.py`, `learning/sessions.py`). A página **Progresso** mostra um resumo para o estudante.
+O app do celular usa uma tradução linha a linha destes algoritmos (`mobile/src/js/core/`), e
+`tests/test_mobile_parity.py` garante que os dois lados dão os mesmos resultados.
 
 ## 1. Correção
 
@@ -96,3 +98,9 @@ A sessão de revisão usa só itens vencidos, em ordem de prioridade, sem coloca
 2. Pontua: +3 se nunca respondida, +2 por erro registrado (até 3), + fragilidade da competência, + um sorteio.
 3. Escolhe as melhores sem semelhantes juntas e com no máximo metade da sessão num mesmo tópico.
 4. Apresenta em ordem crescente de dificuldade, mantendo juntas as perguntas de um mesmo texto.
+
+## 5. Reconstrução após sincronização
+A fila de revisão é uma função do histórico. Depois de importar progresso de outro aparelho, ela é
+reconstruída do zero: todas as respostas avaliadas e marcações são ordenadas por data (respostas antes de
+marcações no mesmo instante) e reaplicadas com as regras da seção 3. Textos livres contam na data da
+autoavaliação. O domínio é então recalculado.

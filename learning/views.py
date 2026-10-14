@@ -310,7 +310,7 @@ def notebook(request):
     page = Paginator(qs, 20).get_page(request.GET.get("page"))
     rows = []
     for item in page:
-        last_wrong = (Attempt.objects.filter(exercise=item.exercise).exclude(result__in=["correct", "pending"])
+        last_wrong = (Attempt.objects.filter(exercise=item.exercise).exclude(result="correct")
                       .order_by("-created_at").first())
         rows.append({"item": item, "ex": item.exercise, "last_wrong": last_wrong})
     counts = {state: ReviewItem.objects.filter(error_count__gt=0, recovery=state).count()

@@ -9,7 +9,7 @@
 <thead><tr><th>Data</th><th>Questão</th><th>Versão</th><th>Resposta</th><th>Resultado</th><th>Tempo</th></tr></thead>
 <tbody>{% for a in page %}
 <tr><td>{{ a.created_at|date:"d/m/Y H:i" }}</td><td><code>{{ a.exercise.code }}</code><br><small>{{ a.exercise.chapter.title }}</small></td>
-<td>v{{ a.exercise_version }}</td><td lang="fr">{{ a.answer_display|truncatechars:80 }}</td>
+<td>v{{ a.exercise_version }}{% if a.device == "mobile" %}<br><small class="muted">celular</small>{% endif %}</td><td lang="fr">{{ a.answer_display|truncatechars:80 }}</td>
 <td>{{ a.result|result_mark }} {{ a.get_result_display }}</td><td>{{ a.duration_seconds }} s</td></tr>
 {% endfor %}</tbody></table></div>
 {% include "includes/pagination.html" %}

@@ -4,6 +4,8 @@ domínio calculado, fila de revisão espaçada e preferências.
 """
 from __future__ import annotations
 
+import uuid
+
 from django.core.exceptions import ValidationError
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
@@ -39,6 +41,8 @@ class StudySession(models.Model):
     parent = models.ForeignKey("self", verbose_name="sessão de origem", null=True, blank=True, on_delete=models.SET_NULL)
     filters = models.JSONField("filtros usados", default=dict, blank=True)
     title = models.CharField("título", max_length=200, blank=True)
+    uid = models.UUIDField("identificador de sincronização", default=uuid.uuid4, unique=True, editable=False)
+    device = models.CharField("dispositivo", max_length=10, default="desktop", editable=False)
     started_at = models.DateTimeField("iniciada em", default=timezone.now)
     last_activity_at = models.DateTimeField("última atividade", default=timezone.now)
     finished_at = models.DateTimeField("concluída em", null=True, blank=True)
@@ -104,7 +108,11 @@ class Attempt(models.Model):
     feedback = models.TextField("observação da correção", blank=True)
     duration_seconds = models.PositiveIntegerField("tempo de resposta (s)", default=0)
     used_translation = models.BooleanField("consultou a tradução", default=False)
+    from_review = models.BooleanField("feita numa sessão de revisão", default=False)
     created_at = models.DateTimeField("respondida em", default=timezone.now, db_index=True)
+    uid = models.UUIDField("identificador de sincronização", default=uuid.uuid4, unique=True, editable=False)
+    device = models.CharField("dispositivo", max_length=10, default="desktop",
+                              help_text="desktop = computador; mobile = celular (importada por sincronização)")
 
     class Meta:
         verbose_name = "tentativa"
@@ -200,6 +208,23 @@ class ReviewItem(models.Model):
     @property
     def is_due(self) -> bool:
         return self.due_at <= timezone.now()
+
+
+class ReviewFlag(models.Model):
+    """Registro de cada vez que o estudante marcou uma questão para revisão (usado na sincronização)."""
+
+    exercise = models.ForeignKey(Exercise, verbose_name="questão", on_delete=models.PROTECT, related_name="review_flags")
+    created_at = models.DateTimeField("marcada em", default=timezone.now)
+    uid = models.UUIDField(default=uuid.uuid4, unique=True, editable=False)
+    device = models.CharField("dispositivo", max_length=10, default="desktop")
+
+    class Meta:
+        verbose_name = "marcação para revisão"
+        verbose_name_plural = "marcações para revisão"
+        ordering = ["-created_at"]
+
+    def __str__(self) -> str:
+        return f"{self.exercise.code} em {self.created_at:%d/%m/%Y}"
 
 
 class Mastery(models.Model):

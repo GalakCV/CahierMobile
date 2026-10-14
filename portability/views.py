@@ -16,6 +16,8 @@ from django.views.decorators.http import require_http_methods, require_POST
 from content.models import Chapter, ContentIssue, ExerciseVersion
 from content.quality import report as quality_report
 
+from learning import sync
+
 from . import backup, exporter, importer
 from .models import ImportLog
 
@@ -35,7 +37,8 @@ def data_home(request):
         "backups": backup.list_backups()[:20], "backup_dir": settings.BACKUP_DIR,
         "imports": ImportLog.objects.all()[:10], "confirm_phrase": backup.CONFIRM_PHRASE,
         "max_import_mb": settings.MAX_IMPORT_BYTES // (1024 * 1024),
-        "max_restore_mb": settings.MAX_RESTORE_BYTES // (1024 * 1024)})
+        "max_restore_mb": settings.MAX_RESTORE_BYTES // (1024 * 1024),
+        "mobile_url": settings.CAHIER_MOBILE_URL})
 
 
 def export_view(request, kind):
@@ -184,3 +187,42 @@ def editorial(request):
         "versions": ExerciseVersion.objects.select_related("exercise").order_by("-created_at")[:20],
         "imports": ImportLog.objects.all()[:10],
     })
+
+
+def sync_export(request):
+    stamp = timezone.localtime().strftime("%Y%m%d-%H%M")
+    return _json_download(sync.export_sync(), f"cahier-sync-computador-{stamp}.json")
+
+
+@require_POST
+def sync_import(request):
+    upload = request.FILES.get("file")
+    if upload is None:
+        messages.error(request, "Selecione o arquivo de sincronização (.json) gerado no celular.")
+        return redirect("dados:home")
+    if upload.size > settings.MAX_RESTORE_BYTES:
+        messages.error(request, "Arquivo grande demais.")
+        return redirect("dados:home")
+    try:
+        data = importer.load_json_bytes(upload.read())
+    except ValueError as exc:
+        messages.error(request, str(exc))
+        return redirect("dados:home")
+    try:
+        backup.create_backup("antes-da-sincronizacao")
+    except backup.BackupError:
+        pass
+    rep = sync.import_sync(data)
+    if not rep.ok:
+        messages.error(request, "Sincronização recusada: " + " ".join(rep.errors[:5]))
+    elif rep.total_added() or rep.updated_written:
+        parts = [f"{v} {k}" for k, v in rep.added.items() if v]
+        if rep.updated_written:
+            parts.append(f"{rep.updated_written} autoavaliação(ões) atualizada(s)")
+        messages.success(request, "Progresso do celular importado: " + ", ".join(parts) +
+                         ". A fila de revisão e o domínio foram recalculados.")
+    else:
+        messages.info(request, "Nada novo: este computador já tinha todo o progresso do arquivo.")
+    for s in rep.skipped:
+        messages.warning(request, s)
+    return redirect("dados:home")

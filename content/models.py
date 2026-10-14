@@ -17,6 +17,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import uuid
 
 from django.core.exceptions import ValidationError
 from django.core.validators import MaxValueValidator, MinValueValidator
@@ -623,6 +624,7 @@ class ContentIssue(TimeStamped):
     comment = models.TextField("comentário", blank=True, max_length=2000)
     user_answer = models.TextField("resposta dada", blank=True)
     status = models.CharField("estado", max_length=10, choices=Status.choices, default=Status.OPEN)
+    uid = models.UUIDField(default=uuid.uuid4, unique=True, editable=False)
     resolution_note = models.TextField("nota de resolução", blank=True)
 
     class Meta:

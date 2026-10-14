@@ -8,6 +8,9 @@ Tudo roda no seu computador: um servidor Django em `127.0.0.1:8000`, acessado pe
 **http://localhost:8000**. O banco SQLite, o progresso e os backups ficam na pasta `data/`. Não há
 telemetria, contas, senhas nem chamadas externas.
 
+> **No celular:** <https://galakcv.github.io/Cahier/> — versão offline e instalável para Android e iPhone,
+> com sincronização de progresso com o computador. Veja [docs/CELULAR.md](docs/CELULAR.md).
+
 ---
 
 ## Instalação no Windows
@@ -87,6 +90,11 @@ fica como está, e seu progresso não é tocado. Por segurança, faça um backup
 
 ## Novidades
 
+**v1.2** — App para celular offline (PWA) publicado no GitHub Pages, com as mesmas regras de correção,
+domínio e revisão (testadas por paridade), e sincronização de progresso entre celular e computador
+(*Dados e backup → Sincronizar com o celular*). As tentativas ganharam um identificador único e as marcações
+para revisão passaram a ser registradas como eventos; as migrations convertem os dados existentes.
+
 **v1.1** — 106 questões novas nos capítulos 1 a 4 e um texto novo por capítulo (mensagem da professora,
 conversa no café do campus, previsão do tempo, retrato de uma amiga), além de frases úteis na sala de aula.
 A importação ganhou o modo “manter os existentes e acrescentar só os novos”.
@@ -117,6 +125,7 @@ A importação ganhou o modo “manter os existentes e acrescentar só os novos�
 .venv\Scripts\python manage.py backup_db --label nome
 .venv\Scripts\python manage.py restore_db data\backups\arquivo.sqlite3 --confirm RESTAURAR
 .venv\Scripts\python manage.py refresh_mastery         # recalcula o domínio
+.venv\Scripts\python manage.py build_mobile            # gera o app para celular em mobile\dist com o seu conteúdo
 .venv\Scripts\python manage.py test tests              # testes automatizados
 ```
 
@@ -164,7 +173,7 @@ Estas escolhas foram feitas sem consulta, por não serem bloqueantes; todas pode
 
 ## Verificação feita
 
-- **126 testes automatizados** aprovados: modelos, migrations, correção (exata, normalizada, acentos,
+- **138 testes automatizados** aprovados (incluindo a paridade com o app do celular): modelos, migrations, correção (exata, normalizada, acentos,
   regex, lacunas múltiplas), múltipla escolha, múltipla seleção, ordenação, pares, textos, domínio,
   revisão espaçada, caderno de erros, importação, exportação, backup e restauração, preservação do
   histórico, rotas, formulários, CSRF, escape de HTML, retomada de sessão e validação do conteúdo inicial.

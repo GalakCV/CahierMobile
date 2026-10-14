@@ -198,7 +198,7 @@ def answer_item(item: SessionItem, data, used_translation: bool = False) -> Atte
         answer=answer, answer_display=result.answer_display, correct_display=result.correct_display,
         result=result.result, score=result.score, feedback=result.feedback,
         duration_seconds=duration, used_translation=bool(used_translation and not session.is_assessment),
-        created_at=now)
+        from_review=session.kind == StudySession.Kind.SPACED_REVIEW, created_at=now)
     if result.result == "pending":
         text = answer.get("text") or result.answer_display
         WrittenAnswer.objects.create(attempt=attempt, text=text)
