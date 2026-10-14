@@ -2,7 +2,7 @@
 
 O app para celular é a mesma plataforma em versão **offline e instalável** (PWA): Android e iPhone, sem loja.
 
-**Endereço:** <https://galakcv.github.io/Cahier/>
+**Endereço:** <https://galakcv.github.io/CahierMobile/>
 
 ## Instalar
 

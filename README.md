@@ -8,7 +8,7 @@ Tudo roda no seu computador: um servidor Django em `127.0.0.1:8000`, acessado pe
 **http://localhost:8000**. O banco SQLite, o progresso e os backups ficam na pasta `data/`. Não há
 telemetria, contas, senhas nem chamadas externas.
 
-> **No celular:** <https://galakcv.github.io/Cahier/> — versão offline e instalável para Android e iPhone,
+> **No celular:** <https://galakcv.github.io/CahierMobile/> — versão offline e instalável para Android e iPhone,
 > com sincronização de progresso com o computador. Veja [docs/CELULAR.md](docs/CELULAR.md).
 
 ---

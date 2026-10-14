@@ -134,7 +134,7 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Endereço do app para celular (PWA publicado no GitHub Pages). Aparece em "Dados e backup".
-CAHIER_MOBILE_URL = os.environ.get("CAHIER_MOBILE_URL", "https://galakcv.github.io/Cahier/")
+CAHIER_MOBILE_URL = os.environ.get("CAHIER_MOBILE_URL", "https://galakcv.github.io/CahierMobile/")
 
 # Limites de upload (importação JSON e restauração de backup).
 MAX_IMPORT_BYTES = int(os.environ.get("CAHIER_MAX_IMPORT_MB", "5")) * 1024 * 1024
