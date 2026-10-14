@@ -2,7 +2,10 @@ import { CONSTANTS, effectiveScore } from "../core/mastery.js";
 import { writtenBlock } from "../exercise.js";
 import { addIssue, mastery, requestPersistence, resetAll, saveSettings, state } from "../store.js";
 import { exportSync, importSync, markExported, pendingExport } from "../study.js";
-import { download, fmtDateTime, go, html, MARK, meter, nowIso, pct, plural, raw, stamp, toast, uid } from "../util.js";
+import { download, fmtDateTime, go, html, MARK, meter, native, nowIso, pct, plural, raw, stamp, toast, uid } from "../util.js";
+
+/** Página de downloads do APK (sempre a versão mais recente). */
+export const APK_PAGE = "https://github.com/GalakCV/CahierMobile/releases/latest";
 import { bindAssessForm } from "./practice.js";
 
 export function moreMenu() {
@@ -20,7 +23,7 @@ export function moreMenu() {
       </ul>
       <ul class="menu">
         ${item("#/sincronizar", "Sincronizar com o computador", unsent ? String(unsent) : "")}
-        ${item("#/instalar", "Instalar e usar offline")}
+        ${item("#/instalar", native ? "Sobre o app e atualizações" : "Instalar e usar offline")}
         ${item("#/preferencias", "Preferências")}
         ${item("#/creditos", "Créditos e fontes")}
       </ul>
@@ -122,6 +125,16 @@ export function syncView() {
         const data = exportSync();
         const name = `cahier-sync-celular-${stamp()}.json`;
         const text = JSON.stringify(data);
+        if (native) {
+          if (!native.shareFile(name, text)) {
+            toast("Não foi possível gerar o arquivo. Libere espaço no aparelho e tente de novo.", "error");
+            return;
+          }
+          await markExported();
+          toast(`Progresso exportado (${plural(data.attempts.length, "resposta", "respostas")}). Escolha para onde enviar.`, "success");
+          go("#/sincronizar");
+          return;
+        }
         const file = typeof File === "function" ? new File([text], name, { type: "application/json" }) : null;
         let shared = false;
         if (file && navigator.canShare?.({ files: [file] })) {
@@ -250,7 +263,28 @@ export function flagIssue({ code, query }) {
   };
 }
 
+function nativeAbout() {
+  let version = "";
+  try { version = native.versionName(); } catch { /* sem versão */ }
+  return {
+    title: "Sobre o app", nav: "more", back: "#/mais",
+    html: html`<h1>Sobre o app</h1>
+      <section class="panel"><h2 class="h-small">Cahier para Android${version ? ` · versão ${version}` : ""}</h2>
+        <p class="small">Todo o conteúdo está dentro do app: funciona sem internet (ônibus, metrô, avião). O app não tem permissão de acesso à internet.</p>
+        <p class="small">Conteúdo: ${plural(state.content.exercises.length, "questão", "questões")} em ${plural(state.content.chapters.length, "capítulo", "capítulos")}.</p>
+      </section>
+      <section class="panel"><h2 class="h-small">Atualizar</h2>
+        <p class="small">Quando houver conteúdo novo, baixe o APK mais recente e instale <strong>por cima</strong> deste. O progresso é mantido.</p>
+        <a class="btn block" href="${APK_PAGE}">Abrir página de downloads</a>
+      </section>
+      <section class="panel"><h2 class="h-small">Seus dados</h2>
+        <p class="small">As respostas ficam só neste aparelho. <strong>Desinstalar o app apaga o progresso</strong>: antes, use <a href="#/sincronizar">Sincronizar → Exportar progresso</a>.</p>
+      </section>`,
+  };
+}
+
 export function installView() {
+  if (native) return nativeAbout();
   const ua = navigator.userAgent;
   const ios = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
   const standalone = matchMedia("(display-mode: standalone)").matches || navigator.standalone;

@@ -1,0 +1,51 @@
+// App Android do Cahier: um WebView que abre o app do celular (mobile/) empacotado no APK.
+// O conteúdo vem de `manage.py build_mobile --out android/app/src/main/assets/www`.
+plugins {
+    id "com.android.application"
+}
+
+def versionCodeEnv = (System.getenv("CAHIER_VERSION_CODE") ?: "1") as int
+def keystorePath = System.getenv("CAHIER_KEYSTORE")
+
+android {
+    namespace = "io.github.galakcv.cahier"
+    compileSdk = 35
+
+    defaultConfig {
+        applicationId = "io.github.galakcv.cahier"
+        minSdk = 24
+        targetSdk = 34
+        versionCode = versionCodeEnv
+        versionName = "1.2." + versionCodeEnv
+    }
+
+    signingConfigs {
+        release {
+            if (keystorePath) {
+                storeFile = file(keystorePath)
+                storePassword = System.getenv("CAHIER_KEYSTORE_PASSWORD")
+                keyAlias = "cahier"
+                keyPassword = System.getenv("CAHIER_KEYSTORE_PASSWORD")
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled = false
+            // Sem chave (build local): assina com a chave de depuração para poder instalar e testar.
+            signingConfig = keystorePath ? signingConfigs.release : signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+}
+
+dependencies {
+    implementation "androidx.webkit:webkit:1.12.1"
+    implementation "androidx.core:core:1.13.1"
+}

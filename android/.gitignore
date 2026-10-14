@@ -1,0 +1,7 @@
+.gradle/
+build/
+local.properties
+*.jks
+*.keystore
+# Gerado por manage.py build_mobile
+app/src/main/assets/www/

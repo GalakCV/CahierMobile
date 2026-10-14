@@ -1,0 +1,124 @@
+# Gera o APK do Cahier para Android, testa num emulador e publica em Releases a cada push na main.
+# Download fixo da versão mais recente: https://github.com/<dono>/<repo>/releases/latest/download/Cahier.apk
+name: App Android (APK)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: android-apk
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      signed: ${{ steps.key.outputs.signed }}
+    env:
+      CAHIER_DATA_DIR: ${{ github.workspace }}/.cahier-data
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Gerar o conteúdo do app
+        run: |
+          pip install -r requirements.txt
+          python manage.py test tests --noinput
+          python manage.py migrate --noinput
+          python manage.py seed_content
+          python manage.py build_mobile --out android/app/src/main/assets/www
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.11.1"
+      - name: Chave de assinatura
+        id: key
+        env:
+          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_B64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+        run: |
+          if [ -z "$KEYSTORE_B64" ] || [ -z "$KEYSTORE_PASSWORD" ]; then
+            # Sem a chave o APK é só testado (assinatura de depuração) e não é publicado:
+            # o Android só aceita atualizar o app com a mesma chave.
+            echo "::warning::Cadastre os segredos ANDROID_KEYSTORE_B64 e ANDROID_KEYSTORE_PASSWORD (Settings → Secrets and variables → Actions) para publicar o APK."
+            echo "signed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "$KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/cahier.jks"
+          echo "CAHIER_KEYSTORE=$RUNNER_TEMP/cahier.jks" >> "$GITHUB_ENV"
+          echo "signed=true" >> "$GITHUB_OUTPUT"
+      - name: Compilar o APK
+        env:
+          CAHIER_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          CAHIER_VERSION_CODE: ${{ github.run_number }}
+        run: |
+          gradle -p android assembleRelease --no-daemon --stacktrace
+          cp android/app/build/outputs/apk/release/app-release.apk Cahier.apk
+          rm -f "$RUNNER_TEMP/cahier.jks"
+      - name: Conferir assinatura
+        if: steps.key.outputs.signed == 'true'
+        run: |
+          APKSIGNER=$(ls "$ANDROID_HOME"/build-tools/*/apksigner | sort -V | tail -1)
+          "$APKSIGNER" verify --print-certs Cahier.apk | tee assinatura.txt
+          grep -q "CN=GalakCV" assinatura.txt
+          ls -la Cahier.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Cahier-apk
+          path: Cahier.apk
+          if-no-files-found: error
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: Cahier-apk
+      - name: Habilitar KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Testar num emulador (Android 14)
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          disable-animations: true
+          script: bash android/smoke-test.sh Cahier.apk smoke
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: teste-emulador
+          path: smoke/
+
+  release:
+    needs: [build, test]
+    if: needs.build.outputs.signed == 'true' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: Cahier-apk
+      - name: Publicar em Releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          VERSION: 1.2.${{ github.run_number }}
+        run: |
+          gh release delete apk -R "$REPO" --cleanup-tag -y || true
+          gh release create apk Cahier.apk -R "$REPO" --target "$GITHUB_SHA" --latest \
+            --title "Cahier para Android $VERSION" \
+            --notes "Baixe **Cahier.apk** no celular e abra o arquivo para instalar (permita a instalação de apps desta fonte quando o Android pedir). Para atualizar, instale a versão nova por cima: o progresso é mantido. Funciona sem internet. Versão $VERSION, gerada do commit ${GITHUB_SHA::7}."

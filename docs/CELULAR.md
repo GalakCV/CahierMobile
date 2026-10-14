@@ -1,10 +1,31 @@
 # Cahier no celular
 
-O app para celular é a mesma plataforma em versão **offline e instalável** (PWA): Android e iPhone, sem loja.
+O app para celular é a mesma plataforma em versão **offline**, em duas formas:
 
-**Endereço:** <https://galakcv.github.io/CahierMobile/>
+| | Android | iPhone |
+|---|---|---|
+| **APK** (recomendado no Android) | [Cahier.apk](https://github.com/GalakCV/CahierMobile/releases/latest/download/Cahier.apk) | — |
+| **Pelo navegador** (PWA) | <https://galakcv.github.io/CahierMobile/> | <https://galakcv.github.io/CahierMobile/> |
 
-## Instalar
+## Android: instalar o APK
+
+1. No celular, abra o link **Cahier.apk** acima (ou a página
+   [Releases](https://github.com/GalakCV/CahierMobile/releases/latest)) e baixe o arquivo.
+2. Toque no arquivo baixado. Na primeira vez, o Android pede para **permitir a instalação de apps desta
+   fonte** (o navegador ou o gerenciador de arquivos): permita e volte.
+3. Toque em **Instalar**. Se o Play Protect avisar que o app é desconhecido, escolha *Instalar mesmo assim*
+   — o APK não vem da Play Store, mas é gerado pelo GitHub a partir deste repositório.
+
+**Atualizar:** baixe o APK novo e instale **por cima**. O progresso é mantido (os APKs são sempre assinados
+com a mesma chave). *Mais → Sobre o app* mostra a versão instalada e tem o link para a página de downloads.
+
+**Atenção:** desinstalar o app apaga o progresso. Antes, use *Sincronizar → Exportar progresso*.
+
+O APK é o mesmo app web empacotado num WebView, com todo o conteúdo dentro: não precisa de internet nem
+tem permissão para usá-la, e não faz backup na nuvem. *Exportar progresso* abre o menu **Compartilhar** do
+Android (WhatsApp, e-mail, Drive, Arquivos…); *Importar arquivo* abre o seletor de arquivos.
+
+## Pelo navegador (PWA)
 
 | Android (Chrome) | iPhone (Safari) |
 |---|---|
@@ -68,6 +89,22 @@ Security Policy que bloqueia qualquer recurso externo). As respostas ficam no ar
   service worker cuja versão muda quando qualquer arquivo muda.
 - `.github/workflows/mobile-pages.yml`: a cada push na `main`, roda os testes, gera o app a partir do
   conteúdo inicial e publica no GitHub Pages.
+- `android/`: projeto Android mínimo (uma Activity com WebView, sem dependências além de `androidx.webkit`).
+  Os arquivos são servidos em `https://appassets.androidplatform.net/www/` pelo `WebViewAssetLoader`, uma
+  origem segura onde módulos ES, IndexedDB e a Content Security Policy funcionam como no navegador. A ponte
+  `window.CahierAndroid` oferece só três funções: versão, compartilhar o arquivo exportado e a cor das barras
+  do sistema conforme o tema.
+- `.github/workflows/android-apk.yml`: a cada push na `main`, roda os testes, gera o conteúdo, compila e
+  assina o APK, instala e abre num emulador Android 14 (`android/smoke-test.sh`) e publica em *Releases*.
+  A chave de assinatura fica nos segredos `ANDROID_KEYSTORE_B64` e `ANDROID_KEYSTORE_PASSWORD`; sem eles o APK é
+  compilado e testado, mas não publicado.
+
+Para compilar o APK localmente (Android SDK e Gradle 8.11+):
+
+```bash
+python manage.py build_mobile --out android/app/src/main/assets/www
+gradle -p android assembleRelease    # sem CAHIER_KEYSTORE, assina com a chave de depuração
+```
 
 Para ver o app com o **seu** conteúdo (por exemplo, questões que você cadastrou no painel), rode
 `manage.py build_mobile` e sirva `mobile/dist/` (ou publique-o).
@@ -84,6 +121,11 @@ Para ver o app com o **seu** conteúdo (por exemplo, questões que você cadastr
   exportação; importação do progresso do computador sem duplicar; preferências mantidas; nenhum erro no console.
 - **Sincronização cruzada:** o arquivo exportado pelo celular foi importado no Django (105 respostas,
   marcação e avaliação; capítulo 1 aparece como concluído) e o arquivo do computador foi importado no celular.
+- **Modo APK** (`mobile/tests/e2e_android.py`, ponte nativa simulada no Chromium): sem service worker nem
+  aviso de offline; tela *Sobre o app* com versão e link de atualização; importar arquivo; exportar entrega o
+  arquivo ao compartilhamento do Android; tema repassado às barras do sistema; nenhum erro no console.
+- **APK num emulador** (Android 14, no GitHub Actions): instala, abre a tela inicial, navega até Capítulos,
+  fecha e reabre, sem erros de JavaScript no log.
 - **Desempenho** (Chromium com CPU 4× mais lenta, simulando um celular simples): primeira abertura em 4G
   ≈ 3,4 s; aberturas seguintes, offline, ≈ 0,6 s; responder e ver a correção, 50–95 ms. O conteúdo inteiro
   ocupa 322 KB (≈ 68 KB compactado).

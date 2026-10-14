@@ -4,7 +4,7 @@ import { currentChapter } from "./core/stats.js";
 import { ACCENTS } from "./exercise.js";
 import { addFlag, init, state } from "./store.js";
 import { dueItems } from "./core/select.js";
-import { go, html, toast } from "./util.js";
+import { go, html, native, toast } from "./util.js";
 import { chapterDetail, chapterList, passageDetail } from "./views/chapters.js";
 import { home } from "./views/home.js";
 import { credits, flagIssue, historyView, installView, moreMenu, progress, settingsView, syncView, writingAssess, writingList } from "./views/more.js";
@@ -216,7 +216,12 @@ function applySettings() {
   const s = state.settings;
   document.documentElement.dataset.theme = s.theme || "auto";
   document.documentElement.dataset.font = s.font || "normal";
+  if (native) {
+    const dark = s.theme === "dark" || ((s.theme || "auto") === "auto" && matchMedia("(prefers-color-scheme: dark)").matches);
+    try { native.setDarkTheme(dark); } catch { /* versão antiga do APK */ }
+  }
 }
+matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", applySettings);
 document.addEventListener("cahier:settings", applySettings);
 document.addEventListener("cahier:storage-error", () => toast("Não foi possível salvar no aparelho. Libere espaço ou saia do modo anônimo.", "error"));
 
@@ -251,24 +256,28 @@ function registerSW() {
 function updateOnline() {
   document.getElementById("offline").hidden = navigator.onLine;
 }
-window.addEventListener("online", updateOnline);
-window.addEventListener("offline", updateOnline);
+if (!native) {
+  window.addEventListener("online", updateOnline);
+  window.addEventListener("offline", updateOnline);
+}
 
 async function start() {
   try {
     await init();
   } catch (err) {
     console.error(err);
-    main().innerHTML = '<h1>Não foi possível abrir o conteúdo</h1><p>Abra o app uma vez com internet para baixar os exercícios.</p>';
+    main().innerHTML = '<h1>Não foi possível abrir o conteúdo</h1><p>' + (native ? 'Feche e abra o app de novo. Se continuar, instale o APK de novo por cima: o progresso é mantido.' : 'Abra o app uma vez com internet para baixar os exercícios.') + '</p>';
     return;
   }
   applySettings();
   if (!state.storageOk) toast("O armazenamento do navegador não está disponível: o progresso não será salvo.", "error");
   window.addEventListener("hashchange", render);
-  updateOnline();
+  if (native) document.body.classList.add("native");
+  else updateOnline();
   await render();
   document.body.classList.add("ready");
-  registerSW();
+  // No APK os arquivos já estão no aparelho: sem service worker nem aviso de "offline".
+  if (!native) registerSW();
 }
 
 start();

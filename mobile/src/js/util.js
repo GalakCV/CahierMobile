@@ -1,5 +1,8 @@
 // Utilidades de interface: templates com escape automático, datas e pequenos helpers.
 
+/** Funções nativas quando o app roda dentro do APK Android (null no navegador). */
+export const native = typeof window !== "undefined" && window.CahierAndroid ? window.CahierAndroid : null;
+
 export class Raw {
   constructor(s) { this.s = s; }
   toString() { return this.s; }

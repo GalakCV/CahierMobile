@@ -8,8 +8,12 @@ Tudo roda no seu computador: um servidor Django em `127.0.0.1:8000`, acessado pe
 **http://localhost:8000**. O banco SQLite, o progresso e os backups ficam na pasta `data/`. Não há
 telemetria, contas, senhas nem chamadas externas.
 
-> **No celular:** <https://galakcv.github.io/CahierMobile/> — versão offline e instalável para Android e iPhone,
-> com sincronização de progresso com o computador. Veja [docs/CELULAR.md](docs/CELULAR.md).
+> **No celular:**
+> - **Android (APK):** [baixar Cahier.apk](https://github.com/GalakCV/CahierMobile/releases/latest/download/Cahier.apk)
+>   — app completo, funciona sem internet.
+> - **iPhone (ou Android sem APK):** <https://galakcv.github.io/CahierMobile/> — versão instalável pelo navegador.
+>
+> Os dois sincronizam o progresso com o computador. Veja [docs/CELULAR.md](docs/CELULAR.md).
 
 ---
 
@@ -90,6 +94,10 @@ fica como está, e seu progresso não é tocado. Por segurança, faça um backup
 
 ## Novidades
 
+**v1.2.1** — App Android (APK) gerado e testado num emulador pelo GitHub Actions a cada atualização e
+publicado em *Releases*. É o mesmo app do celular, empacotado com todo o conteúdo, sem permissão de internet;
+exportar o progresso abre o menu *Compartilhar* do Android.
+
 **v1.2** — App para celular offline (PWA) publicado no GitHub Pages, com as mesmas regras de correção,
 domínio e revisão (testadas por paridade), e sincronização de progresso entre celular e computador
 (*Dados e backup → Sincronizar com o celular*). As tentativas ganharam um identificador único e as marcações
@@ -126,6 +134,7 @@ A importação ganhou o modo “manter os existentes e acrescentar só os novos�
 .venv\Scripts\python manage.py restore_db data\backups\arquivo.sqlite3 --confirm RESTAURAR
 .venv\Scripts\python manage.py refresh_mastery         # recalcula o domínio
 .venv\Scripts\python manage.py build_mobile            # gera o app para celular em mobile\dist com o seu conteúdo
+.venv\Scripts\python manage.py build_mobile --out android\app\src\main\assets\www   # conteúdo do APK (ver docs\CELULAR.md)
 .venv\Scripts\python manage.py test tests              # testes automatizados
 ```
 
